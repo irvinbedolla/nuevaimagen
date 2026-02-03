@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Centro Conciliacion Laboral</title>
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+        <!-- Bootstrap core CSS -->
+        <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+
+            /* 1. Color Blanco para todos los enlaces */
+            .navbar-dark .navbar-nav .nav-link {
+                color: #4A001F  !important;
+                font-size: 0.9rem;
+                transition: color 0.3s ease;
+            }
+
+            /* 2. Color al pasar el ratón (Hover) */
+            .navbar-dark .navbar-nav .nav-link:hover {
+                color: #CEA845 !important; /* El dorado de tu identidad visual */
+            }
+
+            /* 3. Logo Responsivo */
+            .logo-nav {
+                height: auto;
+                width: 80px; /* Tamaño en PC */
+                transition: width 0.3s ease;
+            }
+
+            /* Ajuste para Tablets (Pantallas medianas) */
+            @media (max-width: 992px) {
+                .carrusel-img {
+                    height: 400px;
+                }
+            }
+
+            /* 4. Ajustes para Celulares */
+            @media (max-width: 768px) {
+                .logo-nav {
+                    width: 100px; /* Más pequeño en móvil para que no choque con el botón */
+                }
+                /* Alinea el texto a la derecha cuando el menú se despliega */
+                .navbar-collapse {
+                    text-align: right;
+                    background-color: rgba(33, 37, 41, 0.95); /* Fondo oscuro semitransparente */
+                    padding: 1rem;
+                    border-radius: 0 0 10px 10px;
+                }
+                .nav-item {
+                    margin-bottom: 5px;
+                    border-bottom: 1px solid rgba(255,255,255,0.1); /* Línea divisoria sutil */
+                }
+                .carrusel-img {
+                    height: 250px;
+                }
+                .footer-container {
+                    flex-direction: column; /* Apila en vertical */
+                    text-align: center;
+                }
+            }
+            /* Estilo general para PC */
+            .carrusel-img {
+                width: 100%;
+                height: 550px;       /* Altura fija para mantener uniformidad en escritorio */
+                object-fit: cover;   /* Corta la imagen para llenar el espacio sin deformarla */
+                object-position: center;
+            }
+            @keyframes zoomEffect {
+                from { transform: scale(1); }
+                to { transform: scale(1.1); }
+            }
+
+            /* Se aplica solo a la imagen que está activa en ese momento */
+            .carousel-item.active .carrusel-img {
+                animation: zoomEffect 10s infinite alternate;
+            }
+            .texto-centrado {
+                text-align: center;
+            }
+            .texto-justificado {
+                text-align: justify;
+            }
+            .columna-icono {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Centra horizontalmente */
+                text-align: center;  /* Centra el texto de los encabezados */
+            }
+            .columna-icono img {
+                margin-bottom: 20px;
+                display: block;
+            }
+            .footer-site {
+                background-color: #496163;
+                color: #ffffff;
+                /* Reducimos el padding vertical a la mitad o menos */
+                padding: 10px 0; 
+            }
+
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                /* Eliminamos bordes y paddings extras si no son necesarios */
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+                padding-bottom: 5px;
+                margin-bottom: 5px;
+            }
+
+            /* Reducimos el tamaño de los logos para que no fuercen un footer alto */
+            .img-footer-main, .img-footer-ccl {
+                max-height: 40px; /* Antes era 60px */
+                width: auto;
+            }
+
+            /* Reducimos el tamaño de los iconos de redes sociales */
+            .social-icon img {
+                width: 24px;  /* Antes era 32px */
+                height: 24px;
+            }
+
+            .footer-section {
+                margin-bottom: 5px; /* Menos espacio entre elementos en móvil */
+            }
+
+            .footer-info {
+                padding-top: 5px;
+                font-size: 0.75rem; /* Letra un poco más pequeña */
+            }
+
+            .footer-privacy a {
+                color: #CEA845; /* Dorado para resaltar */
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .footer-privacy a:hover {
+                text-decoration: underline;
+            }
+            .btn-secondary{
+                width: 100%;
+            }
+        </style>
+        <link href="assets/carousel.css" rel="stylesheet">
+    </head>
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light shadow">
+            <div class="container-fluid">
+                <div class="rd-navbar-brand">
+                    <a href="index.html"><img src="imagenes/Circulo.png" class="logo-nav" alt="Logo"></a></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html"><b>INICIO</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contac"><b>CONTACTO</b></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <b>MENU</b>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="Sedes.html">Sedes</a>
+                                <a class="dropdown-item" href="PersonalD.html">Personal Directivo</a>
+                                <a class="dropdown-item" href="DelegM.html">Delegación Morelia</a>
+                                <a class="dropdown-item" href="DelegU.html">Delegación Uruapan</a>
+                                <a class="dropdown-item" href="DelegZ.html">Delegación Zamora</a>
+                                <a class="dropdown-item" href="DirectorioG.html">Directorio General</a>
+                                <a class="dropdown-item" href="Organigrama.html">Organigrama</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" target="_blank" href="encuentro_nacional_ccl/index.html">1ro encuentro</a>
+                                <a class="dropdown-item" target="_blank" href="encuentro_nacional_ccl2/index.html">2ro encuentro</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+        <footer class="footer-site">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <img src="imagenes/footer/MichMejor.png" alt="Logo Michoacán" class="img-footer-main">
+                    </div>
+
+                    <div class="footer-section">
+                        <div class="footer-socials">
+                            <a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="social-icon" target="_blank"><img src="imagenes/footer/FB1.png" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/cclmichoacan/" class="social-icon" target="_blank"><img src="imagenes/footer/IG1.png" alt="Instagram"></a>
+                            <a href="https://x.com/cclmichoacan?s=21" target="_blank" class="social-icon"><img src="imagenes/footer/X1.png" alt="X"></a>
+                            <a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" target="_blank" class="social-icon"><img src="imagenes/footer/TK1.png" alt="TikTok"></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <img src="images/CCLInferior.png" alt="Logo CCL" class="img-footer-ccl">
+                    </div> 
+                </div>
+
+                <div class="footer-info">
+                    <div class="footer-bottom">
+                        © Desarrollado por CCL Michoacán | Gobierno del Estado de Michoacán 2026
+                    </div>
+                    <div class="footer-privacy"> 
+                        <a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank">Aviso de privacidad</a> 
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
