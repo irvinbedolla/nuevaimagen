@@ -1,0 +1,187 @@
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+
+            /* 1. Color Blanco para todos los enlaces */
+            .navbar-dark .navbar-nav .nav-link {
+                color: #4A001F  !important;
+                font-size: 0.9rem;
+                transition: color 0.3s ease;
+            }
+
+            /* 2. Color al pasar el ratón (Hover) */
+            .navbar-dark .navbar-nav .nav-link:hover {
+                color: #CEA845 !important; /* El dorado de tu identidad visual */
+            }
+
+            /* 3. Logo Responsivo */
+            .logo-nav {
+                height: auto;
+                width: 80px; /* Tamaño en PC */
+                transition: width 0.3s ease;
+            }
+
+            /* Ajuste para Tablets (Pantallas medianas) */
+            @media (max-width: 992px) {
+                .carrusel-img {
+                    height: 400px;
+                }
+            }
+
+            /* 4. Ajustes para Celulares */
+            @media (max-width: 768px) {
+                .logo-nav {
+                    width: 100px; /* Más pequeño en móvil para que no choque con el botón */
+                }
+                /* Alinea el texto a la derecha cuando el menú se despliega */
+                .navbar-collapse {
+                    text-align: right;
+                    background-color: rgba(33, 37, 41, 0.95); /* Fondo oscuro semitransparente */
+                    padding: 1rem;
+                    border-radius: 0 0 10px 10px;
+                }
+                .nav-item {
+                    margin-bottom: 5px;
+                    border-bottom: 1px solid rgba(255,255,255,0.1); /* Línea divisoria sutil */
+                }
+                .carrusel-img {
+                    height: 250px;
+                }
+                .footer-container {
+                    flex-direction: column; /* Apila en vertical */
+                    text-align: center;
+                }
+                .section-title { font-size: 1.4rem; }
+            }
+            /* Estilo general para PC */
+            .carrusel-img {
+                width: 100%;
+                height: 550px;       /* Altura fija para mantener uniformidad en escritorio */
+                object-fit: cover;   /* Corta la imagen para llenar el espacio sin deformarla */
+                object-position: center;
+            }
+            @keyframes zoomEffect {
+                from { transform: scale(1); }
+                to { transform: scale(1.1); }
+            }
+
+            /* Se aplica solo a la imagen que está activa en ese momento */
+            .carousel-item.active .carrusel-img {
+                animation: zoomEffect 10s infinite alternate;
+            }
+            .texto-centrado {
+                text-align: center;
+            }
+            .texto-justificado {
+                text-align: justify;
+            }
+            .columna-icono {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Centra horizontalmente */
+                text-align: center;  /* Centra el texto de los encabezados */
+            }
+            .columna-icono img {
+                margin-bottom: 20px;
+                display: block;
+            }
+            .footer-site {
+                background-color: #ffffff;
+                color: #ffffff;
+                /* Reducimos el padding vertical a la mitad o menos */
+                padding: 10px 0; 
+            }
+
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                /* Eliminamos bordes y paddings extras si no son necesarios */
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+                padding-bottom: 5px;
+                margin-bottom: 5px;
+            }
+
+            /* Reducimos el tamaño de los logos para que no fuercen un footer alto */
+            .img-footer-main, .img-footer-ccl {
+                max-height: 40px; /* Antes era 60px */
+                width: auto;
+            }
+
+            /* Reducimos el tamaño de los iconos de redes sociales */
+            .social-icon img {
+                width: 24px;  /* Antes era 32px */
+                height: 24px;
+            }
+
+            .footer-section {
+                margin-bottom: 5px; /* Menos espacio entre elementos en móvil */
+            }
+
+            .footer-info {
+                padding-top: 5px;
+                font-size: 0.75rem; /* Letra un poco más pequeña */
+            }
+
+            .footer-privacy a {
+                color: #CEA845; /* Dorado para resaltar */
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .footer-privacy a:hover {
+                text-decoration: underline;
+            }
+            .btn-secondary{
+                width: 100%;
+            }
+            /* Título de sección moderno */
+            .section-title {
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                color: #496163;
+                margin-bottom: 40px;
+                font-size: 1.8rem;
+            }
+
+            /* Tarjeta de Mapa Estilizada */
+            .card-mapa {
+                background: #ffffff;
+                border-radius: 15px;
+                border: none;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+                transition: all 0.3s ease-in-out;
+                height: 100%; /* Para que todas midan lo mismo */
+            }
+
+            .card-mapa:hover {
+                transform: translateY(-10px); /* Efecto de flotar */
+                box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+            }
+
+            .card-title {
+                color: #496163;
+                font-weight: bold;
+                border-bottom: 2px solid #CEA845;
+                padding-bottom: 10px;
+                margin-bottom: 15px;
+            }
+
+            .card-text {
+                font-size: 0.85rem;
+                color: #555;
+                min-height: 60px; /* Alinea los textos */
+            }
+
+            /* Contenedor del mapa para redondear bordes del iframe */
+            .map-wrapper {
+                overflow: hidden;
+                border-radius: 10px;
+                border: 1px solid #eee;
+            }
