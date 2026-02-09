@@ -139,6 +139,7 @@
             }
             .btn-secondary{
                 width: 100%;
+                background-color: #496163;
             }
             /* Título de sección moderno */
             .section-title {
@@ -185,3 +186,283 @@
                 border-radius: 10px;
                 border: 1px solid #eee;
             }
+
+
+            /*****************************************************************************************/
+/* ============================= */
+/*  ORGANIGRAMA   */
+/* ============================= */
+
+/*.org-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+/* NIVELES */
+.org-level {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Separador visual entre niveles */
+.org-level::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  transform: translateX(-50%);
+  opacity: .6;
+}
+
+.org-level.level-1::before {
+  display: none;
+}
+
+/* TARJETAS */
+.org-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 28px 22px;
+  width: 260px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.12);
+  transition: all .35s ease;
+  border: 1px solid rgba(255,255,255,.4);
+}
+
+/* Card principal */
+.level-1 .org-card {
+  transform: scale(1.05);
+  border: 2px solid #3b82f6;
+}
+
+/* Hover elegante */
+.org-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px rgba(0,0,0,.2);
+}
+
+/* FOTO */
+.org-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 0 0 4px #3b82f6;
+  margin-bottom: 16px;
+}
+
+/* TEXTO */
+.org-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 6px;
+}
+
+.org-card p {
+  font-size: .95rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .org-level {
+    margin-bottom: 60px;
+  }
+
+  .org-card {
+    width: 90%;
+  }
+
+  .org-level::before {
+    display: none;
+  }
+}
+/*************************************************************/
+.footer-bottom {
+    color: #ffffff;
+    text-align: center;
+    padding: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer-bottom b {
+    color: #b08d57;
+}
+
+/******************************************************************/
+/* Contenedor Principal del Footer */
+/*.footer-site {
+    background-color: #ffffff; /* O cambia a #2b2b2b si lo prefieres oscuro */
+ /*   padding: 30px 0 15px 0;
+    border-top: 1px solid #eee;
+}*/
+
+/* Sección de Logos y Enlaces */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.footer-links a {
+    display: block;
+    color: #496163;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.footer-links a:hover {
+    color: #b08d57;
+}
+
+/* Alineación Inferior (Privacidad + Copyright) */
+.footer-info {
+    display: flex;
+    justify-content: space-between; /* Esto alinea uno a la izquierda y otro a la derecha */
+    align-items: center;
+    padding-top: 15px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.footer-info b {
+    color: #b08d57;
+}
+
+.footer-privacy a {
+    color: #b08d57;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-privacy a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes de Redes Sociales */
+.social-icon {
+    margin: 0 8px;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVO PARA CELULARES */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-info {
+        flex-direction: column-reverse; /* Privacidad arriba, copyright abajo en móvil */
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .img-footer-main, .img-footer-ccl {
+        max-height: 50px;
+    }
+}
+/***********************************************************************/
+/*PREGUNTAS FRECUENTES*/
+/* Sección FAQ */
+.faq-section {
+    padding: 60px 15px;
+    max-width: 900px;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 800;
+    color: #6A0F49;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+}
+
+/* El Acordeón Juvenil */
+.faq-item {
+    background: #ffffff;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 25px rgba(106, 15, 73, 0.1);
+    transform: translateY(-2px);
+}
+
+.faq-header {
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.faq-header i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+    color: #6A0F49;
+}
+
+.faq-header:not(.collapsed) {
+    color: #6A0F49;
+    background: #fdfafd;
+}
+
+.faq-header:not(.collapsed) i {
+    transform: rotate(180deg);
+}
+
+.faq-body {
+    padding: 20px 25px;
+    color: #666;
+    line-height: 1.6;
+    border-top: 1px solid #f9f9f9;
+    font-size: 1rem;
+}
+
+/* Lista de requisitos estilizada */
+.faq-list {
+    list-style: none;
+    padding: 0;
+}
+
+.faq-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.faq-list li i {
+    color: #CEA845; /* Dorado */
+    margin-right: 10px;
+}
