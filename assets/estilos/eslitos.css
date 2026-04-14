@@ -1,4 +1,4 @@
-            .bd-placeholder-img {
+.bd-placeholder-img {
                 font-size: 1.125rem;
                 text-anchor: middle;
                 -webkit-user-select: none;
@@ -8,20 +8,30 @@
 
             /* 1. Color Blanco para todos los enlaces */
             .navbar-dark .navbar-nav .nav-link {
-                color: #4A001F  !important;
+                color: #911A3A  !important;
                 font-size: 0.9rem;
                 transition: color 0.3s ease;
             }
 
             /* 2. Color al pasar el ratón (Hover) */
-            .navbar-dark .navbar-nav .nav-link:hover {
-                color: #CEA845 !important; /* El dorado de tu identidad visual */
-            }
+            /*.navbar-dark .navbar-nav .nav-link:hover {
+                color: #496163 !important; /* El dorado de tu identidad visual */
+            /*}*/
+            .navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: #496163 !important; /* Este es el color que pediste */
+    text-decoration: none;
+}
+
+/* Si quieres que el texto en negrita (<b>) también cambie de color dentro del link */
+.navbar .navbar-nav .nav-link:hover b {
+    color: #496163 !important;
+}
 
             /* 3. Logo Responsivo */
             .logo-nav {
                 height: auto;
-                width: 80px; /* Tamaño en PC */
+                width: 180px; /* Tamaño en PC */
                 transition: width 0.3s ease;
             }
 
@@ -47,13 +57,20 @@
                 .nav-item {
                     margin-bottom: 5px;
                     border-bottom: 1px solid rgba(255,255,255,0.1); /* Línea divisoria sutil */
+                    color: #ffffff !important; /* Asegura que el texto sea blanco en móvil */
                 }
                 .carrusel-img {
                     height: 250px;
                 }
+                /* Contenedor de los logos */
                 .footer-container {
-                    flex-direction: column; /* Apila en vertical */
-                    text-align: center;
+                    display: flex;
+                    justify-content: space-between; /* Los separa equitativamente */
+                    align-items: center;           /* Los centra verticalmente */
+                    flex-wrap: wrap;               /* Permite que bajen si no caben */
+                    gap: 30px;                     /* Espacio entre logos */
+                    margin-bottom: 30px;
+                    padding: 20px 0;
                 }
                 .section-title { font-size: 1.4rem; }
             }
@@ -93,7 +110,7 @@
                 background-color: #ffffff;
                 color: #ffffff;
                 /* Reducimos el padding vertical a la mitad o menos */
-                padding: 10px 0; 
+                
             }
 
             .footer-container {
@@ -119,24 +136,57 @@
                 height: 24px;
             }
 
-            .footer-section {
-                margin-bottom: 5px; /* Menos espacio entre elementos en móvil */
-            }
+            /* Cada sección de logo */
+.footer-section {
+    flex: 1;                       /* Hace que cada espacio mida lo mismo */
+    display: flex;
+    justify-content: center;       /* Centra el logo en su espacio */
+    min-width: 200px;              /* Evita que se hagan diminutos */
+}
 
-            .footer-info {
-                padding-top: 5px;
-                font-size: 0.75rem; /* Letra un poco más pequeña */
-            }
+/* Control de las imágenes */
+.footer-section img {
+    max-height: 42px;              /* Ajusta esta altura según tu gusto */
+    width: auto;                   /* Mantiene la proporción */
+    max-width: 100%;               /* No permite que se salgan del contenedor */
+    object-fit: contain;           /* Evita deformaciones */
+    filter: grayscale(100%);       /* Opcional: logos en gris para elegancia */
+    transition: filter 0.3s ease;
+    opacity: 0.8;
+}
 
-            .footer-privacy a {
-                color: #CEA845; /* Dorado para resaltar */
-                text-decoration: none;
-                font-weight: bold;
-            }
+/* Efecto al pasar el mouse */
+.footer-section img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
 
-            .footer-privacy a:hover {
-                text-decoration: underline;
-            }
+/* Estilos para la info inferior */
+.footer-info {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* RESPONSIVO: Para celulares */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;    /* Pone un logo sobre otro */
+        gap: 40px;
+    }
+    
+    .footer-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
             .btn-secondary{
                 width: 100%;
                 background-color: #496163;
@@ -188,7 +238,7 @@
             }
 
 
-            /*****************************************************************************************/
+            /*******************************/
 /* ============================= */
 /*  ORGANIGRAMA   */
 /* ============================= */
@@ -290,7 +340,7 @@
     display: none;
   }
 }
-/*************************************************************/
+/*********************/
 .footer-bottom {
     color: #ffffff;
     text-align: center;
@@ -301,7 +351,7 @@
     color: #b08d57;
 }
 
-/******************************************************************/
+/**********************/
 /* Contenedor Principal del Footer */
 /*.footer-site {
     background-color: #ffffff; /* O cambia a #2b2b2b si lo prefieres oscuro */
@@ -384,7 +434,7 @@
         max-height: 50px;
     }
 }
-/***********************************************************************/
+/*************************/
 /*PREGUNTAS FRECUENTES*/
 /* Sección FAQ */
 .faq-section {
@@ -395,7 +445,7 @@
 .section-title {
     text-align: center;
     font-weight: 800;
-    color: #6A0F49;
+    color: #911A3A;
     margin-bottom: 40px;
     letter-spacing: -1px;
 }
@@ -466,3 +516,437 @@
     color: #CEA845; /* Dorado */
     margin-right: 10px;
 }
+
+/* Estilo para los botones del acordeón */
+.btn-link {
+    text-decoration: none !important;
+}
+
+.card {
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+.card-header {
+    transition: background 0.3s ease;
+}
+
+.card-header:hover {
+    background-color: #f0f7ff !important;
+}
+
+/* Efecto hover para los enlaces de documentos */
+.list-unstyled li {
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.list-unstyled li:hover {
+    background-color: #e9ecef;
+    padding-left: 15px;
+}
+
+
+/* Ajuste de los iconos sociales */
+.social-icon {
+    margin: 0 5px;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Enlace de Junta de Gobierno */
+.junta-link {
+    font-size: 0.75rem;
+    color: #666;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.junta-link:hover {
+    color: #000;
+}
+
+/* Ajustes para móviles (menos de 992px) */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .nav-item {
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+    }
+
+    .social-icons-container {
+        margin-bottom: 10px;
+    }
+
+    /* El botón de login ocupará todo el ancho en móvil */
+    .nav-link.btn-primary {
+        background-color: #007bff !important;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+
+.layout-mosaico {
+    display: grid;
+    /* 60% para el video, 40% para las imágenes para que luzcan mejor */
+    grid-template-columns: 1.5fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 15px;
+    /* Mapa: Grande a la izquierda, pequeñas a la derecha */
+    grid-template-areas: 
+        "grande arriba"
+        "grande abajo";
+}
+
+/* Contenedores */
+.parte-grande { grid-area: grande; }
+.parte-arriba { grid-area: arriba; }
+.parte-abajo { grid-area: abajo; }
+
+.parte-grande, .parte-arriba, .parte-abajo {
+    overflow: hidden;
+    border-radius: 12px; /* Un poco más redondeado para un look moderno */
+    background-color: #000; /* Fondo negro por si el video carga */
+}
+
+/* Estilo para las imágenes con efecto de zoom */
+.parte-arriba img,
+.parte-abajo img {
+    width: 100%;
+    height: 220px; /* Ajusta este valor según qué tan altas quieras las fotos */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.parte-arriba:hover img,
+.parte-abajo:hover img {
+    transform: scale(1.1);
+}
+
+/* Estilo para el Video */
+.parte-grande video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Elimina los bordes negros */
+    display: block;
+}
+
+/* Responsivo para celulares: Todo en una sola columna */
+@media (max-width: 768px) {
+    .layout-mosaico {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "grande"
+            "arriba"
+            "abajo";
+    }
+    .parte-arriba img, .parte-abajo img {
+        height: 200px;
+    }
+}
+
+
+/* Estilo común para ver el contenido centrado */
+.layout-mosaico > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* RESPONSIVO: En celulares se ponen uno sobre otro */
+@media (max-width: 768px) {
+    .layout-mosaico {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "grande"
+            "arriba"
+            "abajo";
+    }
+    .parte-grande { min-height: 200px; }
+}
+
+.grid-moderno {
+    display: grid;
+    /* 4 columnas en desktop, 2 en tablets, 1 en móvil */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    align-items: stretch; /* Obliga a que todos midan lo mismo de alto */
+    margin-bottom: 10px;
+}
+
+.bloque-link {
+    display: flex; /* Permite que el enlace ocupe todo el espacio del grid */
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.bloque {
+    display: flex;
+    flex-direction: column; /* Alinea contenido en vertical */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center;    /* Centra el contenido horizontalmente */
+    
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    width: 100%; /* Ocupa todo el ancho del enlace */
+    transition: all 0.3s ease;
+}
+
+/* Ajuste para que los títulos no rompan la simetría */
+.bloque h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 15px 0 10px 0;
+    min-height: 2.4em; /* Reserva espacio para 2 líneas de texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloque p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    min-height: 3em; /* Reserva espacio para las descripciones */
+}
+
+/* Efecto Moderno al pasar el Mouse (Hover) */
+.bloque:hover {
+    transform: translateY(-10px); /* Se eleva */
+    background: #702032; /* Cambia al guinda institucional */
+    color: white;
+    box-shadow: 0 15px 30px rgba(112, 32, 50, 0.3);
+    cursor: pointer;
+}
+
+/* RESPONSIVO: Para celulares */
+@media (max-width: 768px) {
+    .grid-moderno {
+        /* En pantallas pequeñas, solo 1 columna */
+        grid-template-columns: 1fr;
+    }
+}
+
+.logo-responsivo {
+    /* Evita que la imagen crezca más de su tamaño real o un límite deseado */
+    max-width: 400px; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto visual opcional para que el usuario sepa que es un link */
+.logo-responsivo:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* En pantallas pequeñas (celulares), permitimos que use más ancho si es necesario */
+@media (max-width: 576px) {
+    .logo-responsivo {
+        max-width: 90%; 
+    }
+}
+/*********************************/
+/*Forzando estos estilos en botones y enlaces, para que no los tome de gobierno*/
+.marketing .btn-secondary {
+    color: #ffffff !important;
+    background-color: #496163 !important; 
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.marketing .btn-secondary:hover {
+    color: #BD9868 !important; 
+    background-color: #496163 !important; 
+    transform: scale(1.05); 
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #4A001F !important; 
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #496163 !important;
+}
+
+.btn-login-custom {
+    background-color: #911A3A !important;
+    border: none;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estado al pasar el mouse (Hover) */
+.btn-login-custom:hover {
+    background-color: #496163 !important;
+    color: #ffffff !important; /* Mantiene el texto blanco */
+}
+/* Estado Inicial: Guinda #911A3A */
+.social-icons-container .social-icon img {
+    height: 25px;
+    width: auto;
+    transition: all 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(14%) sepia(56%) saturate(4646%) hue-rotate(330deg) brightness(92%) contrast(92%);
+}
+
+/* Al pasar el mouse (Hover): Petróleo #496163 */
+.social-icons-container .social-icon:hover img {
+    filter: invert(36%) sepia(13%) saturate(1021%) hue-rotate(136deg) brightness(95%) contrast(88%);
+    transform: scale(1.15);
+}
+/***************************************************************/
+    /*Aparatado Menú ciudadano*/
+    :root { --guinda: #911A3A; }
+
+    .grid-moderno {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 0;
+    }
+
+    .tramites-box {
+        width: 210px;
+        height: 230px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        display: block;
+        /* Cambio de color de fondo suave, sin barrido */
+        transition: background-color 0.5s ease, border-color 0.5s ease;
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+
+    .tramites-box:hover {
+        background-color: var(--guinda) !important;
+        border-color: var(--guinda);
+        box-shadow: 0 8px 20px rgba(145, 26, 58, 0.15);
+    }
+
+    .tramites-box h2, 
+    .tramites-box span {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        margin: 0;
+        /* Transición lenta para el deslizamiento */
+        transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tramites-box h2 {
+        top: 65px; /* Bajamos un poco el texto inicial */
+        color: var(--guinda);
+        font-size: 1.15rem;
+        font-weight: bold;
+        padding: 0 10px;
+    }
+
+    .tramites-box span {
+        bottom: 55px; /* Subimos un poco el icono inicial */
+        color: var(--guinda);
+    }
+
+    .tramites-box span i { 
+        font-size: 3.5rem; 
+    }
+
+    .tramites-box:hover h2 {
+        top: 105px; 
+        color: #ffffff !important;
+    }
+
+    /* El icono sube exactamente al nivel donde estaba el texto */
+    .tramites-box:hover span {
+        bottom: 105px; 
+        color: #ffffff !important;
+    }
+    /*FIN Aparatado Menú ciudadano*/
+/***********************************************************/
+    /* Posicionamiento de las flechas sobre la imagen en el carrusel */
+
+#sliderPrincipal {
+    position: relative;
+}
+
+/* Contenedor de las flechas (owl-nav) */
+#sliderPrincipal .owl-nav {
+    position: absolute;
+    top: 50%; /* Centrado vertical */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Una a cada lado */
+    transform: translateY(-50%); /* Ajuste fino del centrado vertical */
+    pointer-events: none; /* Evita que el contenedor interfiera con clics en la imagen */
+    margin-top: 0 !important; /* Elimina márgenes por defecto de Owl */
+    z-index: 10; /* Asegura que estén por encima de la imagen */
+}
+
+/* Estilo para los botones individuales (prev y next) */
+#sliderPrincipal .owl-nav button {
+    pointer-events: all; /* Reactiva el clic solo en los botones */
+    background: transparent !important; /* Fondo transparente */
+    width: 40px; /* Un poco más grandes para facilitar el clic */
+    height: 40px;
+    border: none !important; /* Sin bordes */
+    margin: 0 10px !important; /* Espaciado desde el borde de la pantalla */
+    transition: all 0.3s ease !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo del icono (FontAwesome) DENTRO del botón */
+#sliderPrincipal .owl-nav button i {
+    color: #ffffff !important; /* <--- COLOR BLANCO SIEMPRE */
+    font-size: 2.8rem; /* Tamaño del icono ligeramente mayor */
+    font-weight: bold;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6); /* Sombra más oscura para contraste con blanco */
+}
+
+/* Efecto al pasar el mouse (Hover) */
+#sliderPrincipal .owl-nav button:hover {
+    background: transparent !important; /* Mantiene el fondo transparente */
+    transform: scale(1.15); /* Efecto de aumento sutil al pasar el mouse */
+}
+
+/* Forzamos que el icono siga siendo blanco en Hover */
+#sliderPrincipal .owl-nav button:hover i {
+    color: #ffffff !important;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+/* Ocultar los puntos de navegación (dots) */
+#sliderPrincipal .owl-dots {
+    display: none !important;
+}
+/*************************** IR A SECCIONES DESDE EL MENÚ*********************************************/
+html {
+    scroll-behavior: smooth;
+}
+/* Esto evita que el menú fijo tape el título de la sección al saltar */
+#noticias {
+    scroll-margin-top: 120px; /* Ajusta este valor según la altura de tu navbar */
+}
+        
+        
