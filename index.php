@@ -20,7 +20,9 @@
     <!--<link rel="shortcut icon" href="https://michoacan.gob.mx/cdn/img/favicon/favicon.ico" type="image/x-icon" />-->
     <!--<link rel="apple-touch-icon" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon.png" />-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-        <link href="assets/estilos/eslitos.css" rel="stylesheet">
+    <link href="assets/estilos/eslitos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <style>
         body { padding-top: 110px; font-family: 'Gibson', sans-serif; }
 
@@ -311,39 +313,39 @@
             </div>
         </div>
     </div>
+    
     <section style="background-color: #F6F6F6; background: url(https://michoacan.gob.mx/images/backgrounds/bg.png) fixed no-repeat;  background-size: cover; padding:20px; 0px;">
         <div class="container">
             <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="textoGuinda aos-init aos-animate" data-aos="zoom-in-up" data-aos-delay="100" style="margin-bottom: 0 !important; color: #911A3A;">Entérate</h2>
-            </div>
+                <div class="col-12 text-center">
+                    <h2 class="textoGuinda aos-init aos-animate" data-aos="zoom-in-up" data-aos-delay="100" style="margin-bottom: 0 !important; color: #911A3A;">Entérate</h2>
+                </div>
             </div>
         </div>
-
         <div id="banners">
-            <div class="owl-carousel owl-theme owl-banners owl-loaded owl-drag" style="margin-top: 105px;"><div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-23808px, 0px, 0px); transition: 0.25s; width: 37222px;"><div class="owl-item cloned" style="width: 325.333px; margin-right: 10px;"><div class="item">
-                                <a href="https://visitmichoacan.com.mx/" target="_blank">
-                                <img class="img-fluid" loading="lazy" src="banners/2025-09-18_YQXcW.jpg">
-                                </a>
-                        </div></div><div class="owl-item cloned" style="width: 325.333px; margin-right: 10px;"><div class="item">
-                                <a href="https://ssp.michoacan.gob.mx/" target="_blank">
-                                <img class="img-fluid" loading="lazy" src="banners/2024-12-11_F6gtF.jpg">
-                                </a>
-                        </div></div><div class="owl-item cloned" style="width: 325.333px; margin-right: 10px;"><div class="item">
-                                <a href="https://sedeco.michoacan.gob.mx/" target="_blank">
-                                <img class="img-fluid" loading="lazy" src="banners/2025-06-18_kyg1j.jpg">
-                                </a>
-                        </div></div><div class="owl-item cloned" style="width: 325.333px; margin-right: 10px;"><div class="item">
-                                <a href="https://cultura.michoacan.gob.mx/categoria/cartelera/" target="_blank">
-                                <img class="img-fluid" loading="lazy" src="banners/2025-08-01_oYiIT.jpg">
-                                </a>
-                        </div></div><div class="owl-item cloned" style="width: 325.333px; margin-right: 10px;"><div class="item">
-                                <a href="https://visitmichoacan.com.mx/" target="_blank">
-                                <img class="img-fluid" loading="lazy" src="banners/2025-09-18_YQXcW.jpg">
-                                </a>
-                        </div></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fa fa-chevron-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="fa fa-chevron-right"></i></button></div><div class="owl-dots"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div></div>
+            <div class="owl-carousel owl-theme owl-banners" style="margin-top: 50px;">
+                
+                <div class="item">
+                    <a href="https://visitmichoacan.com.mx/" target="_blank">
+                        <img class="img-fluid" src="imagenes/carrusel_pie/2025-04-23_ptzU7.jpg">
+                    </a>
+                </div>
 
+                <div class="item">
+                    <a href="https://ssp.michoacan.gob.mx/" target="_blank">
+                        <img class="img-fluid" src="imagenes/carrusel_pie/2025-06-18_s7EU1.jpg">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="https://sedeco.michoacan.gob.mx/" target="_blank">
+                        <img class="img-fluid" src="imagenes/carrusel_pie/2026-03-02_nBMb6.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
+
     <section class="about section bg-2" id="noticias">
         <div class="container">
             <div class="row">
@@ -438,7 +440,8 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-section">
-                    <img src="https://michoacan.gob.mx/cdn/img/logo-gris.png" alt="Logo CCL" class="img-footer-ccl">
+                    <img src="imagenes/3.png" alt="Logo Michoacán"  class="img-footer-ccl">
+                    <!--<img src="https://michoacan.gob.mx/cdn/img/logo-gris.png" alt="Logo CCL" class="img-footer-ccl">-->
                 </div> 
                 <div class="footer-section">
                     <img src="imagenes/2.png" alt="Logo Michoacán" class="img-footer-main">
@@ -478,6 +481,24 @@
         });
     });
 </script>
-
+<script>
+    $(document).ready(function(){
+        $(".owl-banners").owlCarousel({
+            loop: true,
+            margin: 15,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            smartSpeed: 800,
+            responsive: {
+                0: { items: 1 },
+                600: { items: 3 },
+                1000: { items: 5 }
+            },
+            /* Cambiamos fa por fas para FontAwesome 5 */
+            navText: ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"]
+        });
+    });
+</script>
 </body>
 </html>

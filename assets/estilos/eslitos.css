@@ -948,5 +948,20 @@ html {
 #noticias {
     scroll-margin-top: 120px; /* Ajusta este valor según la altura de tu navbar */
 }
+/********************* Estilos para carrusel pie (entérate) ***************/
+.owl-banners .owl-nav button {
+        background: #911A3A !important; /* Color Guinda */
+        color: white !important;
+        border-radius: 50% !important;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 35%;
+        z-index: 1000;
+    }
+    .owl-banners .owl-prev { left: -20px; }
+    .owl-banners .owl-next { right: -20px; }
+    
+    #banners { padding: 0 40px; }
         
         
