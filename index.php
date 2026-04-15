@@ -394,7 +394,7 @@
         </div>
 
        <div class="grid-moderno">
-            <a href="https://cclmichoacan.gob.mx/Normatividad.html" class="tramites-box">
+            <a href="Normatividad.html" class="tramites-box">
                 <h2>Normativa</h2>
                 <span><i class="bi bi-journal-text"></i></span>
             </a>

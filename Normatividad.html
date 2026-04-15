@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" />
+    <title>Centro de Conciliación Laboral | Michoacán</title>
+    
+    <meta property="og:title" content="Centro de Conciliación Laboral | Michoacán" />
+    <meta property="og:image" content="https://michoacan.gob.mx/cdn/img/michog.jpg"/>
+    <meta property="og:description" content="Portal del Centro de Conciliación Laboral del Estado de Michoacán" />
+
+    <link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/estilos.css">-->
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!--<link rel="shortcut icon" href="https://michoacan.gob.mx/cdn/img/favicon/favicon.ico" type="image/x-icon" />-->
+    <!--<link rel="apple-touch-icon" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon.png" />-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+        <link href="assets/estilos/eslitos.css" rel="stylesheet">
+    <style>
+        body { padding-top: 110px; font-family: 'Gibson', sans-serif; }
+
+        /* Navbar conforme a lineamiento (Altura y Borde) */
+        .main-nav { 
+            border-bottom: 5px solid #911A3A !important; 
+            background-color: #ffffff !important;
+            padding: 0.5rem 1rem;
+        }
+        .nav-link { 
+            color: var(--guinda) !important; 
+            font-size: 1.2rem;
+            padding: 0 10px !important;
+        }
+        
+        .logo-dependencia { height: 65px; width: auto; }
+        .logo-gobierno { height: 85px; width: auto; margin-left: 15px; }
+
+        
+        
+
+/* --- SECCIÓN DE TRÁMITES Y SERVICIOS (ESTILO CDN) --- */
+.grid-moderno {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; /* Espaciado entre cuadros */
+        padding: 40px 0;
+    }
+
+    /* Estabilización de la Caja (Basado en tu medida de 210x230) */
+    .tramites-box {
+        width: 210px;
+        height: 230px;
+        background-color: #ffffff;
+        border: 1px solid #e9ecef;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        text-align: center;
+        text-decoration: none !important;
+    }
+
+    /* Efecto Hover: Borde Dorado y Elevación */
+    .tramites-box:hover {
+        border-color: var(--dorado) !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        transform: translateY(-5px);
+    }
+
+    /* Títulos (H3) */
+    .tramites-box h3 {
+        color: var(--guinda);
+        font-size: 1rem; /* Ajustado para textos largos como "Código de conducta" */
+        font-weight: bold;
+        margin-top: 15px;
+        transition: 0.3s;
+        line-height: 1.2;
+    }
+
+    /* Efecto del Icono (El salto hacia arriba) */
+    .tramites-box span {
+        display: inline-block;
+        transition: transform 0.4s ease;
+        color: var(--guinda);
+    }
+
+    .tramites-box span i {
+        font-size: 3rem; /* Tamaño del icono */
+    }
+
+    /* Animación del icono al pasar el mouse */
+    .tramites-box:hover span {
+        transform: translateY(-15px);
+        color: var(--dorado);
+    }
+
+    /* Limpieza de enlaces */
+    .bloque-link {
+        text-decoration: none !important;
+    }
+
+    .main-nav .navbar-nav .nav-item .btn-login-custom, 
+    .main-nav .navbar-nav .nav-item .btn-login-custom b,
+    .main-nav .navbar-nav .nav-item .btn-login-custom:hover, 
+    .main-nav .navbar-nav .nav-item .btn-login-custom:hover b {
+        color: #ffffff !important; 
+        text-decoration: none !important;
+    }
+
+    .btn-login-custom {
+        background-color: #911A3A !important; /* Guinda */
+        border-radius: 6px !important;
+        padding: 8px 20px !important;
+        border: none !important;
+        transition: background-color 0.3s ease !important;
+        display: inline-block;
+        margin-top: 5px; /* Ajuste visual */
+    }
+
+    .btn-login-custom:hover {
+        background-color: #496163 !important; /* Verde Azulado */
+    }
+
+    .main-nav .navbar-nav .nav-link:not(.btn-login-custom) b {
+        color: #911A3A;
+        transition: color 0.3s ease;
+    }
+
+    .main-nav .navbar-nav .nav-link:not(.btn-login-custom):hover b {
+        color: #496163;
+    }
+    /* --- ESTILOS PARA BOTONES DESPLEGABLES DE NORMATIVIDAD --- */
+    .btn-category {
+        background-color: #911A3A; /* Guinda institucional */
+        color: #ffffff;
+        padding: 15px 30px;
+        border-radius: 50px; /* Bordes completamente redondeados */
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn-category:hover, .btn-category:focus {
+        background-color: #ffffff;
+        color: #911A3A;
+        border-color: #911A3A;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Icono de flecha en el botón que gira al abrir */
+    .btn-category .bi-chevron-down {
+        transition: transform 0.3s ease;
+    }
+    .btn-category[aria-expanded="true"] .bi-chevron-down {
+        transform: rotate(180deg);
+    }
+
+    .doc-list-item {
+        border: none;
+        border-bottom: 1px solid #e9ecef;
+        padding: 15px 10px;
+        transition: background-color 0.2s;
+    }
+
+    .doc-list-item:hover {
+        background-color: #f8f9fa;
+    }
+
+    .doc-icon {
+        font-size: 1.8rem;
+        color: #911A3A; /* Guinda para el icono de PDF */
+    }
+
+    .btn-consultar {
+        color: #496163; /* Verde Azulado */
+        border-color: #496163;
+        transition: all 0.3s ease;
+    }
+
+    .btn-consultar:hover {
+        background-color: #496163;
+        color: #ffffff;
+    }
+    </style>
+</head>
+<body>
+<!-- MENU -->
+<header>
+    <nav class="navbar main-nav fixed-top navbar-expand-lg shadow-sm">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="index.php">
+                    <img src="imagenes/logo-ccl-michoacan.png" class="logo-dependencia" alt="Logo CCL">
+                </a>
+                <a class="navbar-brand border-start ps-3 d-none d-md-block" href="https://michoacan.gob.mx">
+                    <img src="https://michoacan.gob.mx/cdn/img/logo.svg" class="logo-gobierno" alt="Logo Gobierno">
+                </a>
+            </div>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.php"><b>INICIO</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sedes.html"><b>SEDES</b></a>
+                    </li>
+                    
+                        
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>EVENTOS</b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" target="_blank" href="https://foro-nacional.cclmichoacan.gob.mx/">Foro Nacional</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/tercer_encuentro/">3° Encuentro Internacional</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl2/index.html">2° Encuentro Nacional</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl/index.html">1° Encuentro Nacional</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-lg-3 py-2 py-lg-0 d-flex flex-column align-items-start align-items-lg-center">
+                        <div class="social-icons-container">
+                            <a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="social-icon"><img src="imagenes/footer/FB1.png" alt="FB" ></a>
+                            <a href="https://www.instagram.com/cclmichoacan/" class="social-icon"><img src="imagenes/footer/IG1.png" alt="IG"></a>
+                            <a href="https://x.com/cclmichoacan?s=21" class="social-icon"><img src="imagenes/footer/X1.png" alt="X"></a>
+                            <a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" class="social-icon"><img src="imagenes/footer/TK1.png" alt="TK"></a>
+                            <a href="https://www.youtube.com/@CCLMichoacan" class="social-icon"><img src="imagenes/footer/Y1.png" alt="YouTube"></a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                       
+                            <a class="nav-link btn btn-login-custom ms-lg-2 px-3" href="https://siconcilio.cclmichoacan.gob.mx/login" style="color: #ffffff !important;"><b>INICIAR SESIÓN</b></a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+    <br><br><br><br>
+    
+    <!--<div class="elementor-widget-wrap elementor-element-populated">
+        <div class="elementor-element elementor-element-4dc4c15 elementor-widget elementor-widget-heading" data-id="4dc4c15" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+                <h2 class="elementor-heading-title elementor-size-default" style=" font-weight: 800; text-align: center; font-family: Nutmeg, Sans-serif; font-size: 18px;"></h2>		
+            </div>
+        </div>
+    </div>-->
+
+		<div class="container">
+
+            
+			
+            <div class="text-center mb-4">
+                        <h1 class="textoGuinda aos-init aos-animate" data-aos="zoom-in-up" data-aos-delay="100" style="margin-bottom: 0 !important; color: #911A3A; font-weight: bold">NORMATIVIDAD</h1>
+            </div>
+            <ul class="pdf-list" id="1">
+                <h1 class="wow fadeInLeft" style="text-align: center ; font-family: Nutmeg, Sans-serif;font-size: 20px;"></h1>
+                
+            </ul>
+			<br><br>
+            <div class="container my-5">
+                <!--BOTON DE NORVATIVA INTERNA CCLM-->
+                <div class="mb-4 mx-auto" style="max-width: 900px;">
+                    <button class="btn btn-category w-100 fs-5 fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNormatividad" aria-expanded="false" aria-controls="collapseNormatividad">
+                        <span>Normatividad Interna CCLM</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    
+                    <div class="collapse mt-3" id="collapseNormatividad">
+                        <div class="card card-body border-0 shadow-sm text-start rounded-4">
+                            <ul class="list-group list-group-flush">
+                                
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY ORGÁNICA DEL CENTRO DE CONCILIACIÓN LABORAL DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/INTERNACIONAL/TIMLM/IGUALDAD DE OPORTUNIDADES Y DE TRATO/1. Ley Organica CCL (08 de julio de 2022).pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">REGLAMENTO INTERIOR DEL CENTRO DE CONCILIACIÓN LABORAL DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/Reglamento_CCLMichoacan.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">MANUAL DE ORGANIZACIÓN DEL CENTRO DE CONCILIACIÓN LABORAL DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/Manual.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">MANUAL DE PROCEDIMIENTOS DEL CENTRO DE CONCILIACIÓN LABORAL DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/MANUAL_PROCEDIMIENTO_2025.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">CÓDIGO DE CONDUCTA PARA LAS PERSONAS SERVIDORAS PÚBLICAS DEL CENTRO DE CONCILIACIÓN LABORAL DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Codigo_conducta.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">ACUERDO POR EL QUE SE DA A CONOCER EL CALENDARIO DE LOS DÍAS INHÁBILES PARA EL EJERCICIO 2024, EN QUE EL CENTRO DE CONCILIACIÓN</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/Acuerdo_Calendario.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">FE DE Fe_Erratas</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/Fe_Erratas.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">ACUERDO POR EL QUE SE INFORMA LA APERTURA E INICIO DE FUNCIONES DE LAS OFICINAS DE APOYO DE ZITÁCUARO Y LÁZARO CÁRDENAS, MICHOACÁN, ADSCRITAS A LAS DELEGACIONES REGIONALES DE MORELIA Y URUAPAN DEL CENTRO DE CONCILIACIÓN LABORAL DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/ACUERDO INICIO F.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">MANUAL DE CONTABILIDAD GUBERNAMENTAL CCL</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/MANUAL DE CONTABILIDAD GUBERNAMENTAL CCL.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">ACUERDO DE DÍAS INHÁBILES QUE EL CENTRO DE CONCILIACIÓN LABORAL DEL ESTADO DE MICHOACÁN DE OCAMPO, SUSPENDERÁ SERVICIOS, PLAZOS Y TÉRMINOS, PARA EFECTOS DEL PROCEDIMIENTO DE CONCILIACIÓN INDIVIDUAL, EN EL EJERCICIO ANUAL 2026</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/AcuerdoDI.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">PROTOCOLO PARA LA ATENCIÓN DE QUEJAS Y DENUNCIAS DEL CENTRO DE CONCILIACIÓN LABORAL DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/PROTOCOLOQYD.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">BASES PARA LA ORGANIZACIÓN, FUNCIONAMIENTO Y DESARROLLO DEL SERVICIO PROFESIONAL DE CARRERA DEL CENTRO DE CONCILIACIÓN LABORAL DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/8a-6125CL.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LINEAMIENTOS PARA LA OPERACIÓN DE LAS OFICINAS DE APOYO Y DE REGULACIÓN DE USO DE MEDIOS TECNOLÓGICOS EN EL PROCEDIMIENTO DE CONCILIACIÓN PREJUDICIAL INDIVIDUAL, PARA EL CENTRO DE CONCILIACIÓN LABORAL DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/9a-6125CL.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--BOTON DE CONSTITUCIÓN-->
+                <div class="mb-4 mx-auto" style="max-width: 900px;">
+                    <button class="btn btn-category w-100 fs-5 fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConstitucion" aria-expanded="false" aria-controls="collapseConstitucion">
+                        <span>Constitución</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    
+                    <div class="collapse mt-3" id="collapseConstitucion">
+                        <div class="card card-body border-0 shadow-sm text-start rounded-4">
+                            <ul class="list-group list-group-flush">
+                                
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">CONSTITUCIÓN POLÍTICA DE LOS ESTADOS UNIDOS MEXICANOS</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Constitucion/CONSTITUCION POLITICA  DE LOS ESTADOS UNIDOS MEXICANOS.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">CONSTITUCIÓN POLÍTICA DEL ESTADO LIBRE Y SOBERANO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Constitucion/CONSTITUCION-POLITICA-DEL-ESTADO-REF-13-DE-JULIO-DE-2022.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--BOTON DE DECRETOS-->
+                <div class="mb-4 mx-auto" style="max-width: 900px;">
+                    <button class="btn btn-category w-100 fs-5 fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDecretos" aria-expanded="false" aria-controls="collapseConstitucion">
+                        <span>Decretos</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    
+                    <div class="collapse mt-3" id="collapseDecretos">
+                        <div class="card card-body border-0 shadow-sm text-start rounded-4">
+                            <ul class="list-group list-group-flush">
+                                
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">Decreto 01 de mayo de 2019_LFT_A</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Decretos/Decreto 01 de mayo de 2019_LFT_A.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--BOTON DE LEYES-->
+                <div class="mb-4 mx-auto" style="max-width: 900px;">
+                    <button class="btn btn-category w-100 fs-5 fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeyes" aria-expanded="false" aria-controls="collapseConstitucion">
+                        <span>Leyes</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    
+                    <div class="collapse mt-3" id="collapseLeyes">
+                        <div class="card card-body border-0 shadow-sm text-start rounded-4">
+                            <ul class="list-group list-group-flush">
+                                
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY FEDERAL DEL TRABAJO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/NACIONAL/LEY FEDERAL DEL TRABAJO.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY ORGÁNICA DE LA ADMINISTRACIÓN PÚBLICA DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/1-17621_1697212136_2023SEPTIEMBRE25 DEC 439 LEY ORGANICA DE LA ADMINISTRACION.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY DE INGRESOS DEL ESTADO DE MICHOACÁN DE OCAMPO PARA EL EJERCICIO FISCAL 2024</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/6-20865_1704314248_COMPILADO F.E. LEY DE INGRESOS 2024.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY DE ARCHIVOS ADMINISTRATIVOS E HISTÓRICOS DEL ESTADO DE MICHOACÁN DE OCAMPO Y SUS MUNICIPIOS.</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/2_Ley-de-Archivos-Administrativos-e-Historicos-del-Estado-de-Michoacan-de-Ocampo-y-sus-Municipios..pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY DE GOBIERNO DIGITAL DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/4_LEY-DE-GOBIERNO-DIGITAL-DEL-ESTADO-DE-MICHOACAN-DE-OCAMPO-5-OCT-2021.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY DE LOS TRABAJADORES AL SERVICIO DEL ESTADO DE MICHOACÁN DE OCAMPO Y DE SUS MUNICIPIOS</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/9_LEY-DE-LOS-TRABAJADORES-AL-SERVICIO-DEL-ESTADO-REF-31-DE-AGOSTIO-DE-2022.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY DE PROTECCIÓN DE DATOS PERSONALES EN POSESIÓN DE SUJETOS OBLIGADOS DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/12_LEY-DE-PROTECCION-DE-DATOS-PERSONALES-EN-POSESION-DE-SUJETOS-REF-13-DE-NOV-2017.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY DE RESPONSABILIDADES ADMINISTRATIVAS PARA EL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/13_LEY-DE-RESPONSABILIDADES-ADMINISTRATIVAS-28-DE-JULIO-2020.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY DE TRANSPARENCIA, ACCESO A LA INFORMACIÓN PÚBLICA Y PROTECCIÓN DE DATOS PERSONALES DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/14_LEY-DE-TRANSPARENCIA-ACCESO-A-LA-INFORMACION-PUBLICA-REF-10-DE-AGOSTO-DE-2022.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY DE HACIENDA DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/LEY DE HACIENDA DEL ESTADO DE MICHOACAN DE OCAMPO.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">NUEVA LEY DE HACIENDA DEL ESTADO DE MICHOACAN</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/21_NUEVA-LEY-DE-HACIENDA-DEL-ESTADO-DE-MICHOACAN-DE-OCAMPO-PO-27-de-Diciembre-de-2021.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--BOTON DE REGLAMENTOS-->
+                <div class="mb-4 mx-auto" style="max-width: 900px;">
+                    <button class="btn btn-category w-100 fs-5 fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReglamento" aria-expanded="false" aria-controls="collapseConstitucion">
+                        <span>Reglamentos</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    
+                    <div class="collapse mt-3" id="collapseReglamento">
+                        <div class="card card-body border-0 shadow-sm text-start rounded-4">
+                            <ul class="list-group list-group-flush">
+                                
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">REGLAMENTO INTERIOR DE LA SECRETARÍA DE FINANZAS Y ADMINISTRACIÓN</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Reglamentos/REG_INT-de-la-SFA.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">REGLAMENTO INTERIOR DEL DESPACHO DEL GOBERNADOR</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Reglamentos/REG_INT-del-DG.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--BOTON DE GÉNERO E IGUALDAD-->
+                <div class="mb-4 mx-auto" style="max-width: 900px;">
+                    <button class="btn btn-category w-100 fs-5 fw-bold text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGI" aria-expanded="false" aria-controls="collapseConstitucion">
+                        <span>Género e Igualdad</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    
+                    <div class="collapse mt-3" id="collapseGI">
+                        <div class="card card-body border-0 shadow-sm text-start rounded-4">
+                            <ul class="list-group list-group-flush">
+                                
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">CONVENCIÓN INTERAMERICANA PARA PREVENIR, SANCIONAR Y ERRADICAR LA VIOLENCIA CONTRA LA MUJER
+                                    "CONVENCIÓN DE BELÉM DO PARÁ"</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/GENERO/2-Convencion-Interamericana-para-prevenir-sancionar-y-erradicar-la-violencia-contra-la-mujer.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY POR UNA VIDA LIBRE DE VIOLENCIA PARA LAS MUJERES EN EL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/GENERO/1_Ley-por-una-Vida-Libre-de-Violencia-para-las-Mujeres_04-dic-2020.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY PARA LA IGUALDAD ENTRE MUJERES Y HOMBRES DEL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/16_LEY-PARA-LA-IGUALDAD-ENTRE-MUJERES-Y-HOMBRES-REF-22-DE-AGISTO-DE-2019.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY PARA LA INCLUSIÓN DE LAS PERSONAS CON DISCAPACIDAD EN EL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/17_LEY-PARA-LA-INCLUSION-DE-LAS-PERSONAS-CON-DISCAPACIDAD-REF-31-DE-AGOSTO-DE-2022.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY PARA PREVENIR, ATENDER Y ERRADICAR LA TRATA DE PERSONAS Y PARA LA PROTECCIÓN Y ASISTENCIA DE LAS VÍCTIMAS EN EL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/18_LEY-PARA-PREVENIR-ATENDER-Y-ERRADICAR-LA-TRATA-DE-PERSONAS-Y-PARA-LA-PROTECCION-Y-ASISTENCIA-DE-LAS-VICTIMAS-REF-28-AGOSTO-2019.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY PARA PREVENIR Y ELIMINAR LA DISCRIMINACIÓN Y LA VIOLENCIA EN EL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/19_LEY-PARA-PREVENIR-Y-ELIMINAR-LA-DISCRIMINACION-Y-LA-VIOLENCIA-REF-31-DE-AGOSTO-DE-2022.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY PARA PREVENIR Y ELIMINAR LA DISCRIMINACIÓN Y LA VIOLENCIA EN EL ESTADO DE MICHOACÁN DE OCAMPO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/Leyes/20_Ley-por-una-Vida-Libre-de-Violencia-para-las-Mujeres_04-dic-2020.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">PROTOCOLO PARA PREVENIR Y ATENDER LA DISCRIMINACIÓN, VIOLENCIA, ACOSO Y HOSTIGAMIENTO SEXUAL, POR RAZONES DE GÉNERO, EN LA ADMINISTRACIÓN PÚBLICA DEL GOBIERNO DE MICHOACÁN</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/Protocolo.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">PROTOCOLO VIOLENCIA LABORAL</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/CCLMichoacan/ProtocoloV.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">01 NOM 025 EN IGUALDAD LABORAL Y NO DISCRIMINACIÓN</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/NACIONAL/01 NOM 025 EN IGUALDAD LABORAL Y NO DISCRIMINACION.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">02 NOM 035 FACTORES DE RIESGO PSICOSOCIAL EN EL TRABAJO</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/NACIONAL/02 NOM 035 FACTORES DE RIESGO PSICOSOCIAL EN EL TRABAJO.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center doc-list-item">
+                                    <div class="d-flex align-items-center pe-3">
+                                        <i class="bi bi-file-earmark-pdf-fill doc-icon me-3"></i>
+                                        <span class="mayusculas">LEY FEDERAL PARA PREVENIR Y ELIMINAR LA DISCRIMINACIÓN</span>
+                                    </div>
+                                    <a href="documentos/Normatividad/NACIONAL/LFPED.pdf" target="_blank" class="btn btn-sm btn-outline-secondary text-nowrap rounded-pill btn-consultar">
+                                        <i class="bi bi-eye me-1"></i> Consultar
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+           
+            
+            
+        
+        </div>
+            
+
+    <br><br>
+   
+
+<!-- Footer -->
+    <footer class="footer-site">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <img src="imagenes/logo-ccl-michoacan.png" alt="Logo Michoacán" class="img-footer-main">
+                    </div>
+
+                    <div class="footer-section">
+                        <div class="footer-socials">
+                            <a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="social-icon" target="_blank"><img src="imagenes/footer/FB1.png" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/cclmichoacan/" class="social-icon" target="_blank"><img src="imagenes/footer/IG1.png" alt="Instagram"></a>
+                            <a href="https://x.com/cclmichoacan?s=21" target="_blank" class="social-icon"><img src="imagenes/footer/X1.png" alt="X"></a>
+                            <a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" target="_blank" class="social-icon"><img src="imagenes/footer/TK1.png" alt="TikTok"></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <img src="imagenes/logo-michoacan-es-mejor2.png" alt="Logo CCL" class="img-footer-ccl">
+                    </div> 
+                </div>
+
+                <div class="footer-info">
+                    <div class="footer-bottom">
+                        © Desarrollado por CCL Michoacán | Gobierno del Estado de Michoacán 2026
+                    </div>
+                    <div class="footer-privacy"> 
+                        <a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank">Aviso de privacidad</a> 
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <div class="snackbars" id="form-output-global"></div>
+
+	<!-- Javascript-->
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="js/core.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/carrusel.js"></script>
+</body>
+</html>
