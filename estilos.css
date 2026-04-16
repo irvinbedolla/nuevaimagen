@@ -1,0 +1,190 @@
+body { padding-top: 110px; font-family: 'Gibson', sans-serif; }
+
+        /* Navbar conforme a lineamiento (Altura y Borde) */
+        .main-nav { 
+            border-bottom: 5px solid #911A3A !important; 
+            background-color: #ffffff !important;
+            padding: 0.5rem 1rem;
+        }
+        .nav-link { 
+            color: var(--guinda) !important; 
+            font-size: 1.2rem;
+            padding: 0 10px !important;
+        }
+        
+        .logo-dependencia { height: 65px; width: auto; }
+        .logo-gobierno { height: 85px; width: auto; margin-left: 15px; }
+
+        /* Botón Login - Usando el color Guinda oficial */
+        /*.btn-login-ccl { 
+            background-color: var(--guinda); 
+            color: white !important;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 8px 20px;
+            font-size: 0.9rem;
+        }
+        .btn-login-ccl:hover { background-color: #7a1531; }
+
+        /* Redes sociales en el menú */
+        /*.nav-social .nav-link { 
+            color: var(--guinda) !important; 
+            font-size: 1.2rem;
+            padding: 0 10px !important;
+        }*/
+
+        /* Contenedor Carrusel para que no se traslape */
+        .contenedor-carrusel { width: 100%; position: relative; z-index: 1; }
+
+/* --- SECCIÓN DE TRÁMITES Y SERVICIOS (ESTILO CDN) --- */
+.grid-moderno {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; /* Espaciado entre cuadros */
+        padding: 40px 0;
+    }
+
+    /* Estabilización de la Caja (Basado en tu medida de 210x230) */
+    .tramites-box {
+        width: 210px;
+        height: 230px;
+        background-color: #ffffff;
+        border: 1px solid #e9ecef;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        text-align: center;
+        text-decoration: none !important;
+    }
+
+    /* Efecto Hover: Borde Dorado y Elevación */
+    .tramites-box:hover {
+        border-color: var(--dorado) !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        transform: translateY(-5px);
+    }
+
+    /* Títulos (H3) */
+    .tramites-box h3 {
+        color: var(--guinda);
+        font-size: 1rem; /* Ajustado para textos largos como "Código de conducta" */
+        font-weight: bold;
+        margin-top: 15px;
+        transition: 0.3s;
+        line-height: 1.2;
+    }
+
+    /* Efecto del Icono (El salto hacia arriba) */
+    .tramites-box span {
+        display: inline-block;
+        transition: transform 0.4s ease;
+        color: var(--guinda);
+    }
+
+    .tramites-box span i {
+        font-size: 3rem; /* Tamaño del icono */
+    }
+
+    /* Animación del icono al pasar el mouse */
+    .tramites-box:hover span {
+        transform: translateY(-15px);
+        color: var(--dorado);
+    }
+
+    /* Limpieza de enlaces */
+    .bloque-link {
+        text-decoration: none !important;
+    }
+
+    .main-nav .navbar-nav .nav-item .btn-login-custom, 
+    .main-nav .navbar-nav .nav-item .btn-login-custom b,
+    .main-nav .navbar-nav .nav-item .btn-login-custom:hover, 
+    .main-nav .navbar-nav .nav-item .btn-login-custom:hover b {
+        color: #ffffff !important; 
+        text-decoration: none !important;
+    }
+
+    .btn-login-custom {
+        background-color: #911A3A !important; /* Guinda */
+        border-radius: 6px !important;
+        padding: 8px 20px !important;
+        border: none !important;
+        transition: background-color 0.3s ease !important;
+        display: inline-block;
+        margin-top: 5px; /* Ajuste visual */
+    }
+
+    .btn-login-custom:hover {
+        background-color: #496163 !important; /* Verde Azulado */
+    }
+
+    .main-nav .navbar-nav .nav-link:not(.btn-login-custom) b {
+        color: #911A3A;
+        transition: color 0.3s ease;
+    }
+
+    .main-nav .navbar-nav .nav-link:not(.btn-login-custom):hover b {
+        color: #496163;
+    }
+
+    /* --- ESTILOS PARA BOTONES DESPLEGABLES DE NORMATIVIDAD --- */
+    .btn-category {
+        background-color: #911A3A; /* Guinda institucional */
+        color: #ffffff;
+        padding: 15px 30px;
+        border-radius: 50px; /* Bordes completamente redondeados */
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn-category:hover, .btn-category:focus {
+        background-color: #ffffff;
+        color: #911A3A;
+        border-color: #911A3A;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Icono de flecha en el botón que gira al abrir */
+    .btn-category .bi-chevron-down {
+        transition: transform 0.3s ease;
+    }
+    .btn-category[aria-expanded="true"] .bi-chevron-down {
+        transform: rotate(180deg);
+    }
+
+    .doc-list-item {
+        border: none;
+        border-bottom: 1px solid #e9ecef;
+        padding: 15px 10px;
+        transition: background-color 0.2s;
+    }
+
+    .doc-list-item:hover {
+        background-color: #f8f9fa;
+    }
+
+    .doc-icon {
+        font-size: 1.8rem;
+        color: #911A3A; /* Guinda para el icono de PDF */
+    }
+
+    .btn-consultar {
+        color: #496163; /* Verde Azulado */
+        border-color: #496163;
+        transition: all 0.3s ease;
+    }
+
+    .btn-consultar:hover {
+        background-color: #496163;
+        color: #ffffff;
+    }
