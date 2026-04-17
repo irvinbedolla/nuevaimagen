@@ -1,0 +1,184 @@
+    /* --- SECCIÓN DE NOTICIAS (FORMATO HORIZONTAL) --- */
+
+    /* Ajustamos el contenedor principal para que las tarjetas se apilen en lista */
+    .grid-moderno-lista {
+        display: flex;
+        flex-direction: column; /* Apila las tarjetas de noticias hacia abajo */
+        align-items: center;
+        gap: 20px;
+        padding: 40px 0;
+    }
+    .noticias-box {
+        width: 100%; /* Toma el 100% del espacio disponible */
+        max-width: 2000px; /* Pero nunca crece más de 1200px para no verse estirado en pantallas gigantes */
+        height: auto; /* Permite que la caja crezca hacia abajo si el texto es muy largo */
+        min-height: 250px; /* Mantiene una altura decente base */
+        
+        background-color: #ffffff;
+        border: 1px solid #e9ecef;
+        border-radius: 10px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        
+        display: flex;
+        flex-direction: row; 
+        align-items: center; 
+        text-align: left;
+        box-sizing: border-box;
+    }
+    .bloque-link {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        max-width: 2000px;
+    }
+
+    .noticias-box:hover {
+        border-color: #D4AF37; /* Dorado */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        transform: translateY(-5px);
+    }
+
+    .noticia-img {
+        width: 200px; /* Imagen cuadrada como en tu boceto */
+        height: 200px;
+        object-fit: cover;
+        margin: 20px; /* Esto la separa de los bordes dando el efecto de tu imagen */
+        border-radius: 10px; /* Esquinas redondeadas para la pura imagen */
+        flex-shrink: 0; /* Evita que la imagen se aplaste si el texto es muy largo */
+    }
+
+    .noticia-contenido {
+        padding: 20px 20px 20px 0; /* Quitamos el padding izquierdo porque la imagen ya tiene margen */
+        flex: 1; /* Hace que el contenedor de texto ocupe todo el espacio sobrante a la derecha */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .noticia-titulo {
+        color: #911A3A; /* Guinda institucional */
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0 0 5px 0;
+        line-height: 1.2;
+    }
+
+    .noticia-fecha {
+        color: #496163; /* Verde Azulado */
+        font-size: 0.9rem;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .noticia-balazo {
+        color: #555555;
+        font-size: 1.1rem;
+        margin: 0;
+        line-height: 1.4;
+        font-weight: bold; /* Añadí negrita para igualar tu boceto */
+    }
+
+        /* 
+    CONTENEDOR PRINCIPAL (Posicionamiento)
+     */
+    .grid-galeria-estilizada {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr; /* Columna izquierda más grande */
+        grid-template-rows: 1fr 1fr;      /* Dos filas iguales */
+        gap: 25px;                        /* Espacio entre las tarjetas */
+        max-width: 1000px;
+        height: 550px;
+        margin: 40px auto;                /* Centra el bloque en la página */
+    }
+
+    /* 
+    TARJETAS Y ESTILO VISUAL
+     */
+    .galeria-item {
+        position: relative;
+        display: block;
+        border-radius: 16px; /* Bordes bien redondeados */
+        overflow: hidden;
+        text-decoration: none;
+        /* Sombras y transición suave para el estado normal */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    /* Efecto al pasar el mouse sobre toda la tarjeta */
+    .galeria-item:hover {
+        transform: translateY(-8px); /* Salta un poco hacia arriba */
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Sombra más profunda */
+        border-color: #D4AF37;
+    }
+
+    /* 
+    POSICIÓN DE LA IMAGEN GRANDE
+     */
+    .principal {
+        grid-column: 1 / 2; /* Primera columna */
+        grid-row: 1 / 3;    /* Abarca de la fila 1 a la 3 (ocupa todo lo alto) */
+    }
+
+    /* 
+    MANEJO DE LAS IMÁGENES (Con efecto Zoom)
+     */
+    .img-contenedor {
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* Necesario para que el zoom no se salga del borde */
+    }
+
+    .img-contenedor img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease; /* Transición para el zoom */
+    }
+
+    /* Al hacer hover en la tarjeta, la imagen hace un ligero zoom in */
+    .galeria-item:hover img {
+        transform: scale(1.08);
+    }
+
+    /* 
+    ETIQUETA DE FECHA (Estilo de tu boceto)  */
+    .fecha-badge {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #911A3A; /* El Guinda institucional de tu CSS */
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding: 12px 30px;
+        border-top-right-radius: 20px; /* Esquina superior derecha redondeada */
+        z-index: 2;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Cambio de color en la fecha al pasar el mouse (opcional) */
+    .galeria-item:hover .fecha-badge {
+        background-color: #496163; /* Cambia a tu Verde Azulado para dar feedback interactivo */
+    }
+
+    /* 
+    RESPONSIVIDAD (Para teléfonos)
+     */
+    @media (max-width: 768px) {
+        .grid-galeria-estilizada {
+            grid-template-columns: 1fr; /* Todo en 1 sola columna */
+            grid-template-rows: auto;
+            height: auto;
+        }
+        .principal {
+            grid-column: 1;
+            grid-row: auto;
+            height: 350px; /* Le damos una altura fija en celulares */
+        }
+        .galeria-item {
+            height: 250px; /* Altura para las pequeñas en celulares */
+        }
+    }
+
+    

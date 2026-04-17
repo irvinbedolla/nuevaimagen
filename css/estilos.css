@@ -37,7 +37,7 @@ body { padding-top: 110px; font-family: 'Gibson', sans-serif; }
         .contenedor-carrusel { width: 100%; position: relative; z-index: 1; }
 
 /* --- SECCIÓN DE TRÁMITES Y SERVICIOS (ESTILO CDN) --- */
-.grid-moderno {
+    .grid-moderno {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -96,6 +96,7 @@ body { padding-top: 110px; font-family: 'Gibson', sans-serif; }
         color: var(--dorado);
     }
 
+    
     /* Limpieza de enlaces */
     .bloque-link {
         text-decoration: none !important;

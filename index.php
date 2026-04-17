@@ -23,7 +23,8 @@
     <link href="assets/estilos/eslitos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/noticias.css">
 </head>
 <body>
 
@@ -52,7 +53,7 @@
                         <a class="nav-link" href="Sedes.html"><b>SEDES</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#noticias"><b>NOTICIAS</b></a>
+                        <a class="nav-link" href="Noticias.html"><b>NOTICIAS</b></a>
                     </li>
                         
                     <li class="nav-item dropdown">
@@ -216,13 +217,39 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 mr-auto">
-                    <h2 class="textoGuinda aos-init aos-animate" data-aos="zoom-in-up" data-aos-delay="100" style="margin-bottom: 0 !important; color: #911A3A;">Noticias</h2>
+                    <a class="textoGuinda aos-init aos-animate" data-aos="zoom-in-up" data-aos-delay="100"style="font-size: 36px; margin-bottom: 0 !important;text-decoration:none;color: #911A3A;" href="Noticias.html"><b>Noticias</b></a>
                 </div>
+
+               
                 <div class="col-lg-7"></div>
                 <div class="col-12"><hr></div>
             </div>
+            <div class="grid-galeria-estilizada">
+    
+                <a href="noticias/noticia1.html" class="galeria-item principal">
+                    <div class="img-contenedor">
+                        <img src="imagenes/quienes_somos.jpeg" alt="Noticia Principal">
+                    </div>
+                    <div class="fecha-badge">16 de abril</div>
+                </a>
 
-            <div class="gridNoticias">
+                <a href="noticias/noticia-2.html" class="galeria-item">
+                    <div class="img-contenedor">
+                        <img src="ruta/a/tu-imagen-2.jpg" alt="Noticia Secundaria 1">
+                    </div>
+                    <div class="fecha-badge">15 de abril</div>
+                </a>
+
+                <a href="noticias/noticia-3.html" class="galeria-item">
+                    <div class="img-contenedor">
+                        <img src="ruta/a/tu-imagen-3.jpg" alt="Noticia Secundaria 2">
+                    </div>
+                    <div class="fecha-badge">14 de abril</div>
+                </a>
+
+            </div>
+
+            <!--div class="gridNoticias">
                     <a href="https://michoacan.gob.mx/noticias/en-su-recta-final-supervisa-bedolla-ultimos-detalles-del-puente-la-hielera-en-uruapan/" data-aos="zoom-in-up" data-aos-delay="100" class="noticias noticias1 aos-init aos-animate" style="background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0) 20%), url('https://michoacan.gob.mx/images/michog.jpg'); background-size: cover; background-position: center;">
                         <div class="textos">
                             <p>24 marzo, 2026</p>
@@ -241,14 +268,10 @@
                             <h5>Primeros viajes en el teleférico de Uruapan serán gratis: Gladyz Butanda</h5>
                         </div>
                     </a>
-            </div><!-- gridNoticias -->
+            </div-->
 
-            <div class="col-12">
-                <hr>
-            </div>
-            <div class="col-12 text-end">
-                <a class="textoGuinda" href="categoria/noticias/">Ver todas las noticias</a>
-            </div>
+            
+            
         </div>
     </section>
     <hr class="featurette-divider">
