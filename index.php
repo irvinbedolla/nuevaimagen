@@ -225,12 +225,17 @@
                 <div class="col-12"><hr></div>
             </div>
             <div class="grid-galeria-estilizada">
-    
-                <a href="noticias/noticia1.html" class="galeria-item principal">
+                <!--Base para las tres noticias mas recientes-->
+                <a href="https://michoacan.gob.mx/noticias/en-su-recta-final-supervisa-bedolla-ultimos-detalles-del-puente-la-hielera-en-uruapan/" class="galeria-item principal">
                     <div class="img-contenedor">
                         <img src="imagenes/quienes_somos.jpeg" alt="Noticia Principal">
                     </div>
-                    <div class="fecha-badge">16 de abril</div>
+                    <div class="fecha-badge">16 abril, 2026</div>
+                    <div class="capa-oscura"></div>
+                    <div class="info-noticia">
+                        
+                        <h3 class="titulo-noticia">Atiende Gobierno de Michoacán incendio forestal en Salvador Escalante</h3>
+                    </div>
                 </a>
 
                 <a href="noticias/noticia-2.html" class="galeria-item">
@@ -238,6 +243,11 @@
                         <img src="ruta/a/tu-imagen-2.jpg" alt="Noticia Secundaria 1">
                     </div>
                     <div class="fecha-badge">15 de abril</div>
+                    <div class="capa-oscura"></div>
+                    <div class="info-noticia">
+                        
+                        <h3 class="titulo-noticia">Titulo de la segunda noticia</h3>
+                    </div>
                 </a>
 
                 <a href="noticias/noticia-3.html" class="galeria-item">
@@ -245,6 +255,11 @@
                         <img src="ruta/a/tu-imagen-3.jpg" alt="Noticia Secundaria 2">
                     </div>
                     <div class="fecha-badge">14 de abril</div>
+                    <div class="capa-oscura"></div>
+                    <div class="info-noticia">
+                        
+                        <h3 class="titulo-noticia">Titulo de la tercera noticia</h3>
+                    </div>
                 </a>
 
             </div>
