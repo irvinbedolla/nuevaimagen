@@ -32,7 +32,7 @@
     <nav class="navbar main-nav fixed-top navbar-expand-lg shadow-sm">
         <div class="container-fluid">
             <div class="d-flex align-items-center">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <img src="imagenes/logo-ccl-michoacan.png" class="logo-dependencia" alt="Logo CCL">
                 </a>
                 <a class="navbar-brand border-start ps-3 d-none d-md-block" href="https://michoacan.gob.mx">
@@ -47,7 +47,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link active" href="NUEVA.php"><b>INICIO</b></a>
+                        <a class="nav-link active" href="index.php"><b>INICIO</b></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Sedes.html"><b>SEDES</b></a>
@@ -226,39 +226,39 @@
             </div>
             <div class="grid-galeria-estilizada">
                 <!--Base para las tres noticias mas recientes-->
-                <a href="https://michoacan.gob.mx/noticias/en-su-recta-final-supervisa-bedolla-ultimos-detalles-del-puente-la-hielera-en-uruapan/" class="galeria-item principal">
+                <a href="noticias\comunicadoCCL009-2026.html" class="galeria-item principal">
                     <div class="img-contenedor">
-                        <img src="imagenes/quienes_somos.jpeg" alt="Noticia Principal">
+                        <img src="imagenes/noticias/comunicadoCCL009-2026-1.jpeg" alt="Noticia Principal">
                     </div>
-                    <div class="fecha-badge">16 abril, 2026</div>
+                    <div class="fecha-badge">14 marzo, 2026</div>
                     <div class="capa-oscura"></div>
                     <div class="info-noticia">
                         
-                        <h3 class="titulo-noticia">Atiende Gobierno de Michoacán incendio forestal en Salvador Escalante</h3>
+                        <h3 class="titulo-noticia">Destaca CCL efectividad del Mecanismo Laboral de Respuesta Rápida en Michoacán</h3>
                     </div>
                 </a>
 
-                <a href="noticias/noticia-2.html" class="galeria-item">
+                <a href="noticias\comunicadoCCL008-2026.html" class="galeria-item">
                     <div class="img-contenedor">
-                        <img src="ruta/a/tu-imagen-2.jpg" alt="Noticia Secundaria 1">
+                        <img src="imagenes/noticias/comunicadoCCL008-2026-1.jpeg" alt="Noticia Secundaria 1">
                     </div>
-                    <div class="fecha-badge">15 de abril</div>
+                    <div class="fecha-badge">13 marzo, 2026</div>
                     <div class="capa-oscura"></div>
                     <div class="info-noticia">
                         
-                        <h3 class="titulo-noticia">Titulo de la segunda noticia</h3>
+                        <h3 class="titulo-noticia">Michoacán encabeza reunión de los Centros de Conciliación Laboral del país</h3>
                     </div>
                 </a>
 
-                <a href="noticias/noticia-3.html" class="galeria-item">
+                <a href="noticias\comunicadoCCL007-2026.html" class="galeria-item">
                     <div class="img-contenedor">
-                        <img src="ruta/a/tu-imagen-3.jpg" alt="Noticia Secundaria 2">
+                        <img src="imagenes/noticias/comunicadoCCL007-2026-1.jpeg" alt="Noticia Secundaria 2">
                     </div>
-                    <div class="fecha-badge">14 de abril</div>
+                    <div class="fecha-badge">6 marzo, 2026</div>
                     <div class="capa-oscura"></div>
                     <div class="info-noticia">
                         
-                        <h3 class="titulo-noticia">Titulo de la tercera noticia</h3>
+                        <h3 class="titulo-noticia">Morelia será sede del Foro Nacional por la Consolidación de la Justicia Laboral</h3>
                     </div>
                 </a>
 
@@ -370,7 +370,7 @@
 <script src="https://www.michoacan.gob.mx/cdn/js/jquery-3.6.0.min.js"></script>
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script>
+<script> 
     $(document).ready(function(){
         $("#sliderPrincipal").owlCarousel({
             items: 1,

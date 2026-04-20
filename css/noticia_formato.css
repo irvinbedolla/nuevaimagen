@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Gibson';
+    src: url('https://michoacan.gob.mx/cdn/fonts/gibson-regular-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Configuración General */
+body.pagina-noticia {
+    font-family: 'Gibson', sans-serif;
+    background-color: #911A3A; /* El color guinda solicitado */
+    color: #ffffff; /* Letra blanca */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.contenedor-articulo {
+    max-width: 1500px; /* Ancho similar al de las capturas */
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: left;
+    
+}
+
+/* Imagen Destacada */
+.imagen-destacada img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Título de la noticia */
+.titulo {
+    font-family: 'Gibson', sans-serif;
+    font-size: 2.5rem; /* Tamaño prominente */
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* El "Balazo" (Subtítulo/Resumen) */
+.balazo {
+    font-family: 'Gibson', sans-serif;
+    font-size: 1.2rem;
+    font-style: normal; /* Cambiado de itálica para mejor lectura en blanco */
+    margin-bottom: 25px;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea sutil divisoria */
+    padding-bottom: 15px;
+}
+
+/* Lugar y Fecha */
+.meta-datos {
+    font-family: 'Gibson', sans-serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-transform: none;
+}
+
+/* Cuerpo de texto */
+.contenido-texto p {
+    font-family: 'Gibson', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify; /* Estilo periodístico */
+    color: #ffffff;
+}
+
+/* Galería de fotos (inferior) */
+.galeria-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.galeria-fotos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* Estilo para los enlaces dentro del texto de la noticia */
+body.pagina-noticia .contenedor-articulo .cuerpo-noticia a {
+    color: #D4AF37 !important; /* El color rosa/magenta que solicitaste */
+    text-decoration: none; /* Quitamos el subrayado por defecto */
+    font-weight: bold; /* Los hacemos negritas para que resalten más */
+    transition: all 0.3s ease; /* Animación suave */
+}
+
+/* Efecto al pasar el cursor sobre el enlace */
+body.pagina-noticia .contenedor-articulo .cuerpo-noticia a:hover {
+    color: #ffffff !important; /* Cambia a blanco al pasar el mouse */
+    text-decoration: underline; /* Aparece una línea debajo */
+}

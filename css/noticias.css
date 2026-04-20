@@ -1,3 +1,9 @@
+    @font-face {
+    font-family: 'Gibson';
+    src: url('https://michoacan.gob.mx/cdn/fonts/gibson-regular-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
     /* --- SECCIÓN DE NOTICIAS (FORMATO HORIZONTAL) --- */
 
     /* Ajustamos el contenedor principal para que las tarjetas se apilen en lista */
@@ -48,6 +54,7 @@
     }
 
     .noticia-contenido {
+        font-family: 'Gibson', sans-serif;
         padding: 20px 20px 20px 0; /* Quitamos el padding izquierdo porque la imagen ya tiene margen */
         flex: 1; /* Hace que el contenedor de texto ocupe todo el espacio sobrante a la derecha */
         display: flex;
@@ -56,6 +63,7 @@
     }
 
     .noticia-titulo {
+        font-family: 'Gibson', sans-serif;
         color: #911A3A; /* Guinda institucional */
         font-size: 2rem;
         font-weight: bold;
@@ -64,6 +72,7 @@
     }
 
     .noticia-fecha {
+        font-family: 'Gibson', sans-serif;
         color: #496163; /* Verde Azulado */
         font-size: 0.9rem;
         display: block;
@@ -71,6 +80,7 @@
     }
 
     .noticia-balazo {
+        font-family: 'Gibson', sans-serif;
         color: #555555;
         font-size: 1.1rem;
         margin: 0;
@@ -101,14 +111,15 @@
         overflow: hidden;
         text-decoration: none;
         /* Sombras y transición suave para el estado normal */
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        box-shadow: 0 4px 15px rgba(145,26,58,0.08);
         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        width: 600px;
     }
 
     /* Efecto al pasar el mouse sobre toda la tarjeta */
     .galeria-item:hover {
         transform: translateY(-8px); /* Salta un poco hacia arriba */
-        box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Sombra más profunda */
+        box-shadow: 0 15px 35px rgba(145,26,58,0.8); /* Sombra más profunda */
         border-color: #D4AF37;
     }
 
@@ -144,6 +155,7 @@
     /* 
     ETIQUETA DE FECHA (Estilo de tu boceto)  */
     .fecha-badge {
+        font-family: 'Gibson', sans-serif;
         position: absolute;
         top: 0;                /* Cambia de bottom a top */
         right: 0;
@@ -203,6 +215,7 @@
     }
 
     .titulo-noticia {
+        font-family: 'Gibson', sans-serif;
         color: #ffffff;
         font-size: 1.1rem;
         font-weight: 600;
