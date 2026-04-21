@@ -16,7 +16,7 @@ body.pagina-noticia {
 }
 
 .contenedor-articulo {
-    max-width: 1500px; /* Ancho similar al de las capturas */
+    max-width: 1500px; 
     margin: 0 auto;
     padding: 60px 20px;
     text-align: left;
@@ -47,10 +47,10 @@ body.pagina-noticia {
 .balazo {
     font-family: 'Gibson', sans-serif;
     font-size: 1.2rem;
-    font-style: normal; /* Cambiado de itálica para mejor lectura en blanco */
+    font-style: normal; 
     margin-bottom: 25px;
     display: block;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Línea sutil divisoria */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
     padding-bottom: 15px;
 }
 
@@ -88,9 +88,9 @@ body.pagina-noticia {
 }
 /* Estilo para los enlaces dentro del texto de la noticia */
 body.pagina-noticia .contenedor-articulo .cuerpo-noticia a {
-    color: #D4AF37 !important; /* El color rosa/magenta que solicitaste */
-    text-decoration: none; /* Quitamos el subrayado por defecto */
-    font-weight: bold; /* Los hacemos negritas para que resalten más */
+    color: #D4AF37 !important; 
+    text-decoration: none; 
+    font-weight: bold; 
     transition: all 0.3s ease; /* Animación suave */
 }
 

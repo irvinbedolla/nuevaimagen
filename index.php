@@ -313,7 +313,7 @@
                 <span><i class="bi bi-person-check"></i></span>
             </a>
 
-            <a href="https://cclmichoacan.gob.mx/Junta.html" class="tramites-box">
+            <a href="Junta.html" class="tramites-box">
                 <h2>Junta de gobierno</h2>
                 <span><i class="bi bi-building-check"></i></span>               
             </a>
