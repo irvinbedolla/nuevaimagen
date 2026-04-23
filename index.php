@@ -328,7 +328,7 @@
                 <span><i class="bi bi-bar-chart-line"></i></span>                
             </a>
 
-            <a href="https://cclmichoacan.gob.mx/Transparencia.html" class="tramites-box">
+            <a href="Transparencia.html" class="tramites-box">
                 <h2>Transparencia</h2>
                 <span><i class="bi bi-eye"></i></span>
             </a>

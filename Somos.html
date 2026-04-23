@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" />
+    <title>Nuestra Identidad | Centro de Conciliación Laboral | Michoacán</title>
+    
+    <meta property="og:title" content="Nuestra Identidad | Centro de Conciliación Laboral | Michoacán" />
+    <meta property="og:image" content="https://michoacan.gob.mx/cdn/img/michog.jpg"/>
+    <meta property="og:description" content="Nuestra Identidad, Misión y Visión del Centro de Conciliación Laboral del Estado de Michoacán" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link href="assets/estilos/eslitos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <style>
+        /* Variables de color institucionales */
+        :root {
+            --guinda: #911A3A;
+            --guinda-oscuro: #6A0F49;   
+            --gris-claro: #D2D3D5;
+        }
+
+        body { 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh; 
+            background-color: #ffffff; /* Fondo blanco limpio como en la referencia */
+            padding-top: 85px; 
+        }
+        
+        main { flex: 1; }
+        
+        /* Estilos del Banner de Título */
+        .banner-titulo {
+            background-color: var(--guinda);
+            padding: calc(3.5rem + 85px) 0 3.5rem;
+            margin-top: -85px;
+            text-align: center;
+        }
+
+        .banner-titulo h1 {
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 3.2rem;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+        
+        /* Estilos de las Tarjetas de Misión, Visión, Objetivo */
+        .identity-card {
+            border: 1px solid #eaeaea; /* Borde muy sutil para delimitar en fondo blanco */
+            border-radius: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #ffffff;
+            border-top: 5px solid var(--guinda-oscuro);
+        }
+        .identity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+        }
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -40px auto 20px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border: 3px solid white;
+        }
+        .icon-container i {
+            font-size: 2.5rem;
+            color: var(--guinda-oscuro);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar main-nav fixed-top navbar-expand-lg shadow-sm" style="background-color: #D2D3D5; min-height: 85px;">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="index.php">
+                    <img src="imagenes/logo-ccl-michoacan.png" class="logo-dependencia" alt="Logo CCL" width="200">
+                </a>
+                <a class="navbar-brand border-start ps-3 d-none d-md-block" href="https://michoacan.gob.mx">
+                    <img src="https://michoacan.gob.mx/cdn/img/logo.svg" class="logo-gobierno" alt="Logo Gobierno" width="150">
+                </a>
+            </div>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.php" style="color: #6A0F49;"><b>INICIO</b></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Somos.html" style="color: #6A0F49;"><b>ACERCA DE</b></a></li>
+                    <li class="nav-item"><a class="nav-link" href="Sedes.html" style="color: #6A0F49;"><b>SEDES</b></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #6A0F49;">
+                            <b>EVENTOS</b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" style="color: #6A0F49; font-weight: bold;" target="_blank" href="https://foro-nacional.cclmichoacan.gob.mx/">Foro Nacional</a></li>
+                            <li><a class="dropdown-item" style="color: #6A0F49; font-weight: bold;" target="_blank" href="https://cclmichoacan.gob.mx/tercer_encuentro/">3° Encuentro Internacional</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn ms-lg-2 px-4" href="https://siconcilio.cclmichoacan.gob.mx/login" style="background-color: #6A0F49; color: #ffffff !important; border-radius: 20px;"><b>SI CONCILIO</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container-fluid banner-titulo">
+    <h1>Nuestra Identidad</h1>
+</div>
+
+<main class="container my-5 pt-3 mb-5">
+    
+    <div class="text-center mb-5">
+        <div class="mx-auto text-muted text-justify" style="max-width: 900px; line-height: 1.8; font-size: 1.1rem;">
+            <p>
+                El Centro de Conciliación Laboral del Estado de Michoacán de Ocampo es un organismo descentralizado de la Administración Pública Estatal, especializado e imparcial, con personalidad jurídica y patrimonio propio, dotado de plena autonomía técnica, operativa, presupuestaria, de decisión y de gestión, de conformidad con el artículo 148 párrafo tercero, cuarto y quinto de la Constitución Política del Estado Libre y Soberano de Michoacán de Ocampo, sectorizado a la Secretaría responsable del sector laboral en la entidad.
+            </p>
+            <p>
+                Iniciamos funciones el <strong>03 de octubre del año 2022</strong>, en la tercera etapa de implementación del Nuevo Sistema de Justicia Laboral.
+            </p>
+            <p>
+                Con el inicio de la tercera etapa, las Juntas Locales de Conciliación y Arbitraje dejaron de conocer de los conflictos laborales, para dar paso a que el Centro de Conciliación conozca de la etapa prejudicial atendiendo el tema de la conciliación y posteriormente por Juzgados Laborales en etapa de Juicio.
+            </p>
+        </div>
+    </div>
+
+    <div class="row g-4 mt-4 pt-4">
+        
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 identity-card mt-4">
+                <div class="icon-container">
+                    <i class="bi bi-bullseye"></i>
+                </div>
+                <div class="card-body text-center px-4 pb-4">
+                    <h4 class="card-title mb-3" style="color: var(--guinda-oscuro); font-weight: bold;">MISIÓN</h4>
+                    <p class="card-text text-muted text-justify" style="font-size: 0.95rem; line-height: 1.6;">
+                        Es Misión del Centro de Conciliación Laboral del Estado de Michoacán de Ocampo, ofrecer la función conciliatoria laboral para la solución de los conflictos entre trabajadores y patrones en asuntos del orden local, con estricto apego a la normativa legal antes de presentar demanda ante los juzgados, ofreciendo a éstos una instancia eficaz y expedita para ello, garantizando en todo momento el respeto a los derechos humanos laborales.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 identity-card mt-4">
+                <div class="icon-container">
+                    <i class="bi bi-eye-fill"></i>
+                </div>
+                <div class="card-body text-center px-4 pb-4">
+                    <h4 class="card-title mb-3" style="color: var(--guinda-oscuro); font-weight: bold;">VISIÓN</h4>
+                    <p class="card-text text-muted text-justify" style="font-size: 0.95rem; line-height: 1.6;">
+                        La Visión del Centro de Conciliación Laboral del Estado de Michoacán de Ocampo, es ser reconocido como una instancia de excelencia que garantice y propicie la conciliación en los conflictos laborales de forma ágil, sencilla y efectiva, aplicando los principios de calidez, humanismo, ética, imparcialidad, flexibilidad, seguridad jurídica, transparencia, eficacia, buena fe y con total respeto a los derechos laborales a fin de contribuir al fortalecimiento de un Estado Social de Derecho.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mx-auto">
+            <div class="card h-100 identity-card mt-4">
+                <div class="icon-container">
+                    <i class="bi bi-check2-circle"></i>
+                </div>
+                <div class="card-body text-center px-4 pb-4">
+                    <h4 class="card-title mb-3" style="color: var(--guinda-oscuro); font-weight: bold;">OBJETIVO</h4>
+                    <p class="card-text text-muted text-justify" style="font-size: 0.95rem; line-height: 1.6;">
+                        Ofrecer y prestar el servicio público y gratuito de conciliación laboral para la solución de los asuntos de competencia local, en una instancia previa al juicio ante los juzgados laborales, procurando el equilibrio entre los trabajadores y empleadores con calidez y calidad en el servicio y con un enfoque humanista, transparente y honesto.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer-site py-4 bg-light border-top mt-auto">
+    <div class="container">
+        <div class="row align-items-center text-center">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <img src="imagenes/logo-ccl-michoacan.png" alt="Logo CCL" height="60">
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="https://www.facebook.com/share/p/5ZkRpPXkcLU5f22B/?mibextid=QwDbR1" target="_blank" class="text-dark fs-4"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/p/DAHE5ccyEuf/?igsh=MTZoOTFzdjJ6MzZ4cg==" target="_blank" class="text-dark fs-4"><i class="bi bi-instagram"></i></a>
+                    <a href="https://x.com/cclmichoacan/status/1836850990471074230?s=46&t=b2fwr9Vcf8iWYVavE8GJgA" target="_blank" class="text-dark fs-4"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="imagenes/logo-michoacan-es-mejor2.png" alt="Logo Michoacán" height="60">
+            </div>
+        </div>
+        <div class="text-center mt-4 text-muted small">
+            © Desarrollado por CCL Michoacán | Gobierno del Estado de Michoacán 2026 | <a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank" class="text-decoration-none" style="color: #6A0F49; font-weight: bold;">Aviso de Privacidad</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
