@@ -29,16 +29,16 @@
         main { flex: 1; }
 
         .nav-pills .nav-link.active {
-            background-color: #6A0F49 !important;
+            background-color: #911A3A !important;
             color: #ffffff !important;
         }
 
         .nav-pills .nav-link:not(.active) {
-            color: #6A0F49 !important;
+            color: #911A3A !important;
         }
 
         .accordion-button:not(.collapsed) {
-            background-color: #6A0F49 !important;
+            background-color: #911A3A !important;
             color: #ffffff !important;
             box-shadow: none !important; 
         }
@@ -71,42 +71,64 @@
 <body>
 
 <header>
-    <nav class="navbar main-nav fixed-top navbar-expand-lg shadow-sm" style="background-color: #D2D3D5;">
-        <div class="container-fluid">
-            <div class="d-flex align-items-center">
-                <a class="navbar-brand" href="index.php">
-                    <img src="imagenes/logo-ccl-michoacan.png" class="logo-dependencia" alt="Logo CCL" width="200">
-                </a>
-                <a class="navbar-brand border-start ps-3 d-none d-md-block" href="https://michoacan.gob.mx">
-                    <img src="https://michoacan.gob.mx/cdn/img/logo.svg" class="logo-gobierno" alt="Logo Gobierno" width="150">
-                </a>
-            </div>
+        <nav class="navbar main-nav fixed-top navbar-expand-lg shadow-sm">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="index.php">
+                        <img src="imagenes/logo-ccl-michoacan.png" class="logo-dependencia" alt="Logo CCL">
+                    </a>
+                    <a class="navbar-brand border-start ps-3 d-none d-md-block" href="https://michoacan.gob.mx">
+                        <img src="https://michoacan.gob.mx/cdn/img/logo.svg" class="logo-gobierno" alt="Logo Gobierno">
+                    </a>
+                </div>
 
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.php" style="color: #6A0F49;"><b>INICIO</b></a></li>
-                    <li class="nav-item"><a class="nav-link" href="Sedes.html" style="color: #6A0F49;"><b>SEDES</b></a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #6A0F49;">
-                            <b>EVENTOS</b>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" style="color: #6A0F49; font-weight: bold;" target="_blank" href="https://foro-nacional.cclmichoacan.gob.mx/">Foro Nacional</a></li>
-                            <li><a class="dropdown-item" style="color: #6A0F49; font-weight: bold;" target="_blank" href="https://cclmichoacan.gob.mx/tercer_encuentro/">3° Encuentro Internacional</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn ms-lg-2 px-3" href="https://siconcilio.cclmichoacan.gob.mx/login" style="background-color: #6A0F49; color: #ffffff !important; border-radius: 20px;"><b>INICIAR SESION</b></a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.php"><b>INICIO</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Sedes.html"><b>SEDES</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Noticias.html"><b>NOTICIAS</b></a>
+                        </li>
+                        
+                            
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <b>EVENTOS</b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" target="_blank" href="https://foro-nacional.cclmichoacan.gob.mx/">Foro Nacional</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/tercer_encuentro/">3° Encuentro Internacional</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl2/index.html">2° Encuentro Nacional</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl/index.html">1° Encuentro Nacional</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item px-lg-3 py-2 py-lg-0 d-flex flex-column align-items-start align-items-lg-center">
+                            <div class="social-icons-container">
+                                <a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="social-icon"><img src="imagenes/footer/FB1.png" alt="FB" ></a>
+                                <a href="https://www.instagram.com/cclmichoacan/" class="social-icon"><img src="imagenes/footer/IG1.png" alt="IG"></a>
+                                <a href="https://x.com/cclmichoacan?s=21" class="social-icon"><img src="imagenes/footer/X1.png" alt="X"></a>
+                                <a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" class="social-icon"><img src="imagenes/footer/TK1.png" alt="TK"></a>
+                                <a href="https://www.youtube.com/@CCLMichoacan" class="social-icon"><img src="imagenes/footer/Y1.png" alt="YouTube"></a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                        
+                                <a class="nav-link btn btn-login-custom ms-lg-2 px-3" href="https://siconcilio.cclmichoacan.gob.mx/login" style="color: #ffffff !important;"><b>INICIAR SESIÓN</b></a>
+                            
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
 <div class="container-fluid banner-titulo">
     <h1>Transparencia</h1>
@@ -117,7 +139,7 @@
         <p class="mt-4 mx-auto text-muted" style="max-width: 900px; text-align: justify;">
             La transparencia y el acceso a la información son elementos indispensables para avanzar en la construcción de una democracia efectiva, a su vez, se han convertido en elementos esenciales para lograr un gobierno responsable y responsivo a las necesidades de la ciudadanía y de una sociedad interesada en participar activamente en los asuntos públicos. La transparencia es el elemento mediante el cual las instituciones públicas dan cuenta de sus acciones. En ese sentido, el Centro de Conciliación Laboral del Estado de México, a través de este espacio documenta sus acciones y procesos de toma de decisión, genera, sistematiza y maneja la información a la luz del escrutinio público como parte de una visión más amplia de construcción de confianza entre el gobierno y la sociedad.
         </p>
-        <a href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/consultaPublica.xhtml?idEntidad=MTY=&idOrgano=MTY=&idSujetoObligado=MzM5Nw==#inicio" target="_blank" class="btn mt-3 shadow-sm mb-5" style="background-color: #6A0F49; color: white; border-radius: 25px; padding: 10px 30px; font-weight: bold;">
+        <a href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/consultaPublica.xhtml?idEntidad=MTY=&idOrgano=MTY=&idSujetoObligado=MzM5Nw==#inicio" target="_blank" class="btn mt-3 shadow-sm mb-5" style="background-color: #911A3A; color: white; border-radius: 25px; padding: 10px 30px; font-weight: bold;">
             <i class="bi bi-search me-2"></i>Plataforma Nacional
         </a>
     </div>
@@ -1133,7 +1155,7 @@
         <div class="row mt-4 border-top pt-3 text-center">
             <div class="col-12 text-muted" style="font-size: 0.9rem;">
                 <p class="mb-1">© Desarrollado por CCL Michoacan | Gobierno del Estado de Michoacan 2026</p>
-                <a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank" class="text-decoration-none" style="color: #6A0F49;">Aviso de privacidad</a>
+                <a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank" class="text-decoration-none" style="color: #911A3A;">Aviso de privacidad</a>
             </div>
         </div>
     </div>
