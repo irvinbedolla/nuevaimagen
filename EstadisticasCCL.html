@@ -628,6 +628,11 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.querySelectorAll('a[download]').forEach(function (link) {
+        link.removeAttribute('download');
+    });
+</script>
 
 </body>
 </html>
