@@ -323,7 +323,7 @@
                 <span><i class="bi bi-people"></i></span>  
             </a>
 
-            <a href="https://cclmichoacan.gob.mx/EstadisticasCCL.html" class="tramites-box">
+            <a href="EstadisticasCCL.html" class="tramites-box">
                 <h2>Estadísticas</h2>
                 <span><i class="bi bi-bar-chart-line"></i></span>                
             </a>
