@@ -318,7 +318,7 @@
                 <span><i class="bi bi-building-check"></i></span>               
             </a>
 
-            <a href="https://cclmichoacan.gob.mx/Comites.html" class="tramites-box">
+            <a href="Comites.html" class="tramites-box">
                 <h2>Comités</h2>
                 <span><i class="bi bi-people"></i></span>  
             </a>
@@ -333,7 +333,7 @@
                 <span><i class="bi bi-eye"></i></span>
             </a>
 
-            <a href="https://cclmichoacan.gob.mx/DirectorioG.html" class="tramites-box">
+            <a href="DirectorioG.html" class="tramites-box">
                 <h2>Directorio General</h2>
                 <span><i class="bi bi-telephone-outbound"></i></span>
             </a>
