@@ -25,13 +25,69 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/noticias.css">
+    <style>
+        .servicios-section {
+            background: linear-gradient(180deg, #f7f4f6 0%, #ffffff 70%);
+            padding: 2.5rem 0 1rem;
+        }
+
+        .servicios-title {
+            font-weight: 800;
+            letter-spacing: 0.4px;
+        }
+
+        .servicio-card {
+            background: #ffffff;
+            border: 1px solid #eee2e8;
+            border-radius: 18px;
+            padding: 1.5rem;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .servicio-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .servicio-icon img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: #ffffff;
+        }
+
+        .btn-servicio {
+            background: #911A3A;
+            color: #ffffff;
+            border: none;
+            width: 100%;
+        }
+
+        .btn-servicio:hover {
+            background: #7d1532;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
 
 <header>
     <nav class="navbar main-nav fixed-top navbar-expand-lg shadow-sm">
         <div class="container-fluid">
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center"> 
                 <a class="navbar-brand" href="index.php">
                     <img src="imagenes/logo-ccl-michoacan.png" class="logo-dependencia" alt="Logo CCL">
                 </a>
@@ -109,58 +165,68 @@
         </div>
     </div>
 
-    <div class="container marketing"><br>
+    <section class="servicios-section">
+        <div class="container marketing">
             <div class="row">
                 <div class="container">
                     <div class="text-center mb-4">
-                        <h2 class="textoGuinda aos-init aos-animate" data-aos="zoom-in-up" data-aos-delay="100" style="margin-bottom: 0 !important; color: #911A3A;">Nuestros<span class="" style="padding-top: 15px !important;color: #6D807F; font-size: .6em;"> servicios</span></h2>
+                        <h2 class="textoGuinda aos-init aos-animate servicios-title" data-aos="zoom-in-up" data-aos-delay="100" style="margin-bottom: 0 !important; color: #911A3A;">Nuestros<span class="" style="padding-top: 15px !important;color: #6D807F; font-size: .6em;"> servicios</span></h2>
                     </div>
                 </div>
                 <div class="col-lg-3 mb-4">
-                    <div class="d-flex flex-column h-100 p-3 shadow-sm rounded text-center">
-                        <img src="imagenes/iconos/icono-solicitud.png" class="mx-auto d-block mb-3" width="140" height="140">
+                    <div class="d-flex flex-column h-100 text-center servicio-card">
+                        <div class="servicio-icon">
+                            <img src="imagenes/iconos/icono-solicitud.png" alt="Solicitud">
+                        </div>
                         <h2 class="h5"><b>Solicitud de Conciliación</b></h2>
-                        <p class="text-muted flex-grow-1">Es un servicio rápido, eficiente que permite a las personas, tanto trabajadoras como empleadoras iniciar su solicitud para conciliar de forma digital.</p>
+                        <p class="text-muted flex-grow-1">Permite a las personas, tanto trabajadoras como empleadoras iniciar su solicitud para conciliar.</p>
                         <div class="mt-auto">
-                            <a class="btn btn-secondary btn-block" style="background-color:#496163;" href="http://localhost/sistema-integral/levantar_solicitud">Generar Solicitud &raquo;</a>
+                            <a class="btn btn-servicio btn-block" href="http://localhost/sistema-integral/levantar_solicitud">Generar Solicitud &raquo;</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-3 mb-4">
-                    <div class="d-flex flex-column h-100 p-3 shadow-sm rounded text-center">
-                        <img src="imagenes/iconos/icono-ratificacion.png" class="mx-auto d-block mb-3" width="140" height="140">
+                    <div class="d-flex flex-column h-100 text-center servicio-card">
+                        <div class="servicio-icon">
+                            <img src="imagenes/iconos/icono-ratificacion.png" alt="Ratificacion">
+                        </div>
                         <h2 class="h5"><b>Solicitud de Ratificación</b></h2>
-                        <p class="text-muted flex-grow-1">Es un servicio que permite a las partes, que terminan su relación laboral, acudir con previa cita ante el Centro de Conciliación Laboral a ratificar su acuerdo.</p>
+                        <p class="text-muted flex-grow-1">Acudir con previa cita ante el Centro de Conciliación Laboral a ratificar su acuerdo.</p>
                         <div class="mt-auto">
-                            <a class="btn btn-secondary btn-block text-white" href="https://siconcilio.cclmichoacan.gob.mx/citas">Generar Cita &raquo;</a>
+                            <a class="btn btn-servicio btn-block" href="https://siconcilio.cclmichoacan.gob.mx/citas">Generar Cita &raquo;</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-3 mb-4">
-                    <div class="d-flex flex-column h-100 p-3 shadow-sm rounded text-center">
-                        <img src="imagenes/iconos/icono-representante-patronal.png" class="mx-auto d-block mb-3" width="140" height="140">
+                    <div class="d-flex flex-column h-100 text-center servicio-card">
+                        <div class="servicio-icon">
+                            <img src="imagenes/iconos/icono-representante-patronal.png" alt="Representante">
+                        </div>
                         <h2 class="h5"><b>Representante Patronal</b></h2>
-                        <p class="text-muted flex-grow-1">Es una plataforma digital, que permite a las personas empleadoras registrar a sus representantes legales, agilizando el procedimiento.</p>
+                        <p class="text-muted flex-grow-1">Permite a las personas empleadoras registrar a sus representantes legales, agilizando el procedimiento.</p>
                         <div class="mt-auto">
-                            <a class="btn btn-secondary btn-block" href="https://siconcilio.cclmichoacan.gob.mx/poder-crear">Registrar Representante &raquo;</a>
+                            <a class="btn btn-servicio btn-block" href="https://siconcilio.cclmichoacan.gob.mx/poder-crear">Registrar Representante &raquo;</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-3 mb-4">
-                    <div class="d-flex flex-column h-100 p-3 shadow-sm rounded text-center">
-                        <img src="imagenes/iconos/icono-calculadora.png" class="mx-auto d-block mb-3" width="140" height="140">
+                    <div class="d-flex flex-column h-100 text-center servicio-card">
+                        <div class="servicio-icon">
+                            <img src="imagenes/iconos/icono-calculadora.png" alt="Calculadora">
+                        </div>
                         <h2 class="h5"><b>Calculadora de prestaciones</b></h2>
-                        <p class="text-muted flex-grow-1">Herramienta que permite conocer los cálculos aproximados de las prestaciones laborales dentro de la audiencia de conciliación.</p>
+                        <p class="text-muted flex-grow-1">Conoce los cálculos aproximados de las prestaciones laborales dentro de la audiencia de conciliación.</p>
                         <div class="mt-auto">
-                            <a class="btn btn-secondary btn-block" href="https://cclmichoacan.gob.mx/Calculadora.html">Calcular Prestaciones &raquo;</a>
+                            <a class="btn btn-servicio btn-block" href="/nuevaimagen/calculadora.html">Calcular Prestaciones &raquo;</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
         <div class="container my-5">
             <div class="layout-mosaico">
