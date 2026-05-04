@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Gibson';
+    src: url('https://michoacan.gob.mx/cdn/fonts/gibson-regular-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Contenedor principal mapa */
+.contenedor-principal {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    fill:#cacaca
+    
+}
+
+/* Colores de las regiones */
+.region-zamora { fill: #d4a34b; } 
+.region-sahuayo { fill: #b46a2e; } 
+
+.region-uruapan { fill: #911A3A; } 
+.region-lazaro { fill: #dd6182; } 
+.region-morelia { fill: #1c5f4a; } 
+.region-zitacuaro { fill: #08392a; } 
+
+#mapa-michoacan path {
+    stroke: #ffffff; 
+    stroke-width: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+#mapa-michoacan path:hover {
+    fill-opacity: 0.4;
+    stroke-width: 2.5px;
+
+}
+
+.opacado {
+    fill: #a1a1b2 !important; 
+    opacity: 0.4;
+    pointer-events: none;
+    transition: transform 0.5s ease;
+}
+
+/* Diseño de la carta emergente */
+#carta-info {
+    font-family: 'Gibson', sans-serif;    
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.oculto {
+    opacity: 0;
+    pointer-events: none;
+}
+/* Contenedor para que los botones tengan espacio entre ellos */
+.filtros-colores {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap; 
+}
+
+.filtros-colores button {
+    background-color: #ffffff;
+    color: #911A3A;
+    border: 2px solid #911A3A;
+    border-radius: 50px;
+    padding: 10px 24px;
+    font-family: 'Gibson', sans-serif;    
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+    cursor: pointer;
+    box-shadow: -3px 4px 8px rgba(0, 0, 0, 0.12); 
+    transition: all 0.3s ease; 
+}
+
+.filtros-colores button:hover {
+    background-color: #911A3A;
+    color: #ffffff;
+    box-shadow: -4px 6px 12px rgba(0, 0, 0, 0.18);
+    transform: translateY(-2px);
+}
+
+/* Efecto al hacer clic */
+.filtros-colores button:active {
+    transform: translateY(1px); 
+    box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.marcador {
+    pointer-events: none;
+    filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* El fondo oscuro de la sede */
+.texto-fondo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px; 
+    font-weight: bold;
+    text-anchor: middle; 
+    stroke: #2f3e46;
+    stroke-width: 40px; 
+    stroke-linejoin: round;
+}
+
+.texto-frente {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    text-anchor: middle;
+    fill: #ffffff; 
+}
+#mapa-michoacan {
+    /*filter: drop-shadow(0px 0px 3px #911A3A) drop-shadow(-3px 4px 8px rgba(73, 97, 99, 1));
+   
+    filter: drop-shadow(0px 0px 3px #2f3e46) drop-shadow(-3px 4px 8px rgba(145, 26, 58, 1));*/
+    filter: drop-shadow(0px 0px 3px #2f3e46) drop-shadow(0px 12px 0px rgba(73, 97, 99, 0.5));
+
+
+}
+/* Estilos para el letrero de nombres */
+#tooltip-mapa {
+    position: fixed; 
+    background-color: rgba(47, 62, 70, 0.95); 
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    
+    pointer-events: none; 
+    z-index: 1000; 
+    transition: opacity 0.2s ease;
+}

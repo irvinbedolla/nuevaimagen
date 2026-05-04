@@ -84,7 +84,7 @@
         font-size: 1.1rem;
         margin: 0;
         line-height: 1.4;
-        font-weight: bold; /* Añadí negrita para igualar tu boceto */
+        font-weight: bold; 
     }
 
         /* 
@@ -115,7 +115,6 @@
         width: 600px;
     }
 
-    /* Efecto al pasar el mouse sobre toda la tarjeta */
     .galeria-item:hover {
         transform: translateY(-8px); /* Salta un poco hacia arriba */
         box-shadow: 0 15px 35px rgba(145,26,58,0.8); /* Sombra más profunda */
@@ -179,7 +178,7 @@
         grid-template-columns: 2fr 1fr; 
         grid-template-rows: 1fr 1fr;
         gap: 25px;
-        max-width: 1100px; /* <-- Ligeramente aumentado para darle más amplitud */
+        max-width: 1100px; 
         height: 550px;
         margin: 40px auto;
     }
