@@ -1,606 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
-	<title>Calculadora | Centro de Conciliación Laboral | Michoacán</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora | Centro de Conciliación Laboral | Michoacán</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 
-	<meta property="og:title" content="Calculadora | Centro de Conciliación Laboral | Michoacán">
-	<meta property="og:image" content="https://michoacan.gob.mx/cdn/img/michog.jpg">
-	<meta property="og:description" content="Calculadora para cuantificar la liquidación por despido injustificado">
-	<link rel="icon" href="images/pagina_web/cclm.ico" type="image/x-icon">
-
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-	<link href="assets/estilos/eslitos.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/estilos.css">
-	<link rel="stylesheet" href="css/noticias.css">
-	<link rel="stylesheet" href="css/Transparencia.css">
-
-	<style>
-		.calculadora-hero {
-			max-width: 950px;
-		}
-
-		.note-tag {
-			display: inline-flex;
-			align-items: center;
-			gap: 0.5rem;
-			padding: 0.35rem 0.85rem;
-			border-radius: 999px;
-			background-color: #f2e9ee;
-			color: #911A3A;
-			font-weight: 700;
-		}
-
-		.calculadora-shell {
-			background: #ffffff;
-			border-radius: 18px;
-			box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-			padding: 1.75rem;
-		}
-
-		.calc-label {
-			font-weight: 700;
-			color: #911A3A;
-			margin-bottom: 0.35rem;
-		}
-
-		.calc-input,
-		.calc-button {
-			border-radius: 12px;
-		}
-
-		.periodo-menu {
-			display: none;
-			position: absolute;
-			z-index: 10;
-			background: #ffffff;
-			border: 1px solid #e5e5e5;
-			border-radius: 12px;
-			padding: 0.5rem;
-			width: 100%;
-		}
-
-		.periodo-menu a {
-			display: block;
-			padding: 0.4rem 0.75rem;
-			color: #911A3A;
-			text-decoration: none;
-			font-weight: 600;
-			border-radius: 8px;
-		}
-
-		.periodo-menu a:hover {
-			background: #f2e9ee;
-		}
-
-		.periodo-menu.show {
-			display: block;
-		}
-
-		.result-card {
-			background: #faf7f9;
-			border-radius: 16px;
-			padding: 1rem 1.25rem;
-			border: 1px solid #efe6ec;
-		}
-
-		.result-grid {
-			display: grid;
-			grid-template-columns: 1.2fr 0.8fr 1.2fr;
-			gap: 0.5rem 1rem;
-			font-size: 0.95rem;
-		}
-
-		.result-grid div:nth-child(-n+3) {
-			font-weight: 700;
-			color: #911A3A;
-		}
-
-		#desglose {
-			display: none;
-		}
-
-		@media (max-width: 991px) {
-			.result-grid {
-				grid-template-columns: 1fr;
-			}
-		}
-	</style>
+    <style>
+        :root { --ccl-marron: #911A3A; }
+        .calculadora-shell { background: #fff; border-radius: 18px; box-shadow: 0 10px 28px rgba(0,0,0,0.08); padding: 1.75rem; }
+        .calc-label { font-weight: 700; color: var(--ccl-marron); margin-bottom: 0.35rem; }
+        .btn-ccl { background-color: var(--ccl-marron); color: white; font-weight: bold; border: none; }
+        .btn-ccl:hover { background-color: #72142d; color: white; }
+    </style>
 </head>
-<body>
-
-<header>
-	<nav class="navbar main-nav fixed-top navbar-expand-lg shadow-sm">
-		<div class="container-fluid">
-			<div class="d-flex align-items-center">
-				<a class="navbar-brand" href="index.php">
-					<img src="imagenes/logo-ccl-michoacan.png" class="logo-dependencia" alt="Logo CCL">
-				</a>
-				<a class="navbar-brand border-start ps-3 d-none d-md-block" href="https://michoacan.gob.mx">
-					<img src="https://michoacan.gob.mx/cdn/img/logo.svg" class="logo-gobierno" alt="Logo Gobierno">
-				</a>
-			</div>
-
-			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ms-auto align-items-center">
-					<li class="nav-item"><a class="nav-link" href="index.php"><b>INICIO</b></a></li>
-					<li class="nav-item"><a class="nav-link" href="Sedes.html"><b>SEDES</b></a></li>
-					<li class="nav-item"><a class="nav-link" href="Noticias.html"><b>NOTICIAS</b></a></li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<b>EVENTOS</b>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" target="_blank" href="https://foro-nacional.cclmichoacan.gob.mx/">Foro Nacional</a></li>
-							<li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/tercer_encuentro/">3° Encuentro Internacional</a></li>
-						</ul>
-					</li>
-					<li class="nav-item px-lg-3 py-2 py-lg-0 d-flex flex-column align-items-start align-items-lg-center">
-						<div class="social-icons-container">
-							<a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="social-icon" target="_blank"><img src="imagenes/footer/FB1.png" alt="FB"></a>
-							<a href="https://www.instagram.com/cclmichoacan/" class="social-icon" target="_blank"><img src="imagenes/footer/IG1.png" alt="IG"></a>
-							<a href="https://x.com/cclmichoacan?s=21" class="social-icon" target="_blank"><img src="imagenes/footer/X1.png" alt="X"></a>
-							<a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" class="social-icon" target="_blank"><img src="imagenes/footer/TK1.png" alt="TK"></a>
-							<a href="https://www.youtube.com/@CCLMichoacan" class="social-icon" target="_blank"><img src="imagenes/footer/Y1.png" alt="YouTube"></a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link btn btn-login-custom ms-lg-2 px-3" href="https://siconcilio.cclmichoacan.gob.mx/login" style="color: #ffffff !important;"><b>INICIAR SESIÓN</b></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-</header>
-
-<div class="container-fluid banner-titulo">
-	<h1>Calculadora</h1>
-</div>
+<body class="bg-light">
 
 <main class="container my-5">
-	<div class="calculadora-hero mx-auto mb-5 text-center">
-		<h2 class="fw-bold mb-3">Calculadora para cuantificar la liquidación por despido injustificado</h2>
-		<p class="text-muted">
-			La "Calculadora para cuantificar la liquidación por despido injustificado" es una herramienta de
-			orientación diseñada para que las personas trabajadoras puedan informarse sobre los cálculos
-			que se abordarán en una audiencia de conciliación.
-		</p>
-		<div class="note-tag mt-3">
-			<i class="bi bi-info-circle"></i>
-			Nota Importante
-		</div>
-		<p class="text-muted mt-3">
-			Estos cálculos son un estimado basado en condiciones generales establecidas en la
-			Ley Federal del Trabajo. Cuando una persona trabajadora tiene prestaciones
-			mayores a las de la ley, la compensación por un despido injustificado puede ser mayor.
-			Recuerda que, en el Centro de Conciliación, la persona conciliadora asignada
-			a tu solicitud te apoyará para realizar un cálculo preciso para tu caso.
-		</p>
-	</div>
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Calculadora de Liquidación Michoacán 2026</h2>
+        <p class="text-muted">Salario Mínimo Vigente: $315.04</p>
+    </div>
 
-	<div class="calculadora-shell">
-		<div class="row g-4">
-			<div class="col-lg-6">
-				<label class="calc-label">Periodo de pago</label>
-				<div class="position-relative">
-					<button id="periodoBtn" class="btn btn-outline-secondary w-100 calc-button" type="button" onclick="periodo()">Seleccionar</button>
-					<div id="periodoOpt" class="periodo-menu">
-						<a href="#" onclick="selectOption('Diario')">Diario</a>
-						<a href="#" onclick="selectOption('Semanal')">Semanal</a>
-						<a href="#" onclick="selectOption('Quincenal')">Quincenal</a>
-						<a href="#" onclick="selectOption('Mensual')">Mensual</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<label class="calc-label">Salario</label>
-				<input id="numericInput" class="form-control calc-input" type="text" placeholder="Ingrese un número" oninput="validatePay(event)">
-			</div>
-			<div class="col-lg-6">
-				<label class="calc-label">Fecha de Ingreso</label>
-				<input id="fechaIngreso" class="form-control calc-input" type="date" onchange="updateFechaIngreso(event)">
-			</div>
-			<div class="col-lg-6">
-				<label class="calc-label">Fecha de Egreso</label>
-				<input id="fechaEgreso" class="form-control calc-input" type="date" onchange="updateFechaEgreso(event)">
-			</div>
-		</div>
+    <div class="calculadora-shell">
+        <div class="row g-3">
+            <div class="col-md-3">
+                <label class="calc-label">Periodo de pago</label>
+                <select id="periodoSel" class="form-select">
+                    <option value="1">Diario</option>
+                    <option value="7">Semanal</option>
+                    <option value="15">Quincenal</option>
+                    <option value="30">Mensual</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label class="calc-label">Salario Bruto ($)</label>
+                <input id="salarioInput" type="number" class="form-control" placeholder="0.00">
+            </div>
+            <div class="col-md-3">
+                <label class="calc-label">Fecha Ingreso</label>
+                <input id="fIngreso" type="date" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <label class="calc-label">Fecha Egreso</label>
+                <input id="fEgreso" type="date" class="form-control">
+            </div>
+        </div>
 
-		<div class="d-flex flex-wrap gap-3 mt-4">
-			<div id="btnCalcular">
-				<button class="btn btn-login-custom px-4" type="button" onclick="calcularBtn()">Calcular</button>
-			</div>
-			<button class="btn btn-outline-secondary px-4" type="button" onclick="limpiarCampos()">Limpiar</button>
-		</div>
+        <div class="mt-4 d-flex gap-2">
+            <button class="btn btn-ccl px-4" onclick="calcular()">Calcular</button>
+            <button id="btnPDF" class="btn btn-danger d-none" onclick="generarPDF()">
+                <i class="bi bi-file-earmark-pdf"></i> Descargar PDF
+            </button>
+        </div>
 
-		<div class="mt-5" id="desglose">
-			<div class="d-flex align-items-center gap-2 mb-3">
-				<i class="bi bi-clipboard-data text-danger"></i>
-				<h5 class="mb-0">Resumen</h5>
-			</div>
-			<div class="row g-3">
-				<div class="col-md-6">
-					<div class="result-card">
-						<div>Fecha de ingreso:</div>
-						<div>Salario: $</div>
-						<div>Antigüedad:</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="result-card">
-						<div>Fecha de egreso:</div>
-						<div>Periodo de pago:</div>
-						<div style="display: none;">Salario mínimo: $</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="d-flex align-items-center gap-2 mt-4 mb-3">
-				<i class="bi bi-graph-up text-danger"></i>
-				<h5 class="mb-0">Resultados</h5>
-			</div>
-
-			<div class="row g-3">
-				<div class="col-lg-6">
-					<div class="result-card">
-						<div class="result-grid">
-							<div>Prestación</div>
-							<div>Propuesta 100%</div>
-							<div>Notas</div>
-							<div>Aguinaldo</div>
-							<div id="propuesta1">$</div>
-							<div>Derecho irrenunciable</div>
-							<div>Vacaciones</div>
-							<div id="propuesta2">$</div>
-							<div>Derecho irrenunciable</div>
-							<div>Prima Vacacional</div>
-							<div id="propuesta3">$</div>
-							<div>Derecho irrenunciable</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="result-card">
-						<div class="result-grid">
-							<div>Prestación</div>
-							<div>Propuesta 100%</div>
-							<div>Notas</div>
-							<div>Prima de Antigüedad</div>
-							<div id="propuesta6">$</div>
-							<div>Derecho negociable</div>
-							<div>Indemnización Constitucional</div>
-							<div id="propuesta7">$</div>
-							<div>Derecho negociable</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="total" class="result-card mt-3 text-center fw-bold">Conciliación al 100% $</div>
-
-			<div class="row g-3 mt-3">
-				<div class="col-12">
-					<div class="result-card">
-						<div class="result-grid">
-							<div>Prestación</div>
-							<div>Propuesta 50%</div>
-							<div>Notas</div>
-							<div>Prima de Antigüedad</div>
-							<div id="propuesta4">$</div>
-							<div>Derecho negociable</div>
-							<div>Indemnización Constitucional</div>
-							<div id="propuesta5">$</div>
-							<div>Derecho negociable</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="totalConciliacion" class="result-card mt-3 text-center fw-bold">Conciliación al 50% $</div>
-		</div>
-	</div>
-
-	<div class="text-center mt-4">
-		<a href="javascript:void(0)" class="text-decoration-none" aria-disabled="true">
-			<i class="bi bi-filetype-pdf text-danger me-2"></i>
-			Resumen Conciliación.pdf
-		</a>
-	</div>
+        <div id="resultados" class="mt-5 d-none">
+            <h5 class="calc-label border-bottom pb-2">Desglose de Prestaciones</h5>
+            <div id="resAntiguedad" class="mb-3 fw-bold text-secondary"></div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Monto ($)</th>
+                            <th>Estatus</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </main>
 
-<footer class="footer-site" style="background-color: #f8f9fa; border-top: 1px solid #eaeaea; padding-top: 2rem;">
-	<div class="container pb-4">
-		<div class="row align-items-center text-center text-md-start">
-			<div class="col-md-4 mb-3 mb-md-0 text-center">
-				<img src="imagenes/logo-ccl-michoacan.png" alt="Logo CCL" width="180">
-			</div>
-			<div class="col-md-4 mb-3 mb-md-0 text-center">
-				<a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="text-muted mx-2 fs-4" target="_blank"><i class="bi bi-facebook"></i></a>
-				<a href="https://www.instagram.com/cclmichoacan/" class="text-muted mx-2 fs-4" target="_blank"><i class="bi bi-instagram"></i></a>
-				<a href="https://x.com/cclmichoacan?s=21" class="text-muted mx-2 fs-4" target="_blank"><i class="bi bi-twitter-x"></i></a>
-				<a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" class="text-muted mx-2 fs-4" target="_blank"><i class="bi bi-tiktok"></i></a>
-				<a href="https://www.youtube.com/@CCLMichoacan" class="text-muted mx-2 fs-4" target="_blank"><i class="bi bi-youtube"></i></a>
-			</div>
-			<div class="col-md-4 text-center">
-				<img src="imagenes/logo-michoacan-es-mejor2.png" alt="Michoacán" width="150">
-			</div>
-		</div>
-		<div class="row mt-4 border-top pt-3 text-center">
-			<div class="col-12 text-muted" style="font-size: 0.9rem;">
-				<p class="mb-1">© Desarrollado por CCL Michoacán | Gobierno del Estado de Michoacán 2026</p>
-				<a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank" class="text-decoration-none" style="color: #911A3A;">Aviso de privacidad</a>
-			</div>
-		</div>
-	</div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 <script>
-	let periodoOption = "";
-	let payment = 0;
-	let fechaIngreso = "";
-	let fechaEgreso = "";
-	let diasDiferencia = 0;
-	let salarioBase = 0;
-	let periodoNum = 0;
-	let primaAntiguedad = 0;
-	let diasVacaciones = 0;
-	let fechaUltimoAniversario = "";
-	let egresoDate = "";
-	let ingresoDate = "";
-	let primaVacacional = 0;
-	let vacaciones = 0;
-	let indemnizacion = 0;
-	let aguinaldo = 0;
-	const salarioMinimo = 294.64;
-	let fechaAguinaldo = "";
-	let totalConciliacion = 0;
-	let total = 0;
+    const SALARIO_MINIMO = 315.04;
+    const TOPE_PRIMA = SALARIO_MINIMO * 2;
+    let datosGlobales = {};
 
-	function periodo() {
-		document.getElementById("periodoOpt").classList.toggle("show");
-	}
+    function obtenerDiasVacaciones(anios) {
+        if (anios < 1) return 12;
+        if (anios === 1) return 12;
+        if (anios === 2) return 14;
+        if (anios === 3) return 16;
+        if (anios === 4) return 18;
+        if (anios === 5) return 20;
+        if (anios >= 6 && anios <= 10) return 22;
+        if (anios >= 11 && anios <= 15) return 24;
+        if (anios >= 16 && anios <= 20) return 26;
+        if (anios >= 21 && anios <= 25) return 28;
+        if (anios >= 26 && anios <= 30) return 30;
+        return 32;
+    }
 
-	function selectOption(option) {
-		periodoOption = option;
-		document.getElementById("periodoBtn").textContent = option;
-		document.getElementById("periodoOpt").classList.remove("show");
-	}
+    function calcular() {
+        const periodo = parseFloat(document.getElementById('periodoSel').value);
+        const pago = parseFloat(document.getElementById('salarioInput').value);
+        const f1 = new Date(document.getElementById('fIngreso').value);
+        const f2 = new Date(document.getElementById('fEgreso').value);
 
-	function validatePay(event) {
-		const input = event.target.value;
+        if (!pago || isNaN(f1.getTime()) || isNaN(f2.getTime())) {
+            alert("Por favor, complete todos los campos correctamente.");
+            return;
+        }
 
-		event.target.value = input
-			.replace(/[^0-9.]/g, '')
-			.replace(/(\..*?)\..*/g, '$1');
+        const sdb = pago / periodo;
+		console.log(sdb);
+        const diffTime = Math.abs(f2 - f1);
+        const totalDias = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
+        const aniosCompletos = Math.floor(totalDias / 365);
+		// Cálculo específico para los días de aguinaldo del año en curso
+		const fechaEgreso = new Date(document.getElementById('fEgreso').value);
+		const inicioAnio = new Date(fechaEgreso.getFullYear(), 0, 1); // 1 de enero del mismo año
 
-		if (input.charAt(0) === '.') {
-			event.target.value = '0' + event.target.value;
-		}
+		// Diferencia en milisegundos convertida a días
+		const diasAguinaldo = Math.ceil((fechaEgreso - inicioAnio) / (1000 * 60 * 60 * 24)) + 1;
 
-		payment = event.target.value;
-	}
+		// Ejemplo con salario diario base (sdb)[cite: 1]
+		const montoAguinaldo = (15 / 365) * diasAguinaldo * sdb;
 
-	function updateFechaIngreso(event) {
-		fechaIngreso = event.target.value;
-	}
+        // Vacaciones: Basado en salario ingresado y tabla de días
+        const diasVacDerecho = obtenerDiasVacaciones(aniosCompletos);
+        const montoVac = (diasVacDerecho / 365) * diasAguinaldo * sdb;
+        const montoPV = montoVac * 0.25;
 
-	function updateFechaEgreso(event) {
-		fechaEgreso = event.target.value;
-		calculateDaysDifference();
-	}
+        // Otros conceptos basados en SDB e Indemnización
+        const montoIndem = sdb * 90;
 
-	function calculateDaysDifference() {
-		if (fechaIngreso && fechaEgreso) {
-			ingresoDate = new Date(fechaIngreso);
-			egresoDate = new Date(fechaEgreso);
+        // Prima Antigüedad: Topada a 2 salarios mínimos ($630.08)
+        const sdbTopado = Math.min(sdb, TOPE_PRIMA);
+        const montoAntig = (12 / 365) * totalDias * sdbTopado;
+        const esObligatoria = aniosCompletos >= 15;
 
-			const diaIngreso = ingresoDate.getDate();
-			const mesIngreso = ingresoDate.getMonth();
-			const añoEgreso = egresoDate.getFullYear();
+        datosGlobales = {
+            resumen: `Antigüedad: ${aniosCompletos} años (${totalDias} días totales)`,
+            sdb: sdb.toFixed(2),
+            items: [
+                ["Aguinaldo Proporcional", montoAguinaldo.toFixed(2), "Irrenunciable"],
+                ["Vacaciones (" + diasVacDerecho + " días)", montoVac.toFixed(2), "Irrenunciable"],
+                ["Prima Vacacional (25%)", montoPV.toFixed(2), "Irrenunciable"],
+                ["Indemnización Constitucional (90 días)", montoIndem.toFixed(2), "Negociable"],
+                ["Prima de Antigüedad", montoAntig.toFixed(2), esObligatoria ? "Obligatoria (>=15 años)" : "Negociable"]
+            ]
+        };
 
-			fechaUltimoAniversario = new Date(añoEgreso, mesIngreso, diaIngreso);
-			fechaAguinaldo = new Date(añoEgreso, 0, 1);
+        render();
+    }
 
-			if (egresoDate < ingresoDate) {
-				alert("La fecha de egreso no puede ser anterior a la fecha de ingreso.");
-				return;
-			}
+    function render() {
+        document.getElementById('resAntiguedad').innerText = datosGlobales.resumen;
+        const cuerpo = document.getElementById('cuerpoTabla');
+        cuerpo.innerHTML = datosGlobales.items.map(i => `
+            <tr>
+                <td>${i[0]}</td>
+                <td><strong>$${i[1]}</strong></td>
+                <td><span class="badge ${i[2].includes('Irrenunciable') || i[2].includes('Obligatoria') ? 'bg-success' : 'bg-warning text-dark'}">${i[2]}</span></td>
+            </tr>
+        `).join('');
+        
+        document.getElementById('resultados').classList.remove('d-none');
+        document.getElementById('btnPDF').classList.remove('d-none');
+    }
 
-			const timeDifference = egresoDate - ingresoDate;
-			diasDiferencia = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-		}
-	}
+    function generarPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        
+        doc.setFillColor(145, 26, 58);
+        doc.rect(0, 0, 210, 30, 'F');
+        doc.setTextColor(255, 255, 255);
+        doc.setFontSize(16);
+        doc.text("CENTRO DE CONCILIACIÓN LABORAL MICHOACÁN", 105, 18, { align: 'center' });
+        
+        doc.setTextColor(0, 0, 0);
+        doc.setFontSize(10);
+        doc.text(datosGlobales.resumen, 14, 40);
+        doc.text(`Salario Diario Base: $${datosGlobales.sdb}`, 14, 46);
 
-	function verificarVariables() {
-		if (!periodoOption || !payment || !fechaIngreso || !fechaEgreso || diasDiferencia === 0) {
-			alert("Debe completar todos los campos antes de continuar.");
-			return false;
-		}
-		return true;
-	}
+        doc.autoTable({
+            startY: 55,
+            head: [['Concepto', 'Monto ($)', 'Estatus']],
+            body: datosGlobales.items,
+            headStyles: { fillColor: [145, 26, 58] }
+        });
 
-	function calcularSegunOpcion(periodoOption) {
-		switch (periodoOption) {
-			case 'Diario':
-				periodoNum = 1;
-				break;
-			case 'Semanal':
-				periodoNum = 7;
-				break;
-			case 'Quincenal':
-				periodoNum = 15;
-				break;
-			case 'Mensual':
-				periodoNum = 30;
-				break;
-			default:
-				break;
-		}
-	}
-
-	function calcularSalarioBase() {
-		salarioBase = payment / periodoNum;
-	}
-
-	function calcularPrimaAntiguedad() {
-		if (salarioBase > 630.08) {
-			primaAntiguedad = (12) / (365) * (diasDiferencia + 1) * (630.08);
-		} else {
-			primaAntiguedad = (12) / (365) * (diasDiferencia + 1) * (salarioBase);
-		}
-	}
-
-	function calcularVacaciones() {
-		let anios = (diasDiferencia + 1) / (365);
-		switch (anios.toFixed(0).toString()) {
-			case '0':
-				if (diasDiferencia > 182) {
-					diasVacaciones = 6;
-				} else {
-					diasVacaciones = 3;
-				}
-				break;
-			case '1':
-				diasVacaciones = 12;
-				break;
-			case '2':
-				diasVacaciones = 14;
-				break;
-			case '3':
-				diasVacaciones = 16;
-				break;
-			case '4':
-				diasVacaciones = 18;
-				break;
-			case '5':
-				diasVacaciones = 20;
-			default:
-				let years = (diasDiferencia) / (365);
-				years = years.toFixed(0);
-				if (years > 5 && years < 11) {
-					diasVacaciones = 22;
-				}
-				if (years > 10 && years < 16) {
-					diasVacaciones = 24;
-				}
-				if (years > 15 && years < 21) {
-					diasVacaciones = 26;
-				}
-				if (years > 20 && years < 26) {
-					diasVacaciones = 28;
-				}
-				if (years > 25) {
-					diasVacaciones = 30;
-				}
-				break;
-		}
-	}
-
-	function calcularPrimaVacacional() {
-		calcularVacaciones();
-		let timeDifference = egresoDate - fechaUltimoAniversario;
-		let diferenciaDias = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-
-		if (diferenciaDias < 0) {
-			fechaUltimoAniversario.setFullYear(fechaUltimoAniversario.getFullYear() - 1);
-			timeDifference = egresoDate - fechaUltimoAniversario;
-			diferenciaDias = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-		}
-
-		vacaciones = ((diasVacaciones) / (365)) * (diferenciaDias) * (salarioBase);
-		primaVacacional = (vacaciones) * (0.25);
-	}
-
-	function calcularIndemnizacion() {
-		indemnizacion = salarioBase * 90;
-	}
-
-	function calcularAguinaldo() {
-		const timeDifference = egresoDate - fechaAguinaldo;
-		const diferenciaAguinaldo = Math.ceil(timeDifference / (1000 * 60 * 60 * 24)) + 1;
-
-		aguinaldo = (15 / 365) * diferenciaAguinaldo * salarioBase;
-	}
-
-	function calcularBtn() {
-		if (verificarVariables()) {
-			calcularSegunOpcion(periodoOption);
-			calcularSalarioBase();
-			calcularPrimaAntiguedad();
-			calcularPrimaVacacional();
-			calcularAguinaldo();
-			calcularIndemnizacion();
-
-			totalConciliacion = vacaciones + primaVacacional + aguinaldo + (primaAntiguedad / 2) + (indemnizacion / 2);
-			total = vacaciones + primaVacacional + aguinaldo + primaAntiguedad + indemnizacion;
-
-			document.querySelector('.result-card div:nth-child(1)').textContent = `Fecha de ingreso: ${fechaIngreso}`;
-			document.querySelector('.result-card div:nth-child(2)').textContent = `Salario: $${parseFloat(payment).toFixed(2)}`;
-			document.querySelector('.result-card div:nth-child(3)').textContent = `Antigüedad: ${diasDiferencia + 1} días`;
-
-			document.querySelectorAll('.result-card')[1].querySelector('div:nth-child(1)').textContent = `Fecha de egreso: ${fechaEgreso}`;
-			document.querySelectorAll('.result-card')[1].querySelector('div:nth-child(2)').textContent = `Periodo de pago: ${periodoOption}`;
-			document.querySelectorAll('.result-card')[1].querySelector('div:nth-child(3)').textContent = `Salario mínimo: $${salarioMinimo.toFixed(2)}`;
-
-			document.getElementById('propuesta1').textContent = `$${aguinaldo.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
-			document.getElementById('propuesta2').textContent = `$${vacaciones.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
-			document.getElementById('propuesta3').textContent = `$${primaVacacional.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
-			document.getElementById('propuesta4').textContent = `$${(primaAntiguedad / 2).toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
-			document.getElementById('propuesta5').textContent = `$${(indemnizacion / 2).toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
-			document.getElementById('propuesta6').textContent = `$${primaAntiguedad.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
-			document.getElementById('propuesta7').textContent = `$${indemnizacion.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
-			document.getElementById('totalConciliacion').textContent = `Total Conciliación 50% $${totalConciliacion.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
-			document.getElementById('total').textContent = `Total Conciliación 100% $${total.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
-
-			document.getElementById("desglose").style.display = "block";
-			document.getElementById("btnCalcular").style.display = "none";
-		}
-	}
-
-	function limpiarCampos() {
-		document.getElementById('periodoBtn').textContent = 'Seleccionar';
-		document.getElementById('numericInput').value = '';
-		document.getElementById('fechaIngreso').value = '';
-		document.getElementById('fechaEgreso').value = '';
-		document.getElementById('propuesta1').textContent = '$';
-		document.getElementById('propuesta2').textContent = '$';
-		document.getElementById('propuesta3').textContent = '$';
-		document.getElementById('propuesta4').textContent = '$';
-		document.getElementById('propuesta5').textContent = '$';
-		document.getElementById("desglose").style.display = "none";
-		document.getElementById("btnCalcular").style.display = "block";
-
-		periodoOption = '';
-		payment = 0;
-		fechaIngreso = '';
-		fechaEgreso = '';
-		diasDiferencia = 0;
-		salarioBase = 0;
-		periodoNum = 0;
-		primaAntiguedad = 0;
-		diasVacaciones = 0;
-		primaVacacional = 0;
-		vacaciones = 0;
-		indemnizacion = 0;
-		aguinaldo = 0;
-		totalConciliacion = 0;
-	}
-	document.addEventListener('click', function (event) {
-		const menu = document.getElementById('periodoOpt');
-		const button = document.getElementById('periodoBtn');
-		if (!menu.contains(event.target) && !button.contains(event.target)) {
-			menu.classList.remove('show');
-		}
-	});
+        doc.save("Calculo_Liquidacion_Michoacan.pdf");
+    }
 </script>
 </body>
 </html>

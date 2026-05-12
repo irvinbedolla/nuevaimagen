@@ -1,215 +1,265 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" />
-    <title>Centro de Conciliación Laboral | Michoacán</title>
-    
-    <meta property="og:title" content="Centro de Conciliación Laboral | Michoacán" />
-    <meta property="og:image" content="https://michoacan.gob.mx/cdn/img/michog.jpg"/>
-    <meta property="og:description" content="Portal del Centro de Conciliación Laboral del Estado de Michoacán" />
+    <head>    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" />
+        <title>Centro de Conciliación Laboral | Michoacán</title>
+        
+        <meta property="og:title" content="Centro de Conciliación Laboral | Michoacán" />
+        <meta property="og:image" content="https://michoacan.gob.mx/cdn/img/michog.jpg"/>
+        <meta property="og:description" content="Portal del Centro de Conciliación Laboral del Estado de Michoacán" />
 
-    <link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/estilos.css">-->
-     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/estilos.css">-->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-    <!--<link rel="shortcut icon" href="https://michoacan.gob.mx/cdn/img/favicon/favicon.ico" type="image/x-icon" />-->
-    <!--<link rel="apple-touch-icon" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon.png" />-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link href="assets/estilos/eslitos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/noticias.css">
-</head>
-<body>
-<!-- MENU -->
-    <header>
-        <nav class="navbar main-nav fixed-top navbar-expand-lg shadow-sm">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="index.php">
-                        <img src="imagenes/logo-ccl-michoacan.png" class="logo-dependencia" alt="Logo CCL">
-                    </a>
-                    <a class="navbar-brand border-start ps-3 d-none d-md-block" href="https://michoacan.gob.mx">
-                        <img src="https://michoacan.gob.mx/cdn/img/logo.svg" class="logo-gobierno" alt="Logo Gobierno">
-                    </a>
-                </div>
+        <!--<link rel="shortcut icon" href="https://michoacan.gob.mx/cdn/img/favicon/favicon.ico" type="image/x-icon" />-->
+        <!--<link rel="apple-touch-icon" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon.png" />-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+        <link href="assets/estilos/eslitos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/noticias.css">
+        <style>
+            .servicios-section {
+                background: linear-gradient(180deg, #f7f4f6 0%, #ffffff 70%);
+                padding: 2.5rem 0 1rem;
+            }
 
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            .servicios-title {
+                font-weight: 800;
+                letter-spacing: 0.4px;
+            }
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.php"><b>INICIO</b></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Sedes.html"><b>SEDES</b></a>
-                        </li>
-                        
+            .servicio-card {
+                background: #ffffff;
+                border: 1px solid #eee2e8;
+                border-radius: 18px;
+                padding: 1.5rem;
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            .servicio-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 18px 32px rgba(0, 0, 0, 0.12);
+            }
+
+            .servicio-icon {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1rem;
+            }
+
+            .servicio-icon img {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+                border-radius: 50%;
+                background: #ffffff;
+            }
+
+            .btn-servicio {
+                background: #911A3A;
+                color: #ffffff;
+                border: none;
+                width: 100%;
+            }
+
+            .btn-servicio:hover {
+                background: #7d1532;
+                color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar main-nav fixed-top navbar-expand-lg shadow-sm">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center"> 
+                        <a class="navbar-brand" href="index.php">
+                            <img src="imagenes/logo CCL horizontal.png" class="logo-dependencia" alt="Logo CCL">
+                        </a>
+                        <a class="navbar-brand border-start ps-3 d-none d-md-block" href="https://michoacan.gob.mx">
+                            <img src="https://michoacan.gob.mx/cdn/img/logo.svg" class="logo-gobierno" alt="Logo Gobierno">
+                        </a>
+                    </div>
+
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.php"><b>INICIO</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sedes.html"><b>SEDES</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="noticias.html"><b>NOTICIAS</b></a>
+                            </li>
+                                
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <b>EVENTOS</b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" target="_blank" href="https://foro-nacional.cclmichoacan.gob.mx/">Foro Nacional</a></li>
+                                    <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/tercer_encuentro/">3° Encuentro Internacional</a></li>
+                                    <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl2/index.html">2° Encuentro Nacional</a></li>
+                                    <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl/index.html">1° Encuentro Nacional</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item px-lg-3 py-2 py-lg-0 d-flex flex-column align-items-start align-items-lg-center">
+                                <div class="social-icons-container">
+                                    <a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="social-icon"><img src="imagenes/footer/FB1.png" alt="FB" ></a>
+                                    <a href="https://www.instagram.com/cclmichoacan/" class="social-icon"><img src="imagenes/footer/IG1.png" alt="IG"></a>
+                                    <a href="https://x.com/cclmichoacan?s=21" class="social-icon"><img src="imagenes/footer/X1.png" alt="X"></a>
+                                    <a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" class="social-icon"><img src="imagenes/footer/TK1.png" alt="TK"></a>
+                                    <a href="https://www.youtube.com/@CCLMichoacan" class="social-icon"><img src="imagenes/footer/Y1.png" alt="YouTube"></a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
                             
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <b>EVENTOS</b>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" target="_blank" href="https://foro-nacional.cclmichoacan.gob.mx/">Foro Nacional</a></li>
-                                <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/tercer_encuentro/">3° Encuentro Internacional</a></li>
-                                <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl2/index.html">2° Encuentro Nacional</a></li>
-                                <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl/index.html">1° Encuentro Nacional</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item px-lg-3 py-2 py-lg-0 d-flex flex-column align-items-start align-items-lg-center">
-                            <div class="social-icons-container">
-                                <a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="social-icon"><img src="imagenes/footer/FB1.png" alt="FB" ></a>
-                                <a href="https://www.instagram.com/cclmichoacan/" class="social-icon"><img src="imagenes/footer/IG1.png" alt="IG"></a>
-                                <a href="https://x.com/cclmichoacan?s=21" class="social-icon"><img src="imagenes/footer/X1.png" alt="X"></a>
-                                <a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" class="social-icon"><img src="imagenes/footer/TK1.png" alt="TK"></a>
-                                <a href="https://www.youtube.com/@CCLMichoacan" class="social-icon"><img src="imagenes/footer/Y1.png" alt="YouTube"></a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                        
-                                <a class="nav-link btn btn-login-custom ms-lg-2 px-3" href="https://siconcilio.cclmichoacan.gob.mx/login" style="color: #ffffff !important;"><b>INICIAR SESIÓN</b></a>
-                            
-                        </li>
-                    </ul>
+                                    <a class="nav-link btn btn-login-custom ms-lg-2 px-3" href="https://siconcilio.cclmichoacan.gob.mx/login" style="color: #ffffff !important;"><b>INICIA SESIÓN</b></a>
+                                
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-   <div class="container-fluid banner-titulo">
-        <h1>Noticias</h1>
-</div>
+            </nav>
+        </header>
     
 
-    <div class="grid-moderno-lista">
+        <div class="grid-moderno-lista">
 
-        <a href="noticias/comunicadoCCL009-2026.html" class="bloque-link">
-            <div class="noticias-box">
-                <img src="imagenes/noticias/comunicadoCCL009-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
-                <div class="noticia-contenido">
-                    <h2 class="noticia-titulo">Destaca CCL efectividad del Mecanismo Laboral de Respuesta Rápida en Michoacán</h2>
-                    <span class="noticia-fecha">14 de marzo de 2026</span>
-                    <p class="noticia-balazo">Ha beneficiado a más de 44 mil trabajadores y recuperado millones de pesos en salarios caídos</p>
+            <a href="noticias/comunicadoCCL009-2026.html" class="bloque-link">
+                <div class="noticias-box">
+                    <img src="imagenes/noticias/comunicadoCCL009-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
+                    <div class="noticia-contenido">
+                        <h2 class="noticia-titulo">Destaca CCL efectividad del Mecanismo Laboral de Respuesta Rápida en Michoacán</h2>
+                        <span class="noticia-fecha">14 de marzo de 2026</span>
+                        <p class="noticia-balazo">Ha beneficiado a más de 44 mil trabajadores y recuperado millones de pesos en salarios caídos</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="noticias/comunicadoCCL008-2026.html" class="bloque-link">
-            <div class="noticias-box">
-                <img src="imagenes/noticias/comunicadoCCL008-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
-                <div class="noticia-contenido">
-                    <h2 class="noticia-titulo">Michoacán encabeza reunión de los Centros de Conciliación Laboral del país</h2>
-                    <span class="noticia-fecha">13 de marzo de 2026</span>
-                    <p class="noticia-balazo">Participaron 28 titulares para unificar estrategias de justicia laboral</p>
+            </a>
+            <a href="noticias/comunicadoCCL008-2026.html" class="bloque-link">
+                <div class="noticias-box">
+                    <img src="imagenes/noticias/comunicadoCCL008-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
+                    <div class="noticia-contenido">
+                        <h2 class="noticia-titulo">Michoacán encabeza reunión de los Centros de Conciliación Laboral del país</h2>
+                        <span class="noticia-fecha">13 de marzo de 2026</span>
+                        <p class="noticia-balazo">Participaron 28 titulares para unificar estrategias de justicia laboral</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="noticias/comunicadoCCL007-2026.html" class="bloque-link">
-            <div class="noticias-box">
-                <img src="imagenes/noticias/comunicadoCCL007-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
-                <div class="noticia-contenido">
-                    <h2 class="noticia-titulo">Morelia será sede del Foro Nacional por la Consolidación de la Justicia Laboral</h2>
-                    <span class="noticia-fecha">6 de marzo de 2026</span>
-                    <p class="noticia-balazo">Reunirá a expertos y titulares de centros de conciliación de todo el país</p>
+            </a>
+            <a href="noticias/comunicadoCCL007-2026.html" class="bloque-link">
+                <div class="noticias-box">
+                    <img src="imagenes/noticias/comunicadoCCL007-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
+                    <div class="noticia-contenido">
+                        <h2 class="noticia-titulo">Morelia será sede del Foro Nacional por la Consolidación de la Justicia Laboral</h2>
+                        <span class="noticia-fecha">6 de marzo de 2026</span>
+                        <p class="noticia-balazo">Reunirá a expertos y titulares de centros de conciliación de todo el país</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="noticias/comunicadoCCL006-2026.html" class="bloque-link">
-            <div class="noticias-box">
-                <img src="imagenes/noticias/comunicadoCCL006-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
-                <div class="noticia-contenido">
-                    <h2 class="noticia-titulo">En Michoacán, más del 77 % de los asuntos laborales se resuelven en menos de 35 días</h2>
-                    <span class="noticia-fecha">24 de febrero de 2026</span>
-                    <p class="noticia-balazo">Justicia efectiva en favor de trabajadores y empleadores, sin llegar a juicio</p>
+            </a>
+            <a href="noticias/comunicadoCCL006-2026.html" class="bloque-link">
+                <div class="noticias-box">
+                    <img src="imagenes/noticias/comunicadoCCL006-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
+                    <div class="noticia-contenido">
+                        <h2 class="noticia-titulo">En Michoacán, más del 77 % de los asuntos laborales se resuelven en menos de 35 días</h2>
+                        <span class="noticia-fecha">24 de febrero de 2026</span>
+                        <p class="noticia-balazo">Justicia efectiva en favor de trabajadores y empleadores, sin llegar a juicio</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="noticias/comunicadoCCL005-2026.html" class="bloque-link">
-            <div class="noticias-box">
-                <img src="imagenes/noticias/comunicadoCCL005-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
-                <div class="noticia-contenido">
-                    <h2 class="noticia-titulo">Más de 692 mdp recuperados gracias al diálogo y la conciliación laboral en Michoacán</h2>
-                    <span class="noticia-fecha">23 de febrero de 2026</span>
-                    <p class="noticia-balazo">Se ha brindado atención a más de 135 mil personas en todo el estado</p>
+            </a>
+            <a href="noticias/comunicadoCCL005-2026.html" class="bloque-link">
+                <div class="noticias-box">
+                    <img src="imagenes/noticias/comunicadoCCL005-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
+                    <div class="noticia-contenido">
+                        <h2 class="noticia-titulo">Más de 692 mdp recuperados gracias al diálogo y la conciliación laboral en Michoacán</h2>
+                        <span class="noticia-fecha">23 de febrero de 2026</span>
+                        <p class="noticia-balazo">Se ha brindado atención a más de 135 mil personas en todo el estado</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="noticias/comunicadoCCL004-2026.html" class="bloque-link">
-            <div class="noticias-box">
-                <img src="imagenes/noticias/comunicadoCCL004-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
-                <div class="noticia-contenido">
-                    <h2 class="noticia-titulo">Más de 21 mdp en convenios respaldan la labor del Centro de Conciliación Laboral</h2>
-                    <span class="noticia-fecha">16 de febrero de 2026</span>
+            </a>
+            <a href="noticias/comunicadoCCL004-2026.html" class="bloque-link">
+                <div class="noticias-box">
+                    <img src="imagenes/noticias/comunicadoCCL004-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
+                    <div class="noticia-contenido">
+                        <h2 class="noticia-titulo">Más de 21 mdp en convenios respaldan la labor del Centro de Conciliación Laboral</h2>
+                        <span class="noticia-fecha">16 de febrero de 2026</span>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="noticias/comunicadoCCL003-2026.html" class="bloque-link">
-            <div class="noticias-box">
-                <img src="imagenes/noticias/comunicadoCCL003-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
-                <div class="noticia-contenido">
-                    <h2 class="noticia-titulo">¿Te despidieron? El Centro de Conciliación Laboral garantiza tus derechos</h2>
-                    <span class="noticia-fecha">11 de febrero de 2026</span>
-                    <p class="noticia-balazo">Te ofrece asesoramiento gratuito</p>
+            </a>
+            <a href="noticias/comunicadoCCL003-2026.html" class="bloque-link">
+                <div class="noticias-box">
+                    <img src="imagenes/noticias/comunicadoCCL003-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
+                    <div class="noticia-contenido">
+                        <h2 class="noticia-titulo">¿Te despidieron? El Centro de Conciliación Laboral garantiza tus derechos</h2>
+                        <span class="noticia-fecha">11 de febrero de 2026</span>
+                        <p class="noticia-balazo">Te ofrece asesoramiento gratuito</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="noticias/comunicadoCCL002-2026.html" class="bloque-link">
-            <div class="noticias-box">
-                <img src="imagenes/noticias/comunicadoCCL002-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
-                <div class="noticia-contenido">
-                    <h2 class="noticia-titulo">Crece la confianza en la conciliación laboral en Michoacán: CCL</h2>
-                    <span class="noticia-fecha">4 de febrero de 2026</span>
-                    <p class="noticia-balazo">Atención gratuita en las sedes de Morelia, Uruapan, Zamora, Lázaro Cárdenas, Zitácuaro y Sahuayo</p>
+            </a>
+            <a href="noticias/comunicadoCCL002-2026.html" class="bloque-link">
+                <div class="noticias-box">
+                    <img src="imagenes/noticias/comunicadoCCL002-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
+                    <div class="noticia-contenido">
+                        <h2 class="noticia-titulo">Crece la confianza en la conciliación laboral en Michoacán: CCL</h2>
+                        <span class="noticia-fecha">4 de febrero de 2026</span>
+                        <p class="noticia-balazo">Atención gratuita en las sedes de Morelia, Uruapan, Zamora, Lázaro Cárdenas, Zitácuaro y Sahuayo</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="noticias/comunicadoCCL001-2026.html" class="bloque-link">
-            <div class="noticias-box">
-                <img src="imagenes/noticias/comunicadoCCL001-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
-                <div class="noticia-contenido">
-                    <h2 class="noticia-titulo">La conciliación es una vía efectiva para resolver conflictos laborales</h2>
-                    <span class="noticia-fecha">15 de enero de 2026</span>
-                    <p class="noticia-balazo">Sin necesidad de abogados y con una resolución en menos de 45 días</p>
+            </a>
+            <a href="noticias/comunicadoCCL001-2026.html" class="bloque-link">
+                <div class="noticias-box">
+                    <img src="imagenes/noticias/comunicadoCCL001-2026-1.jpeg" alt="Descripción de la imagen" class="noticia-img">
+                    <div class="noticia-contenido">
+                        <h2 class="noticia-titulo">La conciliación es una vía efectiva para resolver conflictos laborales</h2>
+                        <span class="noticia-fecha">15 de enero de 2026</span>
+                        <p class="noticia-balazo">Sin necesidad de abogados y con una resolución en menos de 45 días</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
 
-    </div>
+        </div>
     
 
-    <footer class="footer-site">
+        <footer class="footer-site">
             <div class="container">
                 <div class="footer-container">
                     <div class="footer-section">
-                        <img src="imagenes/logo-ccl-michoacan.png" alt="Logo Michoacán" class="img-footer-main">
-                    </div>
-
-                    <div class="footer-section">
-                        <div class="footer-socials">
-                            <a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="social-icon" target="_blank"><img src="imagenes/footer/FB1.png" alt="Facebook"></a>
-                            <a href="https://www.instagram.com/cclmichoacan/" class="social-icon" target="_blank"><img src="imagenes/footer/IG1.png" alt="Instagram"></a>
-                            <a href="https://x.com/cclmichoacan?s=21" target="_blank" class="social-icon"><img src="imagenes/footer/X1.png" alt="X"></a>
-                            <a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" target="_blank" class="social-icon"><img src="imagenes/footer/TK1.png" alt="TikTok"></a>
-                        </div>
-                    </div>
-
-                    <div class="footer-section">
-                        <img src="imagenes/logo-michoacan-es-mejor2.png" alt="Logo CCL" class="img-footer-ccl">
+                        <img src="imagenes/3.png" alt="Logo Michoacán"  class="img-footer-ccl">
                     </div> 
+                    <div class="footer-section">
+                        <img src="imagenes/2.png" alt="Logo Michoacán" class="img-footer-main">
+                    </div>
+                    <div class="footer-section">
+                        <img src="imagenes/1.png" alt="Logo CCL" class="img-footer-ccl">
+                    </div> 
+                    <div><p style="color: #911a3a;">#MichoacánEsMejor</p></div>
                 </div>
 
                 <div class="footer-info">
-                    <div class="footer-bottom">
-                        © Desarrollado por CCL Michoacán | Gobierno del Estado de Michoacán 2026
+                    <div class="footer-copy">
+                        &copy; 2026 Desarrollado por <b>CCL Michoacán</b> | Gobierno del Estado de Michoacán
                     </div>
                     <div class="footer-privacy"> 
-                        <a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank">Aviso de privacidad</a> 
+                        <a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank"><b>Aviso de privacidad</b></a> 
                     </div>
                 </div>
             </div>

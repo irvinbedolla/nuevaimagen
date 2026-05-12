@@ -1,243 +1,232 @@
 <!doctype html>
-<html lang="en">
-    <head>
+<html lang="es">
+    <head>    
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Centro Conciliacion Laboral</title>
-        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-        <!-- Bootstrap core CSS -->
-        <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/estilos/eslitos.css" rel="stylesheet">
-        <link href="assets/carousel.css" rel="stylesheet">
-        <!-- CDN de Gobierno-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" />
+        <title>Centro de Conciliación Laboral | Michoacán</title>
+        
+        <meta property="og:title" content="Centro de Conciliación Laboral | Michoacán" />
+        <meta property="og:image" content="https://michoacan.gob.mx/cdn/img/michog.jpg"/>
+        <meta property="og:description" content="Portal del Centro de Conciliación Laboral del Estado de Michoacán" />
+
         <link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/estilos.css">
-        <!--<link rel="shortcut icon" href="https://michoacan.gob.mx/cdn/img/favicon/favicon.ico" type="image/x-icon" />-->
+        <!--<link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/estilos.css">-->
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="apple-touch-icon" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon-180x180.png" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+        <!--<link rel="shortcut icon" href="https://michoacan.gob.mx/cdn/img/favicon/favicon.ico" type="image/x-icon" />-->
+        <!--<link rel="apple-touch-icon" href="https://michoacan.gob.mx/cdn/img/favicon/apple-touch-icon.png" />-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+        <link href="assets/estilos/eslitos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/noticias.css">
+        <style>
+            .servicios-section {
+                background: linear-gradient(180deg, #f7f4f6 0%, #ffffff 70%);
+                padding: 2.5rem 0 1rem;
+            }
+
+            .servicios-title {
+                font-weight: 800;
+                letter-spacing: 0.4px;
+            }
+
+            .servicio-card {
+                background: #ffffff;
+                border: 1px solid #eee2e8;
+                border-radius: 18px;
+                padding: 1.5rem;
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            .servicio-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 18px 32px rgba(0, 0, 0, 0.12);
+            }
+
+            .servicio-icon {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1rem;
+            }
+
+            .servicio-icon img {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+                border-radius: 50%;
+                background: #ffffff;
+            }
+
+            .btn-servicio {
+                background: #911A3A;
+                color: #ffffff;
+                border: none;
+                width: 100%;
+            }
+
+            .btn-servicio:hover {
+                background: #7d1532;
+                color: #ffffff;
+            }
+        </style>
     </head>
     <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light shadow">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="home.html">
-                    <img src="imagenes/logo-ccl-michoacan.png" class="logo-nav" alt="Logo" style="height: auto;">
-                </a>
-                <a class="navbar-brand" href="home.html">
-                    <img src="https://michoacan.gob.mx/cdn/img/logo.png" class="logo-nav" alt="Logo" style="height: auto;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <header>
+            <nav class="navbar main-nav fixed-top navbar-expand-lg shadow-sm">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center"> 
+                        <a class="navbar-brand" href="index.php">
+                            <img src="imagenes/logo CCL horizontal.png" class="logo-dependencia" alt="Logo CCL">
+                        </a>
+                        <a class="navbar-brand border-start ps-3 d-none d-md-block" href="https://michoacan.gob.mx">
+                            <img src="https://michoacan.gob.mx/cdn/img/logo.svg" class="logo-gobierno" alt="Logo Gobierno">
+                        </a>
+                    </div>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto align-items-lg-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html"><b>INICIO</b></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Sedes.html"><b>SEDES</b></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><b>NOTICIAS</b></a>
-                        </li>
-                        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <b>EVENTOS</b>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/tercer_encuentro/">3° Encuentro Internacional</a></li>
-                                <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl2/index.html">2° Encuentro Nacional</a></li>
-                                <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl/index.html">1° Encuentro Nacional</a></li>
-                            </ul>
-                        </li>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                        <li class="nav-item px-lg-3 py-2 py-lg-0 d-flex flex-column align-items-start align-items-lg-center">
-                            <div class="social-icons-container">
-                                <a href="#" class="social-icon"><img src="imagenes/footer/FB1.png" alt="FB" ></a>
-                                <a href="#" class="social-icon"><img src="imagenes/footer/IG1.png" alt="IG"></a>
-                                <a href="#" class="social-icon"><img src="imagenes/footer/X1.png" alt="X"></a>
-                                <a href="#" class="social-icon"><img src="imagenes/footer/TK1.png" alt="TK"></a>
-                            </div>
-                        </li>
-
-                        <li class="nav-item">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto align-items-center">
                             <li class="nav-item">
-                                <a class="nav-link btn btn-login-custom text-white ms-lg-2 px-3" href="https://siconcilio.cclmichoacan.gob.mx/login" style="color: #ffffff !important;"><b>INICIAR SESIÓN</b></a>
+                                <a class="nav-link active" href="index.php"><b>INICIO</b></a>
                             </li>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main><br>
-        <div class="container marketing py-5">
-            <h3 class="section-title wow fadeInDown">
-                Conoce el Centro de Conciliación Laboral del Estado de Michoacán
-            </h3>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <span class="card-text">Identifica tu municipio</span>
-                        <select id="dSolicitud" class="form-control" name="municipio" required>
-                            <option value="">Seleccione...</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <span class="card-text">Oficina que te corresponde</span>
-                        <input type="text" id="delegacion_display" class="form-control" style="background-color: #f8f9fa; font-weight: bold; color: #911A3A;" readonly>
-                        <input type="hidden" id="delegacion_id" name="delegacion">
-                    </div>
-                </div>
-            </div><br><br>
-
-            <div class="row g-4 justify-content-center">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-mapa wow fadeInUp">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Morelia </h5>
-                            <p class="card-text" style="line-height: 1.6;">BLVD. GARCÍA DE LEÓN NO. 1575, COL. CHAPULTEPEC ORIENTE, C.P. 58260 MORELIA, MICHOACÁN.</p>
-                            <div class="map-wrapper" style="margin-top: -5px;">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.5621762276137!2d-101.1639715!3d19.6886758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
-                                1!3m3!1m2!1s0x86972e4da3b81177%3A0xb3bdb18efbe90610!2sCentro%20de%20Conciliaci%C3%B3n%20Laboral%20del%20Estado%20de%20Michoac%C3%A1n!5e0!3m2!1ses!2smx!4v1741903615342!5m2!1ses!2smx" 
-                                 width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-2">
-                                <div>
-                                    <i class="fas fa-phone-alt me-1"></i>
-                                    <span class="card-text">(443) 123 4567</span>
-                                </div>
-                                <div>
-                                    <i class="fas fa-clock me-1"></i>
-                                    <span class="card-text">L - V: 9:00 - 15:00hrs.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-mapa wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Zitácuaro</h5>
-                            <p class="card-text">5 DE MAYO NORTE NO. 3, COL. JOSE MARÍA MORELOS, PISO 3, C.P. 61506 ZITÁCUARO, MICHOACÁN.</p>
-                            <div class="map-wrapper">
-                               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d470.3004250517409!2d-100.3569007!3d19.4381668!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2a5005ea66ecd%3A0x59605737b4a2c01b!2sCentro%20de%20Conciliaci%C3%B3n%20Laboral%20Zit%C3%A1cuaro!5e0!3m2!1ses!2smx!4v1776182745014!5m2!1ses!2smx"width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sedes.html"><b>SEDES</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="noticias.html"><b>NOTICIAS</b></a>
+                            </li>
                                 
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-2">
-                                <div>
-                                    <!--i class="fas fa-phone-alt me-1"></i>
-                                    <span class="card-text"></span-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <b>EVENTOS</b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" target="_blank" href="https://foro-nacional.cclmichoacan.gob.mx/">Foro Nacional</a></li>
+                                    <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/tercer_encuentro/">3° Encuentro Internacional</a></li>
+                                    <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl2/index.html">2° Encuentro Nacional</a></li>
+                                    <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/encuentro_nacional_ccl/index.html">1° Encuentro Nacional</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item px-lg-3 py-2 py-lg-0 d-flex flex-column align-items-start align-items-lg-center">
+                                <div class="social-icons-container">
+                                    <a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="social-icon"><img src="imagenes/footer/FB1.png" alt="FB" ></a>
+                                    <a href="https://www.instagram.com/cclmichoacan/" class="social-icon"><img src="imagenes/footer/IG1.png" alt="IG"></a>
+                                    <a href="https://x.com/cclmichoacan?s=21" class="social-icon"><img src="imagenes/footer/X1.png" alt="X"></a>
+                                    <a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" class="social-icon"><img src="imagenes/footer/TK1.png" alt="TK"></a>
+                                    <a href="https://www.youtube.com/@CCLMichoacan" class="social-icon"><img src="imagenes/footer/Y1.png" alt="YouTube"></a>
                                 </div>
-                                <div>
-                                    <i class="fas fa-clock me-1"></i>
-                                    <span class="card-text">L - V: 9:00 - 15:00hrs.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-mapa wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Zamora</h5>
-                            <p class="card-text">JUSTO SIERRA NO. 290, COL. JARDINES DE CATEDRAL, C.P. 59670 ZAMORA DE HIDALGO, MICHOACÁN.</p>
-                            <div class="map-wrapper">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.6144294848896!2d-102.28617489337921!3d19.982711050664033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842e89efb12f9db3%3A0xbf96b157c4633027!2sCentro%20de%20Conciliaci%C3%B3n%20Laboral%20de%20Michoac%C3%A1n%20(Zamora).!5e0!3m2!1ses!2smx!4v1776183226153!5m2!1ses!2smx" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-2">
-                            <div>
-                                <i class="fas fa-phone-alt me-1"></i>
-                                <span class="card-text">(351) 688 0481</span>
-                            </div>
-                            <div>
-                                <i class="fas fa-clock me-1"></i>
-                                <span class="card-text">L - V: 9:00 - 15:00hrs.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-mapa wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Sahuayo</h5>
-                            <p class="card-text">AV. UNIVERSIDAD SUR NO. 3000, SEGUNDO PISO, EDIFICIO CENTRAL, COL. LOMAS DE UNIVERSIDAD, C.P. 59103 SAHUAYO DE MORELOS, MICHOACÁN.</p>
-                            <div class="map-wrapper">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14995.430247585507!2d-102.743601!3d20.014492!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842efcf134505fbb%3A0x37c487e870973933!2sUniversidad%20de%20la%20Ci%C3%A9naga%20del%20Estado%20de%20Michoac%C3%A1n%20de%20Ocampo!5e0!3m2!1ses!2smx!4v1776186988861!5m2!1ses!2smx" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-2">
-                                <div>
-                                    <!--i class="fas fa-phone-alt me-1"></i>
-                                    <span class="card-text"></span-->
-                                </div>
-                                <div>
-                                    <i class="fas fa-clock me-1"></i>
-                                    <span class="card-text">L - V: 9:00 - 15:00hrs.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-mapa wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Uruapan</h5>
-                            <p class="card-text">NUEVO PARICUTÍN NO. 308, COL. SAN RAFAEL, C.P. 60136 URUAPAN, MICHOACÁN.</p>
-                            <div class="map-wrapper">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.861823456283!2d-102.0080912251979!3d19.41837528185799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842de3549b0e069b%3A0x5044e26ce5f7e25a!2sCentro%20de%20Conciliaci%C3%B3n%20Laboral%20Uruapan!5e0!3m2!1ses!2smx!4v1776183375252!5m2!1ses!2smx" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-2">
-                                <div>
-                                    <i class="fas fa-phone-alt me-1"></i>
-                                    <span class="card-text">(452) 452 3509</span>
-                                </div>
+                            </li>
+                            <li class="nav-item">
+                            
+                                    <a class="nav-link btn btn-login-custom ms-lg-2 px-3" href="https://siconcilio.cclmichoacan.gob.mx/login" style="color: #ffffff !important;"><b>INICIA SESIÓN</b></a>
                                 
-                                <div>
-                                    <i class="fas fa-clock me-1"></i>
-                                    <span class="card-text">L - V: 9:00 - 15:00hrs.</span>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-3">
-                                <div>
-                                    <i class="fas fa-phone-alt me-1"></i>
-                                    <span class="card-text">(452) 452 3352 </span>
-                                </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+            </nav>
+        </header>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card-mapa wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Lázaro Cárdenas</h5>
-                            <p class="card-text">PARACHO NO. 26, COL. 600 CASAS, C.P. 60950 LÁZARO CÁRDENAS, MICHOACÁN.</p>
-                            <div class="map-wrapper">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15181.054317307542!2d-102.218564!3d17.96647!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84315c8d3b8b9bdf%3A0xe98a2dd18850e4cf!2sParacho%2026%2C%20600%20Casas%2C%2060954%20Cdad.%20L%C3%A1zaro%20C%C3%A1rdenas%2C%20Mich.!5e0!3m2!1ses-419!2smx!4v1776187057922!5m2!1ses-419!2smx" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            </div>
+        <main><br>
+            <div class="container marketing py-5">
+                <h3 class="section-title wow fadeInDown">
+                    Conoce el Centro de Conciliación Laboral del Estado de Michoacán
+                </h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <span class="card-text">Identifica tu municipio</span>
+                            <select id="dSolicitud" class="form-control" name="municipio" required>
+                                <option value="">Seleccione...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <span class="card-text">Oficina que te corresponde</span>
+                            <input type="text" id="delegacion_display" class="form-control" style="background-color: #f8f9fa; font-weight: bold; color: #911A3A;" readonly>
+                            <input type="hidden" id="delegacion_id" name="delegacion">
+                        </div>
+                    </div>
+                </div><br><br>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-mapa wow fadeInUp">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Morelia </h5>
+                                <p class="card-text" style="line-height: 1.6;">BLVD. GARCÍA DE LEÓN NO. 1575, COL. CHAPULTEPEC ORIENTE, C.P. 58260 MORELIA, MICHOACÁN.</p>
+                                <div class="map-wrapper" style="margin-top: -5px;">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.5621762276137!2d-101.1639715!3d19.6886758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+                                    1!3m3!1m2!1s0x86972e4da3b81177%3A0xb3bdb18efbe90610!2sCentro%20de%20Conciliaci%C3%B3n%20Laboral%20del%20Estado%20de%20Michoac%C3%A1n!5e0!3m2!1ses!2smx!4v1741903615342!5m2!1ses!2smx" 
+                                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
                                 <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-2">
+                                    <div>
+                                        <i class="fas fa-phone-alt me-1"></i>
+                                        <span class="card-text">(443) 123 4567</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-clock me-1"></i>
+                                        <span class="card-text">L - V: 9:00 - 15:00hrs.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-mapa wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Zitácuaro</h5>
+                                <p class="card-text">5 DE MAYO NORTE NO. 3, COL. JOSE MARÍA MORELOS, PISO 3, C.P. 61506 ZITÁCUARO, MICHOACÁN.</p>
+                                <div class="map-wrapper">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d470.3004250517409!2d-100.3569007!3d19.4381668!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d2a5005ea66ecd%3A0x59605737b4a2c01b!2sCentro%20de%20Conciliaci%C3%B3n%20Laboral%20Zit%C3%A1cuaro!5e0!3m2!1ses!2smx!4v1776182745014!5m2!1ses!2smx"width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                    
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-2">
+                                    <div>
+                                        <!--i class="fas fa-phone-alt me-1"></i>
+                                        <span class="card-text"></span-->
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-clock me-1"></i>
+                                        <span class="card-text">L - V: 9:00 - 15:00hrs.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-mapa wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Zamora</h5>
+                                <p class="card-text">JUSTO SIERRA NO. 290, COL. JARDINES DE CATEDRAL, C.P. 59670 ZAMORA DE HIDALGO, MICHOACÁN.</p>
+                                <div class="map-wrapper">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.6144294848896!2d-102.28617489337921!3d19.982711050664033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842e89efb12f9db3%3A0xbf96b157c4633027!2sCentro%20de%20Conciliaci%C3%B3n%20Laboral%20de%20Michoac%C3%A1n%20(Zamora).!5e0!3m2!1ses!2smx!4v1776183226153!5m2!1ses!2smx" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-2">
                                 <div>
                                     <i class="fas fa-phone-alt me-1"></i>
-                                    <span class="card-text"> (753) 147 8420</span>
+                                    <span class="card-text">(351) 688 0481</span>
                                 </div>
                                 <div>
                                     <i class="fas fa-clock me-1"></i>
@@ -246,43 +235,110 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <footer class="footer-site">
-            <div class="container">
-                <div class="footer-container">
-                    <div class="footer-section">
-                        <img src="imagenes/logo-ccl-michoacan.png" alt="Logo Michoacán" class="img-footer-main">
-                    </div>
 
-                    <div class="footer-section">
-                        <div class="footer-socials">
-                            <a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="social-icon" target="_blank"><img src="imagenes/footer/FB1.png" alt="Facebook"></a>
-                            <a href="https://www.instagram.com/cclmichoacan/" class="social-icon" target="_blank"><img src="imagenes/footer/IG1.png" alt="Instagram"></a>
-                            <a href="https://x.com/cclmichoacan?s=21" target="_blank" class="social-icon"><img src="imagenes/footer/X1.png" alt="X"></a>
-                            <a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" target="_blank" class="social-icon"><img src="imagenes/footer/TK1.png" alt="TikTok"></a>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-mapa wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Sahuayo</h5>
+                                <p class="card-text">AV. UNIVERSIDAD SUR NO. 3000, SEGUNDO PISO, EDIFICIO CENTRAL, COL. LOMAS DE UNIVERSIDAD, C.P. 59103 SAHUAYO DE MORELOS, MICHOACÁN.</p>
+                                <div class="map-wrapper">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14995.430247585507!2d-102.743601!3d20.014492!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842efcf134505fbb%3A0x37c487e870973933!2sUniversidad%20de%20la%20Ci%C3%A9naga%20del%20Estado%20de%20Michoac%C3%A1n%20de%20Ocampo!5e0!3m2!1ses!2smx!4v1776186988861!5m2!1ses!2smx" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-2">
+                                    <div>
+                                        <!--i class="fas fa-phone-alt me-1"></i>
+                                        <span class="card-text"></span-->
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-clock me-1"></i>
+                                        <span class="card-text">L - V: 9:00 - 15:00hrs.</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="footer-section">
-                        <img src="imagenes/logo-michoacan-es-mejor2.png" alt="Logo CCL" class="img-footer-ccl">
-                    </div> 
-                </div>
-
-                <div class="footer-info">
-                    <div class="footer-bottom">
-                        © Desarrollado por CCL Michoacán | Gobierno del Estado de Michoacán 2026
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-mapa wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Uruapan</h5>
+                                <p class="card-text">NUEVO PARICUTÍN NO. 308, COL. SAN RAFAEL, C.P. 60136 URUAPAN, MICHOACÁN.</p>
+                                <div class="map-wrapper">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.861823456283!2d-102.0080912251979!3d19.41837528185799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842de3549b0e069b%3A0x5044e26ce5f7e25a!2sCentro%20de%20Conciliaci%C3%B3n%20Laboral%20Uruapan!5e0!3m2!1ses!2smx!4v1776183375252!5m2!1ses!2smx" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-2">
+                                    <div>
+                                        <i class="fas fa-phone-alt me-1"></i>
+                                        <span class="card-text">(452) 452 3509</span>
+                                    </div>
+                                    
+                                    <div>
+                                        <i class="fas fa-clock me-1"></i>
+                                        <span class="card-text">L - V: 9:00 - 15:00hrs.</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-3">
+                                    <div>
+                                        <i class="fas fa-phone-alt me-1"></i>
+                                        <span class="card-text">(452) 452 3352 </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="footer-privacy"> 
-                        <a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank">Aviso de privacidad</a> 
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card-mapa wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="card-body">
+                                <h5 class="card-title"><i class="fas fa-map-marker-alt me-2"></i>Lázaro Cárdenas</h5>
+                                <p class="card-text">PARACHO NO. 26, COL. 600 CASAS, C.P. 60950 LÁZARO CÁRDENAS, MICHOACÁN.</p>
+                                <div class="map-wrapper">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15181.054317307542!2d-102.218564!3d17.96647!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84315c8d3b8b9bdf%3A0xe98a2dd18850e4cf!2sParacho%2026%2C%20600%20Casas%2C%2060954%20Cdad.%20L%C3%A1zaro%20C%C3%A1rdenas%2C%20Mich.!5e0!3m2!1ses-419!2smx!4v1776187057922!5m2!1ses-419!2smx" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                                    <div class="d-flex justify-content-between align-items-center mt-1 px-3 mb-2">
+                                    <div>
+                                        <i class="fas fa-phone-alt me-1"></i>
+                                        <span class="card-text"> (753) 147 8420</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-clock me-1"></i>
+                                        <span class="card-text">L - V: 9:00 - 15:00hrs.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </main>
+            <footer class="footer-site">
+                <div class="container">
+                    <div class="footer-container">
+                        <div class="footer-section">
+                            <img src="imagenes/3.png" alt="Logo Michoacán"  class="img-footer-ccl">
+                            <!--<img src="https://michoacan.gob.mx/cdn/img/logo-gris.png" alt="Logo CCL" class="img-footer-ccl">-->
+                        </div> 
+                        <div class="footer-section">
+                            <img src="imagenes/2.png" alt="Logo Michoacán" class="img-footer-main">
+                        </div>
+                        <div class="footer-section">
+                            <img src="imagenes/1.png" alt="Logo CCL" class="img-footer-ccl">
+                        </div> 
+                        <div><p style="color: #911a3a;">#MichoacánEsMejor</p></div>
+                    </div>
 
-    <script src="assets/dist/js/municipios.js"></script>
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+                    <div class="footer-info">
+                        <div class="footer-copy">
+                            &copy; 2026 Desarrollado por <b>CCL Michoacán</b> | Gobierno del Estado de Michoacán
+                        </div>
+                        <div class="footer-privacy"> 
+                            <a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank"><b>Aviso de privacidad</b></a> 
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <script src="assets/dist/js/municipios.js"></script>
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
