@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="stylesheet" href="css/noticias.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <style>
             .servicios-section {
                 background: linear-gradient(180deg, #f7f4f6 0%, #ffffff 70%);
@@ -400,6 +401,11 @@
                     <a href="directorioG.html" class="tramites-box">
                         <h2>Directorio General</h2>
                         <span><i class="bi bi-telephone-outbound"></i></span>
+                    </a>
+
+                    <a href="https://intra.secoem.michoacan.gob.mx/denuncias" class="tramites-box">
+                        <h2>Buzón Naranja</h2>
+                        <span><i class="bi bi-envelope-arrow-up"></i></span>
                     </a>
                 </div>
             </div>

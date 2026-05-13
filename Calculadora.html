@@ -13,8 +13,8 @@
 
     <style>
         :root { --ccl-marron: #911A3A; }
-        .calculadora-shell { background: #fff; border-radius: 18px; box-shadow: 0 10px 28px rgba(0,0,0,0.08); padding: 1.75rem; }
-        .calc-label { font-weight: 700; color: var(--ccl-marron); margin-bottom: 0.35rem; }
+        .calculadora-shell { background: #fff; border-radius: 18px; box-shadow: 0 10px 28px rgba(0,0,0,0.08); padding: 2rem; }
+        .calc-label { font-weight: 700; color: var(--ccl-marron); }
         .btn-ccl { background-color: var(--ccl-marron); color: white; font-weight: bold; border: none; }
         .btn-ccl:hover { background-color: #72142d; color: white; }
     </style>
@@ -22,15 +22,12 @@
 <body class="bg-light">
 
 <main class="container my-5">
-    <div class="text-center mb-5">
-        <h2 class="fw-bold">Calculadora de Liquidación Michoacán 2026</h2>
-        <p class="text-muted">Salario Mínimo Vigente: $315.04</p>
-    </div>
-
     <div class="calculadora-shell">
+        <h2 class="text-center fw-bold mb-4" style="color: var(--ccl-marron);">Calculadora de Liquidación 2026</h2>
+        
         <div class="row g-3">
             <div class="col-md-3">
-                <label class="calc-label">Periodo de pago</label>
+                <label class="calc-label">Periodo de Pago</label>
                 <select id="periodoSel" class="form-select">
                     <option value="1">Diario</option>
                     <option value="7">Semanal</option>
@@ -40,7 +37,7 @@
             </div>
             <div class="col-md-3">
                 <label class="calc-label">Salario Bruto ($)</label>
-                <input id="salarioInput" type="number" class="form-control" placeholder="0.00">
+                <input id="salarioInput" type="number" class="form-control" placeholder="0.0000">
             </div>
             <div class="col-md-3">
                 <label class="calc-label">Fecha Ingreso</label>
@@ -53,27 +50,28 @@
         </div>
 
         <div class="mt-4 d-flex gap-2">
-            <button class="btn btn-ccl px-4" onclick="calcular()">Calcular</button>
-            <button id="btnPDF" class="btn btn-danger d-none" onclick="generarPDF()">
-                <i class="bi bi-file-earmark-pdf"></i> Descargar PDF
-            </button>
+            <button class="btn btn-ccl px-5" onclick="calcular()">CALCULAR</button>
+            <button id="btnPDF" class="btn btn-danger d-none" onclick="generarPDF()">DESCARGAR PDF</button>
         </div>
 
+        <!-- Sección de Resultados -->
         <div id="resultados" class="mt-5 d-none">
-            <h5 class="calc-label border-bottom pb-2">Desglose de Prestaciones</h5>
-            <div id="resAntiguedad" class="mb-3 fw-bold text-secondary"></div>
-            <div class="table-responsive">
-                <table class="table">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Concepto</th>
-                            <th>Monto ($)</th>
-                            <th>Estatus</th>
-                        </tr>
-                    </thead>
-                    <tbody id="cuerpoTabla"></tbody>
-                </table>
-            </div>
+            <div class="alert alert-secondary border-0" id="resAntiguedad"></div>
+            
+            <table class="table align-middle mt-3">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Concepto</th>
+                        <th>Base de Cálculo</th>
+                        <th>Monto ($)</th>
+                        <th>Estatus</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla"></tbody>
+            </table>
+
+            <!-- Contenedor para Propuestas (90% - 50%) -->
+            <div id="contenedorPropuestas"></div>
         </div>
     </div>
 </main>
@@ -83,6 +81,12 @@
     const TOPE_PRIMA = SALARIO_MINIMO * 2;
     let datosGlobales = {};
 
+    // Formateador de moneda (estilo numérico con comas y 2 decimales)
+    const formatoMoneda = new Intl.NumberFormat('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+
     function obtenerDiasVacaciones(anios) {
         if (anios < 1) return 12;
         if (anios === 1) return 12;
@@ -90,79 +94,117 @@
         if (anios === 3) return 16;
         if (anios === 4) return 18;
         if (anios === 5) return 20;
-        if (anios >= 6 && anios <= 10) return 22;
-        if (anios >= 11 && anios <= 15) return 24;
-        if (anios >= 16 && anios <= 20) return 26;
-        if (anios >= 21 && anios <= 25) return 28;
-        if (anios >= 26 && anios <= 30) return 30;
+        if (anios <= 10) return 22;
+        if (anios <= 15) return 24;
+        if (anios <= 20) return 26;
+        if (anios <= 25) return 28;
+        if (anios <= 30) return 30;
         return 32;
     }
 
     function calcular() {
         const periodo = parseFloat(document.getElementById('periodoSel').value);
         const pago = parseFloat(document.getElementById('salarioInput').value);
-        const f1 = new Date(document.getElementById('fIngreso').value);
-        const f2 = new Date(document.getElementById('fEgreso').value);
+        const fIn = new Date(document.getElementById('fIngreso').value);
+        const fEg = new Date(document.getElementById('fEgreso').value);
 
-        if (!pago || isNaN(f1.getTime()) || isNaN(f2.getTime())) {
-            alert("Por favor, complete todos los campos correctamente.");
-            return;
-        }
+        if (!pago || isNaN(fIn) || isNaN(fEg)) return alert("Datos incompletos");
 
-        const sdb = pago / periodo;
-		console.log(sdb);
-        const diffTime = Math.abs(f2 - f1);
-        const totalDias = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
-        const aniosCompletos = Math.floor(totalDias / 365);
-		// Cálculo específico para los días de aguinaldo del año en curso
-		const fechaEgreso = new Date(document.getElementById('fEgreso').value);
-		const inicioAnio = new Date(fechaEgreso.getFullYear(), 0, 1); // 1 de enero del mismo año
+        // Salario Diario Base con 4 decimales sin redondeo
+        const sdb = Math.floor((pago / periodo) * 10000) / 10000; 
+        const totalDiasRelacion = Math.ceil(Math.abs(fEg - fIn) / (1000 * 60 * 60 * 24)) + 1;
+        const aniosCompletos = Math.floor(totalDiasRelacion / 365);
 
-		// Diferencia en milisegundos convertida a días
-		const diasAguinaldo = Math.ceil((fechaEgreso - inicioAnio) / (1000 * 60 * 60 * 24)) + 1;
+        // 1. Aguinaldo (Año Calendario)
+        const inicioAnio = new Date(fEg.getFullYear(), 0, 1);
+        const diasAguinaldo = Math.ceil((fEg - inicioAnio) / (1000 * 60 * 60 * 24)) + 1;
+        const montoAguinaldo = (15 / 365) * diasAguinaldo * sdb;
 
-		// Ejemplo con salario diario base (sdb)[cite: 1]
-		const montoAguinaldo = (15 / 365) * diasAguinaldo * sdb;
-
-        // Vacaciones: Basado en salario ingresado y tabla de días
-        const diasVacDerecho = obtenerDiasVacaciones(aniosCompletos);
-        const montoVac = (diasVacDerecho / 365) * diasAguinaldo * sdb;
+        // 2. Vacaciones (Desde Aniversario)
+        let fAniv = new Date(fEg.getFullYear(), fIn.getMonth(), fIn.getDate());
+        if (fAniv > fEg) fAniv.setFullYear(fAniv.getFullYear() - 1);
+        const diasDesdeAniv = Math.ceil((fEg - fAniv) / (1000 * 60 * 60 * 24)) + 1;
+        const diasDerecho = obtenerDiasVacaciones(aniosCompletos + 1);
+        const montoVac = (diasDerecho / 365) * diasDesdeAniv * sdb;
         const montoPV = montoVac * 0.25;
 
-        // Otros conceptos basados en SDB e Indemnización
+        // 3. Conceptos Negociables
         const montoIndem = sdb * 90;
-
-        // Prima Antigüedad: Topada a 2 salarios mínimos ($630.08)
         const sdbTopado = Math.min(sdb, TOPE_PRIMA);
-        const montoAntig = (12 / 365) * totalDias * sdbTopado;
-        const esObligatoria = aniosCompletos >= 15;
+        const montoAntig = (12 / 365) * totalDiasRelacion * sdbTopado;
+
+        // 4. Cálculo de Propuestas
+        const irrenunciables = montoAguinaldo + montoVac + montoPV;
+        const negociables100 = montoIndem + montoAntig;
+        
+        const propuestasArray = [];
+        for (let i = 90; i >= 50; i -= 10) {
+            let montoTotal = irrenunciables + (negociables100 * (i / 100));
+            propuestasArray.push({ porcentaje: i, monto: montoTotal });
+        }
 
         datosGlobales = {
-            resumen: `Antigüedad: ${aniosCompletos} años (${totalDias} días totales)`,
-            sdb: sdb.toFixed(2),
+            sdb: sdb.toFixed(4),
+            resumen: `Antigüedad: ${aniosCompletos} años | Días proporcional vacaciones: ${diasDesdeAniv}`,
             items: [
-                ["Aguinaldo Proporcional", montoAguinaldo.toFixed(2), "Irrenunciable"],
-                ["Vacaciones (" + diasVacDerecho + " días)", montoVac.toFixed(2), "Irrenunciable"],
-                ["Prima Vacacional (25%)", montoPV.toFixed(2), "Irrenunciable"],
-                ["Indemnización Constitucional (90 días)", montoIndem.toFixed(2), "Negociable"],
-                ["Prima de Antigüedad", montoAntig.toFixed(2), esObligatoria ? "Obligatoria (>=15 años)" : "Negociable"]
-            ]
+                ["Aguinaldo", `${diasAguinaldo} días lab.`, montoAguinaldo, "Irrenunciable"],
+                ["Vacaciones", `${diasDesdeAniv} días lab.`, montoVac, "Irrenunciable"],
+                ["Prima Vacacional", "25% de vacaciones", montoPV, "Irrenunciable"],
+                ["Indemnización", "90 días de salario", montoIndem, "Negociable"],
+                ["Prima Antigüedad", "12 días por año", montoAntig, aniosCompletos >= 15 ? "Obligatoria" : "Negociable"]
+            ],
+            propuestas: propuestasArray,
+            total100: (irrenunciables + negociables100)
         };
 
         render();
     }
 
     function render() {
-        document.getElementById('resAntiguedad').innerText = datosGlobales.resumen;
+        // Resumen superior
+        document.getElementById('resAntiguedad').innerHTML = `
+            <div class="d-flex justify-content-between">
+                <span><strong>${datosGlobales.resumen}</strong></span>
+                <span>Salario Diario: <strong>$${datosGlobales.sdb}</strong></span>
+            </div>`;
+
+        // Tabla de prestaciones
         const cuerpo = document.getElementById('cuerpoTabla');
         cuerpo.innerHTML = datosGlobales.items.map(i => `
             <tr>
                 <td>${i[0]}</td>
-                <td><strong>$${i[1]}</strong></td>
-                <td><span class="badge ${i[2].includes('Irrenunciable') || i[2].includes('Obligatoria') ? 'bg-success' : 'bg-warning text-dark'}">${i[2]}</span></td>
+                <td class="text-muted small">${i[1]}</td>
+                <td><strong>$${formatoMoneda.format(i[2])}</strong></td>
+                <td><span class="badge ${i[3] === 'Negociable' ? 'bg-warning text-dark' : 'bg-success'}">${i[3]}</span></td>
             </tr>
         `).join('');
-        
+
+        // Escenarios de conciliación (Propuestas)
+        let htmlPropuestas = `
+            <div class="mt-4">
+                <h5 class="calc-label mb-3 border-bottom pb-2"><i class="bi bi-percent me-2"></i>Propuesta de Conciliación</h5>
+                <div class="row g-3">`;
+
+        datosGlobales.propuestas.forEach(p => {
+            htmlPropuestas += `
+                <div class="col-md-4 col-lg-2">
+                    <div class="p-2 border rounded bg-white text-center shadow-sm">
+                        <small class="text-muted d-block fw-bold">${p.porcentaje}%</small>
+                        <span class="d-block fw-bold" style="color: var(--ccl-marron);">$${formatoMoneda.format(p.monto)}</span>
+                    </div>
+                </div>`;
+        });
+
+        htmlPropuestas += `
+                <div class="col-md-12 mt-3">
+                    <div class="p-3 rounded text-white text-center shadow" style="background-color: var(--ccl-marron);">
+                        <small class="d-block text-uppercase">Total Conciliación al 100%</small>
+                        <strong class="fs-4">$${formatoMoneda.format(datosGlobales.total100)}</strong>
+                    </div>
+                </div>
+            </div></div>`;
+
+        document.getElementById('contenedorPropuestas').innerHTML = htmlPropuestas;
         document.getElementById('resultados').classList.remove('d-none');
         document.getElementById('btnPDF').classList.remove('d-none');
     }
@@ -171,25 +213,24 @@
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
         
-        doc.setFillColor(145, 26, 58);
-        doc.rect(0, 0, 210, 30, 'F');
-        doc.setTextColor(255, 255, 255);
-        doc.setFontSize(16);
-        doc.text("CENTRO DE CONCILIACIÓN LABORAL MICHOACÁN", 105, 18, { align: 'center' });
+        // Estilo del PDF
+        doc.setFillColor(145, 26, 58); doc.rect(0, 0, 210, 30, 'F');
+        doc.setTextColor(255); doc.setFontSize(16); doc.text("REPORTE DE LIQUIDACIÓN ESTIMADA 2026", 105, 18, { align: 'center' });
         
-        doc.setTextColor(0, 0, 0);
-        doc.setFontSize(10);
+        doc.setTextColor(0); doc.setFontSize(10);
         doc.text(datosGlobales.resumen, 14, 40);
         doc.text(`Salario Diario Base: $${datosGlobales.sdb}`, 14, 46);
 
+        // Tabla de prestaciones formateada
+        const bodyTable = datosGlobales.items.map(i => [i[0], i[1], `$${formatoMoneda.format(i[2])}`, i[3]]);
         doc.autoTable({
             startY: 55,
-            head: [['Concepto', 'Monto ($)', 'Estatus']],
-            body: datosGlobales.items,
+            head: [['Concepto', 'Base', 'Monto', 'Estatus']],
+            body: bodyTable,
             headStyles: { fillColor: [145, 26, 58] }
         });
 
-        doc.save("Calculo_Liquidacion_Michoacan.pdf");
+        doc.save("Liquidacion_Michoacan_2026.pdf");
     }
 </script>
 </body>
