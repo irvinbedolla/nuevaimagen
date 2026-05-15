@@ -963,5 +963,6 @@ html {
     .owl-banners .owl-next { right: -20px; }
     
     #banners { padding: 0 40px; }
-        
-        
+.mayusculas {
+    text-align: justify;
+}

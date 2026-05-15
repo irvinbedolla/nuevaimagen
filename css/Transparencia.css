@@ -56,3 +56,28 @@
             margin: 0;
             letter-spacing: 1px;
         }
+      /* Oculta los bordes de cada bloque interno */
+        .accordion-item {
+            border: none !important;
+        }
+
+        /* Oculta el borde perimetral del contenedor del acordeón */
+        .accordion, .accordion-flush {
+            border: none !important;
+            box-shadow: none !important; /* Quita esto si sí quieres mantener la sombra tenue */
+        }
+
+        /* Limpia cualquier línea o recuadro residual en los encabezados */
+        .accordion-header {
+            border-bottom: none !important;
+        }
+        /* Agrega separación entre cada bloque del acordeón */
+        .accordion-item {
+            margin-bottom: 10px !important; /* Ajusta los píxeles según el espacio que desees */
+            border-radius: 4px !important;  /* Opcional: le da una ligera curvatura a las esquinas ahora que están separados */
+        }
+
+        /* Evita que el contenedor del botón se encime */
+        .accordion-header {
+            margin-bottom: 0;
+        }

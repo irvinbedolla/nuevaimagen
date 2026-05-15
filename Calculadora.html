@@ -6,6 +6,7 @@
     <title>Calculadora | Centro de Conciliación Laboral | Michoacán</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -14,67 +15,122 @@
     <style>
         :root { --ccl-marron: #911A3A; }
         .calculadora-shell { background: #fff; border-radius: 18px; box-shadow: 0 10px 28px rgba(0,0,0,0.08); padding: 2rem; }
+        @media (min-width: 768px) { .calculadora-shell { padding: 2.5rem; } }
         .calc-label { font-weight: 700; color: var(--ccl-marron); }
         .btn-ccl { background-color: var(--ccl-marron); color: white; font-weight: bold; border: none; }
         .btn-ccl:hover { background-color: #72142d; color: white; }
+        .text-justify { text-align: justify; }
+        .important { color: var(--ccl-marron); font-weight: bold; }
+        .note { font-weight: bold; font-size: 1.2rem; color: var(--ccl-marron); margin-top: 1rem; }
+        .btn-nota {
+            background-color: #f3e6ea;
+            color: #911A3A;
+            border-radius: 30px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-nota:hover {
+            background-color: #edd7de;
+            color: #7a1430;
+        }
     </style>
 </head>
 <body class="bg-light">
+    <main class="container my-5" style="max-width: 1000px; margin: 0 auto;">
+        <div class="row">
+            <div class="col-12 text-justify container mb-3" style="max-width: 900px; margin: 0 auto;">
+                <h1 class="fs-2 fw-bold text-center mb-4 text-balance">
+                    Calculadora para cuantificar la liquidación por despido injustificado
+                </h1>
 
-<main class="container my-5">
-    <div class="calculadora-shell">
-        <h2 class="text-center fw-bold mb-4" style="color: var(--ccl-marron);">Calculadora de Liquidación 2026</h2>
-        
-        <div class="row g-3">
-            <div class="col-md-3">
-                <label class="calc-label">Periodo de Pago</label>
-                <select id="periodoSel" class="form-select">
-                    <option value="1">Diario</option>
-                    <option value="7">Semanal</option>
-                    <option value="15">Quincenal</option>
-                    <option value="30">Mensual</option>
-                </select>
-            </div>
-            <div class="col-md-3">
-                <label class="calc-label">Salario Bruto ($)</label>
-                <input id="salarioInput" type="number" class="form-control" placeholder="0.0000">
-            </div>
-            <div class="col-md-3">
-                <label class="calc-label">Fecha Ingreso</label>
-                <input id="fIngreso" type="date" class="form-control">
-            </div>
-            <div class="col-md-3">
-                <label class="calc-label">Fecha Egreso</label>
-                <input id="fEgreso" type="date" class="form-control">
+                <p><br>
+                    La "Calculadora para cuantificar la liquidación por despido injustificado"
+                    es una herramienta de orientación diseñada para que las personas trabajadoras
+                    puedan informarse sobre los cálculos que se abordarán en una audiencia de conciliación.
+                </p>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-nota" data-bs-toggle="modal" data-bs-target="#modalNota">
+                        <i class="bi bi-info-circle me-1"></i>
+                            Nota Importante
+                    </button>
+                </div>
+                <!--<div class="note">Nota Importante</div>-->
+
+                <!--<p>
+                    Estos cálculos son un estimado basado en condiciones generales establecidas en la
+                    <span class="important">Ley Federal del Trabajo</span>. Cuando una persona trabajadora tiene prestaciones
+                    mayores a las de la ley, la compensación por un despido injustificado puede ser mayor.
+                    Recuerda que, en el <span class="important">Centro de Conciliación</span>, la persona conciliadora asignada
+                    a tu solicitud te apoyará para realizar un cálculo preciso para tu caso.
+                </p>-->
             </div>
         </div>
-
-        <div class="mt-4 d-flex gap-2">
-            <button class="btn btn-ccl px-5" onclick="calcular()">CALCULAR</button>
-            <button id="btnPDF" class="btn btn-danger d-none" onclick="generarPDF()">DESCARGAR PDF</button>
-        </div>
-
-        <!-- Sección de Resultados -->
-        <div id="resultados" class="mt-5 d-none">
-            <div class="alert alert-secondary border-0" id="resAntiguedad"></div>
+        <div class="calculadora-shell">
+            <h2 class="text-center fw-bold mb-4 fs-3" style="color: var(--ccl-marron);">Calculadora de Prestaciones 2026</h2>
             
-            <table class="table align-middle mt-3">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Concepto</th>
-                        <th>Base de Cálculo</th>
-                        <th>Monto ($)</th>
-                        <th>Estatus</th>
-                    </tr>
-                </thead>
-                <tbody id="cuerpoTabla"></tbody>
-            </table>
+            <div class="row g-3">
+                <div class="col-sm-6 col-md-3">
+                    <label class="calc-label">Periodo de Pago</label>
+                    <select id="periodoSel" class="form-select">
+                        <option value="1">Diario</option>
+                        <option value="7">Semanal</option>
+                        <option value="15">Quincenal</option>
+                        <option value="30">Mensual</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <label class="calc-label">Salario ($)</label>
+                    <input id="salarioInput" type="number" class="form-control" placeholder="000.00">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <label class="calc-label">Fecha de Ingreso</label>
+                    <input id="fIngreso" type="date" class="form-control">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <label class="calc-label">Fecha de Egreso</label>
+                    <input id="fEgreso" type="date" class="form-control">
+                </div>
+            </div>
 
-            <!-- Contenedor para Propuestas (90% - 50%) -->
-            <div id="contenedorPropuestas"></div>
-        </div>
-    </div>
-</main>
+            <div class="row mt-4 g-2">
+                <div class="col-12 col-sm-auto">
+                    <button class="btn btn-ccl w-100 px-4 py-2" onclick="calcular()">Calcular</button>
+                </div>
+                <div class="col-12 col-sm-auto">
+                    <button id="btnPDF" class="btn btn-danger w-100 d-none px-4 py-2" onclick="generarPDF()">Descargar PDF</button>
+                </div>
+                <div class="col-12 col-sm-auto ms-sm-auto">
+                <button class="btn btn-ccl w-100 px-4 py-2" onclick="limpiarCampos()">Limpiar</button>
+                </div>
+            </div>
+
+            <!-- Sección de Resultados -->
+            <div id="resultados" class="mt-5 d-none">
+                <div class="alert alert-secondary border-0 p-3" id="resAntiguedad"></div>
+            
+                <!-- Tabla responsiva expandida al 100% en PC -->
+                <div class="table-responsive rounded border mt-3 fs-6">
+                    <table class="table table-sm align-middle mb-0 table-hover w-100">
+                        <thead class="table-dark" style="background-color:black;">
+                            <tr>
+                                <th style="width: 28%;">Concepto</th>
+                                <th style="width: 32%;">Base de Cálculo</th>
+                                <th style="width: 22%;">Monto ($)</th>
+                                <th style="width: 18%;">Estatus</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpoTabla"></tbody>
+                    </table>
+
+                    <!-- Contenedor para Propuestas (90% - 50%) -->
+                    <div id="contenedorPropuestas"></div>
+                </div>
+            </div>
+    </main>
 
 <script>
     const SALARIO_MINIMO = 315.04;
@@ -145,10 +201,10 @@
 
         datosGlobales = {
             sdb: sdb.toFixed(4),
-            resumen: `Antigüedad: ${aniosCompletos} años | Días proporcional vacaciones: ${diasDesdeAniv}`,
+            resumen: `Antigüedad: ${aniosCompletos} años\nDías laborados: ${diasDesdeAniv}`,
             items: [
-                ["Aguinaldo", `${diasAguinaldo} días lab.`, montoAguinaldo, "Irrenunciable"],
-                ["Vacaciones", `${diasDesdeAniv} días lab.`, montoVac, "Irrenunciable"],
+                ["Aguinaldo", `${diasAguinaldo} días laborados`, montoAguinaldo, "Irrenunciable"],
+                ["Vacaciones", `${diasDesdeAniv} días laborados`, montoVac, "Irrenunciable"],
                 ["Prima Vacacional", "25% de vacaciones", montoPV, "Irrenunciable"],
                 ["Indemnización", "90 días de salario", montoIndem, "Negociable"],
                 ["Prima Antigüedad", "12 días por año", montoAntig, aniosCompletos >= 15 ? "Obligatoria" : "Negociable"]
@@ -182,7 +238,7 @@
         // Escenarios de conciliación (Propuestas)
         let htmlPropuestas = `
             <div class="mt-4">
-                <h5 class="calc-label mb-3 border-bottom pb-2"><i class="bi bi-percent me-2"></i>Propuesta de Conciliación</h5>
+                <h5 class="calc-label mb-3 border-bottom pb-2" style="text-align: center;"><i class="bi bi-percent me-2"></i>Propuesta de Conciliación</h5>
                 <div class="row g-3">`;
 
         datosGlobales.propuestas.forEach(p => {
@@ -219,7 +275,7 @@
         
         doc.setTextColor(0); doc.setFontSize(10);
         doc.text(datosGlobales.resumen, 14, 40);
-        doc.text(`Salario Diario Base: $${datosGlobales.sdb}`, 14, 46);
+        doc.text(`Salario Diario Base: $${datosGlobales.sdb}`, 14, 50);
 
         // Tabla de prestaciones formateada
         const bodyTable = datosGlobales.items.map(i => [i[0], i[1], `$${formatoMoneda.format(i[2])}`, i[3]]);
@@ -232,6 +288,40 @@
 
         doc.save("Liquidacion_Michoacan_2026.pdf");
     }
+    function limpiarCampos() {
+        document.getElementById('periodoSel').value = '1';
+        document.getElementById('salarioInput').value = '';
+        document.getElementById('fIngreso').value = '';
+        document.getElementById('fEgreso').value = '';
+        document.getElementById('resultados').classList.add('d-none');
+        document.getElementById('btnPDF').classList.add('d-none');
+        datosGlobales = {};
+    }
 </script>
+<div class="modal fade" id="modalNota" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                Estos cálculos son un estimado basado en condiciones generales establecidas en la
+                <strong>Ley Federal del Trabajo</strong>.
+                </p>
+
+                <p>
+                Cuando una persona trabajadora tiene prestaciones mayores a las de la ley, la compensación
+                por un despido injustificado puede ser mayor.
+                </p>
+
+                <p>
+                Recuerda que, en el <strong>Centro de Conciliación</strong>, la persona conciliadora asignada
+                a tu solicitud te apoyará para realizar un cálculo preciso para tu caso.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
