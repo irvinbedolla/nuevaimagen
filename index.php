@@ -256,22 +256,118 @@
                 </div>
                 <div id="banners">
                     <div class="owl-carousel owl-theme owl-banners" style="margin-top: 50px;">
-                        
+                        <!-- MAYO 2026 -->
                         <div class="item">
-                            <a href="https://visitmichoacan.com.mx/" target="_blank">
-                                <img class="img-fluid" src="imagenes/carrusel_pie/2025-04-23_ptzU7.jpg">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260513 Derechos laborales durante embarazo y lactancia.png">
                             </a>
                         </div>
 
                         <div class="item">
-                            <a href="https://ssp.michoacan.gob.mx/" target="_blank">
-                                <img class="img-fluid" src="imagenes/carrusel_pie/2025-06-18_s7EU1.jpg">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260505 Reparto de utilidades - quién aplica- Parte 0 - Portada.jpg">
                             </a>
                         </div>
 
                         <div class="item">
-                            <a href="https://sedeco.michoacan.gob.mx/" target="_blank">
-                                <img class="img-fluid" src="imagenes/carrusel_pie/2026-03-02_nBMb6.jpg">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260505 Reparto de utilidades - quién aplica- Parte 1.jpg">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260505 Reparto de utilidades - quién aplica- Parte 2.jpg">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260505 Reparto de utilidades - quién aplica- Parte 3.jpg">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260505 Reparto de utilidades - quién aplica- Parte 4.jpg">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260504 Renuncia - 1 año para pagos.png">
+                            </a>
+                        </div>
+                        <!-- ABRIL 2026 -->
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260429 Requisitos para audiencia.png">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260424 Plazo conciliación ante despido injustificado.png">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260421 CONACENTROS Beneficios de Conciliación Prejudicial.jpg">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260420 Código de ética.png">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260417 Finiquito- lo que corresponde por ley.png">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260415 Montos convenidos 1er trimestre 2026.png">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260413 Ubicaciones CCL.png">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260410 personas optan por resolver conflictos.png">
+                            </a>
+                        </div>
+
+                         <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260409 Empleadores - requisitos citatorios.png">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260408 PTU reparto de utilidades.png">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260407 CONACENTROS No tienes que pagar.jpg">
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#" onclick="return false;" target="_blank">
+                                <img class="img-fluid" src="imagenes/carrusel_pie/260406 Plazo solicitud de conciliación.png">
                             </a>
                         </div>
                     </div>
@@ -291,9 +387,53 @@
                     </div>
                     <div class="grid-galeria-estilizada">
                         <!--Base para las tres noticias mas recientes-->
-                        <a href="noticias\comunicadoCCL009-2026.html" class="galeria-item principal">
+                        <a href="noticias\comunicadoCCL013-2026.html" class="galeria-item principal">
                             <div class="img-contenedor">
-                                <img src="imagenes/noticias/comunicadoCCL009-2026-1.jpeg" alt="Noticia Principal">
+                                <img src="imagenes/noticias/comunicadoCCL013-2026-1.jpeg" alt="Noticia Principal">
+                            </div>
+                            <div class="fecha-badge">13 mayo, 2026</div>
+                            <div class="capa-oscura"></div>
+                            <div class="info-noticia">
+                                
+                                <h3 class="titulo-noticia">Michoacán protege los derechos laborales de mujeres durante el embarazo y la lactancia</h3>
+                            </div>
+                        </a>
+                        <a href="noticias\comunicadoCCL012-2026.html" class="galeria-item">
+                            <div class="img-contenedor">
+                                <img src="imagenes/noticias/comunicadoCCL012-2026-1.jpeg" alt="Noticia Secundaria 6">
+                            </div>
+                            <div class="fecha-badge">01 mayo, 2026</div>
+                            <div class="capa-oscura"></div>
+                            <div class="info-noticia">
+                                
+                                <h3 class="titulo-noticia">Centro de Conciliación Laboral asegura defensa a los derechos de las y los trabajadores</h3>
+                            </div>
+                        </a>
+                        <a href="noticias\comunicadoCCL011-2026.html" class="galeria-item">
+                            <div class="img-contenedor">
+                                <img src="imagenes/noticias/comunicadoCCL011-2026-1.jpeg" alt="Noticia Secundaria 5">
+                            </div>
+                            <div class="fecha-badge">21 abril, 2026</div>
+                            <div class="capa-oscura"></div>
+                            <div class="info-noticia">
+                                
+                                <h3 class="titulo-noticia">Centro de Conciliación Laboral recupera más de 75 mdp en favor de las y los trabajadores</h3>
+                            </div>
+                        </a>
+                        <!--<a href="noticias\comunicadoCCL010-2026.html" class="galeria-item">
+                            <div class="img-contenedor">
+                                <img src="imagenes/noticias/comunicadoCCL010-2026-1.jpeg" alt="Noticia Secundaria 4">
+                            </div>
+                            <div class="fecha-badge">17 abril, 2026</div>
+                            <div class="capa-oscura"></div>
+                            <div class="info-noticia">
+                                
+                                <h3 class="titulo-noticia">¿Vas a renunciar? El Centro de Conciliación Laboral te orienta para obtener un finiquito justo</h3>
+                            </div>
+                        </a>
+                        <a href="noticias\comunicadoCCL009-2026.html" class="galeria-item">
+                            <div class="img-contenedor">
+                                <img src="imagenes/noticias/comunicadoCCL009-2026-1.jpeg" alt="Noticia Secundaria 3">
                             </div>
                             <div class="fecha-badge">14 marzo, 2026</div>
                             <div class="capa-oscura"></div>
@@ -325,7 +465,7 @@
                                 
                                 <h3 class="titulo-noticia">Morelia será sede del Foro Nacional por la Consolidación de la Justicia Laboral</h3>
                             </div>
-                        </a>
+                        </a>-->
 
                     </div>
 
