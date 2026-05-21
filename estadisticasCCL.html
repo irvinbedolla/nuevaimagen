@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+    <title>Estadísticas | Centro de Conciliación Laboral | Michoacán</title>
+
+    <meta property="og:title" content="Estadísticas | Centro de Conciliación Laboral | Michoacán">
+    <meta property="og:image" content="https://michoacan.gob.mx/cdn/img/michog.jpg">
+    <meta property="og:description" content="Estadísticas del Centro de Conciliación Laboral del Estado de Michoacán">
+    <link rel="icon" href="images/pagina_web/cclm.ico" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link href="assets/estilos/eslitos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/noticias.css">
+	<link rel="stylesheet" href="css/Transparencia.css">
+
+  
+</head>
+<body>
+
+<header>
+    <nav class="navbar main-nav fixed-top navbar-expand-lg shadow-sm">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="index.php">
+                    <img src="imagenes/logo-ccl-michoacan.png" class="logo-dependencia" alt="Logo CCL">
+                </a>
+                <a class="navbar-brand border-start ps-3 d-none d-md-block" href="https://michoacan.gob.mx">
+                    <img src="https://michoacan.gob.mx/cdn/img/logo.svg" class="logo-gobierno" alt="Logo Gobierno">
+                </a>
+            </div>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.php"><b>INICIO</b></a></li>
+                    <li class="nav-item"><a class="nav-link" href="sedes.html"><b>SEDES</b></a></li>
+                    <li class="nav-item"><a class="nav-link" href="noticias.html"><b>NOTICIAS</b></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>EVENTOS</b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow border-0" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" target="_blank" href="https://foro-nacional.cclmichoacan.gob.mx/">Foro Nacional</a></li>
+                            <li><a class="dropdown-item" target="_blank" href="https://cclmichoacan.gob.mx/tercer_encuentro/">3° Encuentro Internacional</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-lg-3 py-2 py-lg-0 d-flex flex-column align-items-start align-items-lg-center">
+                        <div class="social-icons-container">
+                            <a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="social-icon" target="_blank"><img src="imagenes/footer/FB1.png" alt="FB" ></a>
+                            <a href="https://www.instagram.com/cclmichoacan/" class="social-icon" target="_blank"><img src="imagenes/footer/IG1.png" alt="IG"></a>
+                            <a href="https://x.com/cclmichoacan?s=21" class="social-icon" target="_blank"><img src="imagenes/footer/X1.png" alt="X"></a>
+                            <a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" class="social-icon" target="_blank"><img src="imagenes/footer/TK1.png" alt="TK"></a>
+                            <a href="https://www.youtube.com/@CCLMichoacan" class="social-icon" target="_blank"><img src="imagenes/footer/Y1.png" alt="YouTube"></a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-login-custom ms-lg-2 px-3" href="https://siconcilio.cclmichoacan.gob.mx/login" style="color: #ffffff !important;"><b>INICIAR SESIÓN</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container-fluid banner-titulo">
+    <h1>Estadísticas</h1>
+</div>
+
+<main class="container my-5">
+
+
+    <ul class="nav nav-pills justify-content-center mb-5 border-bottom pb-4" id="pills-tab" role="tablist">
+        <li class="nav-item mx-2"><button class="nav-link active rounded-pill px-5 py-2 fs-5 fw-bold" id="t25" data-bs-toggle="pill" data-bs-target="#c25" type="button">2025</button></li>
+        <li class="nav-item mx-2"><button class="nav-link rounded-pill px-5 py-2 fs-5 fw-bold" id="t24" data-bs-toggle="pill" data-bs-target="#c24" type="button">2024</button></li>
+        <li class="nav-item mx-2"><button class="nav-link rounded-pill px-5 py-2 fs-5 fw-bold" id="t23" data-bs-toggle="pill" data-bs-target="#c23" type="button">2023</button></li>
+        <li class="nav-item mx-2"><button class="nav-link rounded-pill px-5 py-2 fs-5 fw-bold" id="t22" data-bs-toggle="pill" data-bs-target="#c22" type="button">2022</button></li>
+    </ul>
+
+    <div class="tab-content mt-4" id="pills-tabContent">
+
+        <div class="tab-pane fade show active" id="c25" role="tabpanel">
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Morelia</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRM25/ENERO_MORELIA.pdf" download="ENERO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ENERO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRM25/FEBRERO_MORELIA.pdf" download="FEBRERO MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    FEBRERO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRM25/MARZO_MORELIA.pdf" download="MARZO MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MARZO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRM25/ABRIL_MORELIA.pdf" download="ABRIL_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ABRIL MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRM25/MAYO_MORELIA.pdf" download="MAYO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MAYO MORELIA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Uruapan</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRU25/ENERO_URUAPAN.pdf" download="ENERO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ENERO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRU25/FEBRERO_URUAPAN.pdf" download="FEBRERO URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    FEBRERO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRU25/MARZO_URUAPAN.pdf" download="MARZO URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MARZO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRU25/ABRIL_URUAPAN.pdf" download="ABRIL_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ABRIL URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRU25/MAYO_URUAPAN.pdf" download="MAYO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MAYO URUAPAN
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Zamora</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRZ25/ENERO_ZAMORA.pdf" download="ENERO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ENERO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRZ25/FEBRERO_ZAMORA.pdf" download="FEBRERO ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    FEBRERO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRZ25/MARZO_ZAMORA.pdf" download="MARZO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MARZO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRZ25/ABRIL_ZAMORA.pdf" download="ABRIL_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ABRIL ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2025/DRZ25/MAYO_ZAMORA.pdf" download="MAYO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MAYO ZAMORA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="c24" role="tabpanel">
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Morelia</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/ENERO_MORELIA.pdf" download="ENERO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ENERO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/FEBRERO_MORELIA.pdf" download="FEBRERO MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    FEBRERO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/MARZO_MORELIA.pdf" download="MARZO MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MARZO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/ABRIL_MORELIA.pdf" download="ABRIL_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ABRIL MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/MAYO_MORELIA.pdf" download="MAYO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MAYO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/JUNIO_MORELIA.pdf" download="JUNIO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JUNIO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/JULIO_MORELIA.pdf" download="JULIO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JULIO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/AGOSTO_MORELIA.pdf" download="AGOSTO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    AGOSTO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/SEPTIEMBRE_MORELIA.pdf" download="SEPTIEMBRE_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    SEPTIEMBRE MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/OCTUBRE_MORELIA.pdf" download="OCTUBRE_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    OCTUBRE MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/NOVIEMBRE_MORELIA.pdf" download="NOVIEMBRE_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    NOVIEMBRE MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRM24/DICIEMBRE_MORELIA.pdf" download="DICIEMBRE_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    DICIEMBRE MORELIA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Uruapan</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/ENERO_URUAPAN.pdf" download="ENERO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ENERO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/FEBRERO_URUAPAN.pdf" download="FEBRERO URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    FEBRERO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/MARZO_URUAPAN.pdf" download="MARZO URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MARZO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/ABRIL_URUAPAN.pdf" download="ABRIL_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ABRIL URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/MAYO_URUAPAN.pdf" download="MAYO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MAYO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/JUNIO_URUAPAN.pdf" download="JUNIO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JUNIO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/JULIO_URUAPAN.pdf" download="JULIO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JULIO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/AGOSTO_URUAPAN.pdf" download="AGOSTO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    AGOSTO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/SEPTIEMBRE_URUAPAN.pdf" download="SEPTIEMBRE_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    SEPTIEMBRE URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/OCTUBRE_URUAPAN.pdf" download="OCTUBRE_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    OCTUBRE URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/NOVIEMBRE_URUAPAN.pdf" download="NOVIEMBRE_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    NOVIEMBRE URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRU24/DICIEMBRE_URUAPAN.pdf" download="DICIEMBRE_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    DICIEMBRE URUAPAN
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Zamora</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/ENERO_ZAMORA.pdf" download="ENERO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ENERO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/FEBRERO_ZAMORA.pdf" download="FEBRERO ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    FEBRERO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/MARZO_ZAMORA.pdf" download="MARZO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MARZO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/ABRIL_ZAMORA.pdf" download="ABRIL_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ABRIL ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/MAYO_ZAMORA.pdf" download="MAYO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MAYO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/JUNIO_ZAMORA.pdf" download="JUNIO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JUNIO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/JULIO_ZAMORA.pdf" download="JULIO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JULIO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/AGOSTO_ZAMORA.pdf" download="AGOSTO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    AGOSTO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/SEPTIEMBRE_ZAMORA.pdf" download="SEPTIEMBRE_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    SEPTIEMBRE ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/OCTUBRE_ZAMORA.pdf" download="OCTUBRE_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    OCTUBRE ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/NOVIEMBRE_ZAMORA.pdf" download="NOVIEMBRE_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    NOVIEMBRE ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2024/DRZ24/DICIEMBRE_ZAMORA.pdf" download="DICIEMBRE_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    DICIEMBRE ZAMORA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="c23" role="tabpanel">
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Morelia</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/ENERO_MORELIA.pdf" download="ENERO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ENERO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/FEBRERO_MORELIA.pdf" download="FEBRERO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    FEBRERO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/MARZO_MORELIA.pdf" download="MARZO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MARZO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/ABRIL_MORELIA.pdf" download="ABRIL_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ABRIL MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/MAYO_MORELIA.pdf" download="MAYO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MAYO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/JUNIO_MORELIA.pdf" download="JUNIO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JUNIO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/JULIO_MORELIA.pdf" download="JULIO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JULIO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/AGOSTO_MORELIA.pdf" download="AGOSTO_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    AGOSTO MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/SEPTIEMBRE_MORELIA.pdf" download="SEPTIEMBRE_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    SEPTIEMBRE MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/OCTUBRE_MORELIA.pdf" download="OCTUBRE_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    OCTUBRE MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/NOVIEMBRE_MORELIA.pdf" download="NOVIEMBRE_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    NOVIEMBRE MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRM23/DICIEMBRE_MORELIA.pdf" download="DICIEMBRE_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    DICIEMBRE MORELIA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Uruapan</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/ENERO_URUAPAN.pdf" download="ENERO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ENERO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/FEBRERO_URUAPAN.pdf" download="FEBRERO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    FEBRERO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/MARZO_URUAPAN.pdf" download="MARZO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MARZO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/ABRIL_URUAPAN.pdf" download="ABRIL_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ABRIL URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/MAYO_URUAPAN.pdf" download="MAYO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MAYO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/JUNIO_URUAPAN.pdf" download="JUNIO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JUNIO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/JULIO_URUAPAN.pdf" download="JULIO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JULIO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/AGOSTO_URUAPAN.pdf" download="AGOSTO_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    AGOSTO URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/SEPTIEMBRE_URUAPAN.pdf" download="SEPTIEMBRE_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    SEPTIEMBRE URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/OCTUBRE_URUAPAN.pdf" download="OCTUBRE_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    OCTUBRE URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/NOVIEMBRE_URUAPAN.pdf" download="NOVIEMBRE_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    NOVIEMBRE URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRU23/DICIEMBRE_URUAPAN.pdf" download="DICIEMBRE_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    DICIEMBRE URUAPAN
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Zamora</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/ENERO_ZAMORA.pdf" download="ENERO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ENERO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/FEBRERO_ZAMORA.pdf" download="FEBRERO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    FEBRERO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/MARZO_ZAMORA.pdf" download="MARZO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MARZO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/ABRIL_ZAMORA.pdf" download="ABRIL_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    ABRIL ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/MAYO_ZAMORA.pdf" download="MAYO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    MAYO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/JUNIO_ZAMORA.pdf" download="JUNIO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JUNIO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/JULIO_ZAMORA.pdf" download="JULIO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    JULIO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/AGOSTO_ZAMORA.pdf" download="AGOSTO_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    AGOSTO ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/SEPTIEMBRE_ZAMORA.pdf" download="SEPTIEMBRE_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    SEPTIEMBRE ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/OCTUBRE_ZAMORA.pdf" download="OCTUBRE_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    OCTUBRE ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/NOVIEMBRE_ZAMORA.pdf" download="NOVIEMBRE_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    NOVIEMBRE ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2023/DRZ23/DICIEMBRE_ZAMORA.pdf" download="DICIEMBRE_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    DICIEMBRE ZAMORA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="c22" role="tabpanel">
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Morelia</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2022/DRM/OCTUBRE_MORELIA.pdf" download="OCTUBRE_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    OCTUBRE MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2022/DRM/NOVIEMBRE_MORELIA.pdf" download="NOVIEMBRE_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    NOVIEMBRE MORELIA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2022/DRM/DICIEMBRE_MORELIA.pdf" download="DICIEMBRE_MORELIA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    DICIEMBRE MORELIA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Uruapan</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2022/DRU/OCTUBRE_URUAPAN.pdf" download="OCTUBRE_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    OCTUBRE URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2022/DRU/NOVIEMBRE_URUAPAN.pdf" download="NOVIEMBRE_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    NOVIEMBRE URUAPAN
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2022/DRU/DICIEMBRE_URUAPAN.pdf" download="DICIEMBRE_URUAPAN">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    DICIEMBRE URUAPAN
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header fw-bold">Delegación Regional Zamora</div>
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush small">
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2022/DRZ/OCTUBRE_ZAMORA.pdf" download="OCTUBRE_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    OCTUBRE ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2022/DRZ/NOVIEMBRE_ZAMORA.pdf" download="NOVIEMBRE_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    NOVIEMBRE ZAMORA
+                                </a>
+                                <a class="list-group-item list-group-item-action d-flex align-items-center gap-2" target="_blank" href="documentos/ST/Estadisticas/A2022/DRZ/DICIEMBRE_ZAMORA.pdf" download="DICIEMBRE_ZAMORA">
+                                    <i class="bi bi-file-earmark-pdf text-danger" aria-hidden="true"></i>
+                                    DICIEMBRE ZAMORA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+<footer class="footer-site">
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-section">
+                <img src="imagenes/3.png" alt="Logo Michoacán"  class="img-footer-ccl">
+                <!--<img src="https://michoacan.gob.mx/cdn/img/logo-gris.png" alt="Logo CCL" class="img-footer-ccl">-->
+            </div> 
+            <div class="footer-section">
+                <img src="imagenes/2.png" alt="Logo Michoacán" class="img-footer-main">
+            </div>
+            <div class="footer-section">
+                <img src="imagenes/1.png" alt="Logo CCL" class="img-footer-ccl">
+            </div> 
+            <div><p style="color: #911a3a;">#MichoacánEsMejor</p></div>
+        </div>
+
+        <div class="footer-info">
+            <div class="footer-copy">
+                &copy; 2026 Desarrollado por <b>CCL Michoacán</b> | Gobierno del Estado de Michoacán
+            </div>
+            <div class="footer-privacy"> 
+                <a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank"><b>Aviso de privacidad</b></a> 
+            </div>
+        </div>
+    </div>
+</footer>
+<!--<footer class="footer-site" style="background-color: #f8f9fa; border-top: 1px solid #eaeaea; padding-top: 2rem;">
+    <div class="container pb-4">
+        <div class="row align-items-center text-center text-md-start">
+            <div class="col-md-4 mb-3 mb-md-0 text-center">
+                <img src="imagenes/logo-ccl-michoacan.png" alt="Logo CCL" width="180">
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0 text-center">
+                <a href="https://www.facebook.com/conciliacionlaboralmich/?locale=es_LA" class="text-muted mx-2 fs-4" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/cclmichoacan/" class="text-muted mx-2 fs-4" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://x.com/cclmichoacan?s=21" class="text-muted mx-2 fs-4" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.tiktok.com/@cclmichoacan0?_t=ZM-8uooi2eSI1V&_r=1" class="text-muted mx-2 fs-4" target="_blank"><i class="bi bi-tiktok"></i></a>
+                <a href="https://www.youtube.com/@CCLMichoacan" class="text-muted mx-2 fs-4" target="_blank"><i class="bi bi-youtube"></i></a>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="imagenes/logo-michoacan-es-mejor2.png" alt="Michoacán" width="150">
+            </div>  
+        </div>
+        <div class="row mt-4 border-top pt-3 text-center">
+            <div class="col-12 text-muted" style="font-size: 0.9rem;">
+                <p class="mb-1">© Desarrollado por CCL Michoacán | Gobierno del Estado de Michoacán 2026</p>
+                <a href="documentos/AvisoPrivacidad/Aviso_de_Privacidad_Simplificado.pdf" target="_blank" class="text-decoration-none" style="color: #911A3A;">Aviso de privacidad</a>
+            </div>
+        </div>
+    </div>
+</footer>-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.querySelectorAll('a[download]').forEach(function (link) {
+        link.removeAttribute('download');
+    });
+</script>
+
+</body>
+</html>
