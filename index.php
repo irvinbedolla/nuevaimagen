@@ -528,7 +528,7 @@
                         <span><i class="bi bi-people"></i></span>  
                     </a>
 
-                    <a href="rstadisticasCCL.html" class="tramites-box">
+                    <a href="estadisticasCCL.html" class="tramites-box">
                         <h2>Estadísticas</h2>
                         <span><i class="bi bi-bar-chart-line"></i></span>                
                     </a>
@@ -549,7 +549,6 @@
                     </a>
                 </div>
             </div>
-
             <footer class="footer-site">
                 <div class="container">
                     <div class="footer-container">
