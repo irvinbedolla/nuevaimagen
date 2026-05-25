@@ -151,6 +151,26 @@
                         <img src="imagenes/carrusel/ccl.png" alt="Centro de Conciliación">
                     </div>
 
+                    <div class="item">
+                        <img src="imagenes/carrusel/2.png" alt="Centro de Conciliación">
+                    </div>
+
+                    <div class="item">
+                        <img src="imagenes/carrusel/3.png" alt="Centro de Conciliación">
+                    </div>
+
+                    <div class="item">
+                        <img src="imagenes/carrusel/4.png" alt="Centro de Conciliación">
+                    </div>
+
+                    <div class="item">
+                        <img src="imagenes/carrusel/5.png" alt="Centro de Conciliación">
+                    </div>
+
+                    <div class="item">
+                        <img src="imagenes/carrusel/6.png" alt="Centro de Conciliación">
+                    </div>
+
                     <?php 
                         // Iniciar cURL
                         $ch = curl_init();
