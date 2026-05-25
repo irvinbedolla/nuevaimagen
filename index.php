@@ -152,7 +152,27 @@
                     </div>
 
                     <?php 
-                        $content = @file_get_contents("https://michoacan.gob.mx/cdn/slider.php");
+                        // Iniciar cURL
+                        $ch = curl_init();
+                        curl_setopt($ch, CURLOPT_URL, "https://michoacan.gob.mx/cdn/slider.php");
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                        // Simular un navegador web para evitar bloqueos de seguridad
+                        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+                        // Evitar problemas si el sitio tiene problemas con su certificado SSL temporalmente
+                        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
+                        
+                        $content = curl_exec($ch);
+                        curl_close($ch);
+
+                        if($content) {
+                            preg_match_all('/src="([^"]+)"/', $content, $matches);
+                            if(!empty($matches[1])) {
+                                foreach($matches[1] as $url) {
+                                    echo '<div class="item"><img src="' . $url . '" alt="carrusel gobierno"></div>';
+                                }
+                            }
+                        }
+                        /*$content = @file_get_contents("https://michoacan.gob.mx/cdn/slider.php");
                         if($content) {
                             preg_match_all('/src="([^"]+)"/', $content, $matches);
                             if(!empty($matches[1])) {
@@ -160,7 +180,7 @@
                                     echo '<div class="item"><img src="' . $url . '" alt="Comunicado Gobierno"></div>';
                                 }
                             }
-                        }
+                        }*/
                     ?>
                 </div>
             </div>

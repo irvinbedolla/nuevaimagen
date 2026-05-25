@@ -22,7 +22,58 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link href="assets/estilos/eslitos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/noticias.css">
     <link rel="stylesheet" href="css/Transparencia.css">
+    <style>
+        .accordion {
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .accordion-item {
+            border: none;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-button {
+            background-color: #f5f5f5;
+            color: #4a4a4a;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 18px 20px;
+            box-shadow: none !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #f5f5f5;
+            box-shadow: none;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: transparent;
+        }
+
+        .accordion-body {
+            background: #ffffff;
+            padding: 20px;
+            color: #444;
+        }
+
+        /* Flecha */
+        .accordion-button::after {
+            filter: brightness(0.4);
+        }
+        .nombre-persona {
+            --bs-text-opacity: 1;
+            color: #496163 !important;
+        }
+    </style>
 </head>
 <body>
 <!-- MENU -->
@@ -89,8 +140,318 @@
 </div>
 
 <main class="container my-5">
-    
-    <ul class="nav nav-pills justify-content-center mb-4 border-bottom pb-3" id="pills-tab" role="tablist">
+    <div class="accordion" id="accordionGeneral">
+        <h3 class="accordion-title-header mb-3">Estructura</h3>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                    DIRECCIÓN GENERAL
+                </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                <div class="accordion-body">
+                    <h5 class="titulo-puesto">Director General</h5>
+                    <p class="nombre-persona">
+                        <strong>Mtro. Andrés Medina Gúzman</strong>
+                    </p>
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Secretaría Técnica</h4>
+                    <h5 class="titulo-puesto">Titular</h5>
+                    <p class="nombre-persona">
+                        <strong>Mtro. Rigoberto Gúzman Uriarte</strong>
+                    </p>
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Auxiliar de Conciliador</h4>
+                    <h5 class="titulo-puesto">Titular</h5>
+                    <p class="nombre-persona">
+                        <strong>Mtro. Brandon Cruz Vilchis</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                    UNIDAD DE ASUNTOS JURÍDICOS, CONFLICTOS, ACUERDOS E IGUALDAD
+                </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                <div class="accordion-body">
+                    <h5 style="margin: 10px;">Titular</h5>
+                    <p class="nombre-persona">
+                        <strong>Mtra. Yadira Lizbeth Torres Herrera</strong>
+                    </p> 
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Departamento De Contratos, Convenios Y Acuerdos</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Mayra Edith López García</strong>
+                    </p>  
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Departamento De Conciliación, Género E Igualdad</h4>  
+                    <p class="nombre-persona">
+                        <strong>Lic. Mariam Samantha Cazarez Sánchez</strong>
+                    </p>                    
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                    DELEGACIÓN ADMINISTRATIVA
+                </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                <div class="accordion-body">
+                    <h5 style="margin: 10px;">Titular</h5>
+                    <p class="nombre-persona">
+                        <strong>L.A. Ignacio Gerardo Álvarez Palacios</strong>
+                    </p>
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Departamento de Recursos Humanos y archivos</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Emmanuel Navarro Higareda</strong>
+                    </p>  
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Departamento de Recursos Financieros y Recursos Materiales</h4>  
+                    <p class="nombre-persona">
+                        <strong>Lic. Ana Rosa Molina Alcaraz</strong>
+                    </p> 
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Departamento de Sistema Virtual, Tecnologias de La Información, Comunicación y Soporte Técnico</h4>  
+                    <p class="nombre-persona">
+                        <strong>Ing. Irvin Samuel Bedolla Mota</strong>
+                    </p>                   
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                    DELEGACIÓN REGIONAL MORELIA
+                </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                <div class="accordion-body">
+                    <h5 style="margin: 10px;">Titular</h5>
+                    <p class="nombre-persona">
+                        <strong>Lic. Adolfo Cecilio Campos Marcial</strong>
+                    </p>   
+                    
+                    <hr class="separador">
+                    <h4 class="titulo-area">Conciliadores</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Rosa Isela Barrera Valdés</strong>
+                    </p>  
+                    <p class="nombre-persona">
+                        <strong>Lic. Daniel Buitrón Izquierdo</strong>
+                    </p> 
+                    <p class="nombre-persona">
+                        <strong>Lic. Susy Areli Reyes Santoyo</strong>
+                    </p>
+                    <p class="nombre-persona">
+                        <strong>Mtra. Natalia Itzel Estrada Guzmán</strong>
+                    </p>  
+                    <p class="nombre-persona">
+                        <strong>Lic. Rocío Estefanía Ramírez Soto</strong>
+                    </p> 
+                    <p class="nombre-persona">
+                        <strong>Lic. Luz Ireri González Hernández</strong>
+                    </p>
+                    <p class="nombre-persona">
+                        <strong>Mtro. Juan Rosales Garibay</strong>
+                    </p>
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Notificadores</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Felipe Moreno Díaz</strong>
+                    </p>  
+                    <p class="nombre-persona">
+                        <strong>Lic. Lorena Lachino Barboza</strong>
+                    </p> 
+                    <p class="nombre-persona">
+                        <strong>Lic. Ricardo Rafael Paz Rodríguez</strong>
+                    </p>
+                    <p class="nombre-persona">
+                        <strong>Lic. Manlio Gerardo López Gutiérrez</strong>
+                    </p>  
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Auxiliar de Conciliadores</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Felipe Moreno Díaz</strong>
+                    </p>  
+                    <p class="nombre-persona">
+                        <strong>Lic. Lorena Lachino Barboza</strong>
+                    </p> 
+                    <p class="nombre-persona">
+                        <strong>Lic. Ricardo Rafael Paz Rodríguez</strong>
+                    </p>
+                    <p class="nombre-persona">
+                        <strong>Lic. Manlio Gerardo López Gutiérrez</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                    DELEGACIÓN REGIONAL URUAPAN
+                </button>
+            </h2>
+            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                <div class="accordion-body">
+                    <h5 style="margin: 10px;">Titular</h5>
+                    <p class="nombre-persona">
+                        <strong>Mtro. Eduardo Israel Contreras Ramírez</strong>
+                    </p>  
+                    
+                    <hr class="separador">
+                    <h4 class="titulo-area">Conciliadores</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Diana Guadalupe Negrete Ramirez</strong>
+                    </p>  
+                    <p class="nombre-persona">
+                        <strong>Lic. Hugo Mundo Ramos</strong>
+                    </p> 
+                    <p class="nombre-persona">
+                        <strong>Lic. Mary Ascela Torres Benitez</strong>
+                    </p>
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Notificadores</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Victor Hugo Aboytes Arce</strong>
+                    </p>  
+                    <p class="nombre-persona">
+                        <strong>Lic. Erika Velázquez Morales</strong>
+                    </p>  
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Enlace administrativo</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Brenda Lizeth Anaya Diaz</strong>
+                    </p>  
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Auxiliar de Conciliadores</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Maria Guadalupe Mata Ponce</strong>
+                    </p>  
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                    DELEGACIÓN REGIONAL ZAMORA
+                </button>
+            </h2>
+            <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionGeneral">
+                <div class="accordion-body">
+                    <h5 style="margin: 10px;">Titular</h5>
+                    <p class="nombre-persona">
+                        <strong>Lic. Belen Villagómez León</strong>
+                    </p>
+                    
+                    <hr class="separador">
+                    <h4 class="titulo-area">Conciliadores</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Montserrat Meza De la Cruz</strong>
+                    </p>  
+                    <p class="nombre-persona">
+                        <strong>Lic. Maria Isabel Barrera Moreno</strong>
+                    </p> 
+                
+                    <hr class="separador">
+                    <h4 class="titulo-area">Notificadores</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Rosa Isela Arzate Quevedo</strong>
+                    </p>  
+                    <p class="nombre-persona">
+                        <strong>Lic. Oscar Salinas Huerta</strong>
+                    </p>  
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Enlace administrativo</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. Liberiana hernandez valentin</strong>
+                    </p>  
+
+                    <hr class="separador">
+                    <h4 class="titulo-area">Auxiliar de Conciliadores</h4>                    
+                    <p class="nombre-persona">
+                        <strong>Lic. </strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="tab-pane" id="c25" role="tabpanel">
+        <div class="accordion accordion-flush border rounded shadow-sm" id="acc25">
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#a25-2">Reportes Presupuestales 2025</button></h2>
+                <div id="a25-2" class="accordion-collapse collapse" data-bs-parent="#acc25">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="titulo-mes">Marzo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#a25-2">Reportes Presupuestales 2025</button></h2>
+                <div id="a25-2" class="accordion-collapse collapse" data-bs-parent="#acc25">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="titulo-mes">Marzo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#a25-2">Reportes Presupuestales 2025</button></h2>
+                <div id="a25-2" class="accordion-collapse collapse" data-bs-parent="#acc25">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="titulo-mes">Marzo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#a25-2">Reportes Presupuestales 2025</button></h2>
+                <div id="a25-2" class="accordion-collapse collapse" data-bs-parent="#acc25">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="titulo-mes">Marzo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    -->
+    <!--<ul class="nav nav-pills justify-content-center mb-4 border-bottom pb-3" id="pills-tab" role="tablist">
         <li class="nav-item"><button class="nav-link active rounded-pill px-4" id="tmor" data-bs-toggle="pill" data-bs-target="#cmor" type="button">Morelia</button></li>
         <li class="nav-item"><button class="nav-link rounded-pill px-4" id="tzit" data-bs-toggle="pill" data-bs-target="#czit" type="button">Zitácuaro</button></li>
         <li class="nav-item"><button class="nav-link rounded-pill px-4" id="turu" data-bs-toggle="pill" data-bs-target="#curu" type="button">Uruapan</button></li>
@@ -98,1036 +459,8 @@
         <li class="nav-item"><button class="nav-link rounded-pill px-4" id="tzam" data-bs-toggle="pill" data-bs-target="#czam" type="button">Zamora</button></li>
         <li class="nav-item"><button class="nav-link rounded-pill px-4" id="tsah" data-bs-toggle="pill" data-bs-target="#csah" type="button">Sahuayo</button></li>
     </ul>
-           <br>         
-    <div class="tab-content mt-4" id="pills-tabContent">
-        
-        <div class="tab-pane fade show active" id="cmor" role="tabpanel" aria-labelledby="tmor">
-            <h3 class="textoVerde mb-3"><i class="bi bi-geo-alt-fill"></i> Directorio - Sede Morelia</h3>
-            
-            <div class="table-responsive shadow-sm rounded border">
-                <table class="table table-hover table-striped align-middle mb-0">
-                    <thead style="background-color: #911A3A; color: white;">
-                        <tr>
-                            <th scope="col" class="py-3 text-nowrap">Nombre</th>
-                            <th scope="col" class="py-3">Cargo</th>
-                            <th scope="col" class="py-3">Correo</th>
-                            <th scope="col" class="py-3">Teléfono</th>
-                            <th scope="col" class="py-3">Extensión</th>
-                            <th scope="col" class="py-3" style="min-width: 250px;">Dirección</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Ana Luisa Soriano Virueta</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">asoriano@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Ana Rosa Leal Mendoza</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">aleal@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Armando Cruz Ballesteros</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">acruz@cclmichoacan.gob.</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Brando Mozqueda Rubio</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">bmozqueda@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Brenda Berenice Ángel García</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">bangel@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1096</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Carolina Calderón Hernández</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">ccalderon@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Clever Guadalupe Cortés Salas</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">ccortes@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1092</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Eduardo Montaño Calvillo</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">emontano@cclmichoacan.gob.m</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Erandi Martínez Barajas</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">emartinez@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Estefania Ramirez Mejia</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">eramirez@cclmichoacan.gob.m</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Graciela Soriano Vargas</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Guadalupe Paola Díaz Rivera</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">@cclmichoacan.gob.</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Jesús Manuel Correa Arizmendi</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">jcorrea@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1090</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Jimena Gutierrez</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">vguzman@cclmichoacan.gob.</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Juan Velazquez Rios</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">jvelazquez@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1081</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Jully Coraima Rubio Mendoza</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">jrubio@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Karla Guadalupe Sánchez Calderón</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">ksanchez@cclmichoacan.gob.m</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Luis Alberto Vazquez Abad</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">avazquez@cclmichoacan.gob.</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Luis Rico Tinoco</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">lrico@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1098</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>María Del Rosario Valle García</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">mvalle@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Ofelia Tapia Rodriguez</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">otapia@cclmichoacan.gob.m</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Olivia Pedraza Torres</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">opedraza@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Paola Alejandra Aguilar Gonzalez</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">paaguilar@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1081</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sandra Rocío Varela Cortés</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">svarela@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Yesenia Arteaga Vénces</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">yarteaga@cclmichoacan.gob.m</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Gloria Espinoza Ruíz</strong></td>
-                            <td>Auxiliar de Conciliador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">gespinoza@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1084</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Mayra Edith López García</strong></td>
-                            <td>Auxiliar de Conciliador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">mlopez@ccl.michoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Jorge Alberto Ibarra Aguilar</strong></td>
-                            <td>Auxiliar de Conciliadores</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">jibarra@michoacán.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1087</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Daniel Buitrón Izquierdo</strong></td>
-                            <td>Conciliador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">dbuitron@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1083</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Hugo Mundo Ramos</strong></td>
-                            <td>Conciliador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">hmundo@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1089</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Juan Rosales Garibay</strong></td>
-                            <td>Conciliador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">jrosales@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1091</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Luz Ireri González Hernández</strong></td>
-                            <td>Conciliadora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">lgonzalez@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1095</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Natalia Itzel Estrada Guzmán</strong></td>
-                            <td>Conciliadora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">nestrada@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1086</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Rocío Estefanía Ramírez Soto</strong></td>
-                            <td>Conciliadora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">rramirez@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1082</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Rosa Isela Barrera Valdés</strong></td>
-                            <td>Conciliadora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">rbarrera@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1085</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Susy Areli Reyes Santoyo</strong></td>
-                            <td>Conciliadora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">sreyes@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1094</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Cristina Gaona Rojas</strong></td>
-                            <td>Delegada administrativa </td>
-                            <td><a class="text-decoration-none" style="color: #496163;">cgaona@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1003</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Adolfo Cecilio Campos Marcial</strong></td>
-                            <td>Delegado regional Morelia</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">acampos@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1097</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Andrés Medina Gúzman</strong></td>
-                            <td>Director General</td>
-                            <td><a style="color: #496163;">amedina@cclmichoacán.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 6886337<br>(443) 2983977</td>
-                            <td>1088</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Yadira Lizbeth Torres Herrera</strong></td>
-                            <td>Directora De La Unidad De Asuntos Juridicos, Conflictos, Acuerdos E Igualdad</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">ytorres@ccl.michoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1100</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Mariam Samantha Cazarez Sánchez</strong></td>
-                            <td>Jefa De Departamento De Conciliación, Género E Igualdad</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">mcazarez@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1079</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Omar Said Marin Leyva</strong></td>
-                            <td>Jefe De Departamento De Contratos, Convenios Y Acuerdos</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">smarin@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1090</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Rubén Ivan Ochoa Trujillo</strong></td>
-                            <td>Jefe de Departamento de Recursos Financieros y Recursos Materiales</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">rochoa@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Emmanuel Navarro Higareda</strong></td>
-                            <td>Jefe de Departamento de Recursos Humanos y archivos</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">enavarro@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Irvin Samuel Bedolla Mota</strong></td>
-                            <td>Jefe de Departamento de Sistema Virtual, Tecnologias de La Información, Comunicación y Soporte Técnico</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">ibedolla@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1093</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Felipe Moreno Díaz</strong></td>
-                            <td>Notificador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">fmoreno@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Lorena Lachino Barboza</strong></td>
-                            <td>Notificadora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">llachino@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Matilde Lizet Farfán Ángeles</strong></td>
-                            <td>Notificadora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">mfarfan@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Rigoberto Guzmán Uriarte</strong></td>
-                            <td>Secretaría Técnica</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">rguzman@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 298-39-77</td>
-                            <td>1080</td>
-                            <td>Blvd. García de León 1575, Chapultepec Oriente, 58260 Morelia, Mich.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        
-        <div class="tab-pane fade" id="czit" role="tabpanel" aria-labelledby="tzit">
-            <h3 class="textoVerde mb-3"><i class="bi bi-geo-alt-fill"></i> Directorio - Sede Zitácuaro</h3>
-            
-            <div class="table-responsive shadow-sm rounded border">
-                <table class="table table-hover table-striped align-middle mb-0">
-                    <thead style="background-color: #911A3A; color: white;">
-                        <tr>
-                            <th scope="col" class="py-3 text-nowrap">Nombre</th>
-                            <th scope="col" class="py-3">Cargo</th>
-                            <th scope="col" class="py-3">Correo</th>
-                            <th scope="col" class="py-3">Teléfono</th>
-                            <th scope="col" class="py-3">Extensión</th>
-                            <th scope="col" class="py-3" style="min-width: 250px;">Dirección</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>JETZEMANI ESTEFANIA MENDIOLA ESQUIVEL</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a href="" class="text-decoration-none" style="color: #496163;"></a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>5 de Mayo norte 3, Jose María Morelos, tercer piso, 61506 Zitácuaro, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARIELA ZAVALA BLANCAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a href="mzavala@cclmichoacan.gob.mx" class="text-decoration-none" style="color: #496163;">mzavala@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>5 de Mayo norte 3, Jose María Morelos, tercer piso, 61506 Zitácuaro, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>EPIFANIO GONZÁLEZ VENGAS</strong></td>
-                            <td>Auxiliar Apoyo Zitacuaro</td>
-                            <td><a href="egonzalez@cclmichoacan.gob.mx" class="text-decoration-none" style="color: #496163;">egonzalez@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1098</td>
-                            <td>5 de Mayo norte 3, Jose María Morelos, tercer piso, 61506 Zitácuaro, Mich.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="tab-pane fade" id="curu" role="tabpanel" aria-labelledby="turu">
-            <h3 class="textoVerde mb-3"><i class="bi bi-geo-alt-fill"></i> Directorio - Sede Uruapan</h3>
-            <div class="table-responsive shadow-sm rounded border">
-                <table class="table table-hover table-striped align-middle mb-0">
-                    <thead style="background-color: #911A3A; color: white;">
-                        <tr>
-                            <th scope="col" class="py-3 text-nowrap">Nombre</th>
-                            <th scope="col" class="py-3">Cargo</th>
-                            <th scope="col" class="py-3">Correo</th>
-                            <th scope="col" class="py-3">Teléfono</th>
-                            <th scope="col" class="py-3">Extensión</th>
-                            <th scope="col" class="py-3" style="min-width: 250px;">Dirección</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>BRENDA GUADALUPE EQUIHUA PEREZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">bequihua@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>GISELLE OLIVO MORENO</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">golivo@cclmichaocan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARY ASCELA TORRES BENÍTEZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">matorres@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>GUADALUPE MATA PONCE</strong></td>
-                            <td>Auxiliar de Conciliador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">mmata@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>HUGO CALDERÓN SÁNCHEZ</strong></td>
-                            <td>Auxiliar de Conciliador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">hcalderon@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>EDUARDO ISRAEL CONTRERAS</strong></td>
-                            <td>Conciliador</td>
-                            <td><a  class="text-decoration-none" style="color: #496163;">econtreras@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>DIANA GUADALUPE NEGRETE RAMÍREZ</strong></td>
-                            <td>Conciliadora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">dnegrete@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>YAHAIRA LIZETH MEDINA URIBE</strong></td>
-                            <td>Directora Regional Uruapan</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">ymedina@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>BRENDA LIZETH ANAYA DÍAS</strong></td>
-                            <td>Enlace Administrativo</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">banaya@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>REYNA ERÉNDIRA TEJEDA DÍAZ</strong></td>
-                            <td>Intendente</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">dretejera@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>VÍCTOR HUGO ABOYTES ARCE</strong></td>
-                            <td>Notificador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">hcalderon@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ANGÉLICA YANEHT TORRES RODRÍGUEZ</strong></td>
-                            <td>Notificadora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">atorres@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Nuevo Paricutín 308, Jardines de San Rafael, 30136 Uruapan, Mich.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="tab-pane fade" id="curu" role="tabpanel" aria-labelledby="turu">
-            <h3 class="textoVerde mb-3"><i class="bi bi-geo-alt-fill"></i> Directorio - Sede Uruapan</h3>
-            <div class="table-responsive shadow-sm rounded border">
-                <table class="table table-hover table-striped align-middle mb-0">
-                    <thead style="background-color: #911A3A; color: white;">
-                        <tr>
-                            <th scope="col" class="py-3 text-nowrap">Nombre</th>
-                            <th scope="col" class="py-3">Cargo</th>
-                            <th scope="col" class="py-3">Correo</th>
-                            <th scope="col" class="py-3">Teléfono</th>
-                            <th scope="col" class="py-3">Extensión</th>
-                            <th scope="col" class="py-3" style="min-width: 250px;">Dirección</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>JESUS IGNACIO DEGOLLADO NÚÑEZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">denuignacio@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARÍA GUADALUPE VILLANUEVA MACIAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">gvillanueva@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>JESUS IGNACIO DEGOLLADO NÚÑEZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">denuignacio@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARÍA GUADALUPE VILLANUEVA MACIAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">gvillanueva@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>JESUS IGNACIO DEGOLLADO NÚÑEZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">denuignacio@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARÍA GUADALUPE VILLANUEVA MACIAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">gvillanueva@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>JETZEMANI ESTEFANIA MENDIOLA ESQUIVEL</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a href="" class="text-decoration-none" style="color: #496163;"></a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>5 de Mayo norte 3, Jose María Morelos, tercer piso, 61506 Zitácuaro, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARIELA ZAVALA BLANCAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">mzavala@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>5 de Mayo norte 3, Jose María Morelos, tercer piso, 61506 Zitácuaro, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>EPIFANIO GONZÁLEZ VENGAS</strong></td>
-                            <td>Auxiliar Apoyo Zitacuaro</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">egonzalez@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1098</td>
-                            <td>5 de Mayo norte 3, Jose María Morelos, tercer piso, 61506 Zitácuaro, Mich.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="tab-pane fade" id="curu" role="tabpanel" aria-labelledby="turu">
-            <h3 class="textoVerde mb-3"><i class="bi bi-geo-alt-fill"></i> Directorio - Sede Uruapan</h3>
-            <div class="table-responsive shadow-sm rounded border">
-                <table class="table table-hover table-striped align-middle mb-0">
-                    <thead style="background-color: #911A3A; color: white;">
-                        <tr>
-                            <th scope="col" class="py-3 text-nowrap">Nombre</th>
-                            <th scope="col" class="py-3">Cargo</th>
-                            <th scope="col" class="py-3">Correo</th>
-                            <th scope="col" class="py-3">Teléfono</th>
-                            <th scope="col" class="py-3">Extensión</th>
-                            <th scope="col" class="py-3" style="min-width: 250px;">Dirección</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>JESUS IGNACIO DEGOLLADO NÚÑEZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">denuignacio@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARÍA GUADALUPE VILLANUEVA MACIAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">gvillanueva@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>JESUS IGNACIO DEGOLLADO NÚÑEZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">denuignacio@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARÍA GUADALUPE VILLANUEVA MACIAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">gvillanueva@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>JESUS IGNACIO DEGOLLADO NÚÑEZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">denuignacio@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARÍA GUADALUPE VILLANUEVA MACIAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">gvillanueva@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>JETZEMANI ESTEFANIA MENDIOLA ESQUIVEL</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a href="" class="text-decoration-none" style="color: #496163;"></a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>5 de Mayo norte 3, Jose María Morelos, tercer piso, 61506 Zitácuaro, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARIELA ZAVALA BLANCAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">mzavala@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td></td>
-                            <td>5 de Mayo norte 3, Jose María Morelos, tercer piso, 61506 Zitácuaro, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>EPIFANIO GONZÁLEZ VENGAS</strong></td>
-                            <td>Auxiliar Apoyo Zitacuaro</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">egonzalez@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(443) 688-63-37</td>
-                            <td>1098</td>
-                            <td>5 de Mayo norte 3, Jose María Morelos, tercer piso, 61506 Zitácuaro, Mich.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="tab-pane fade" id="curu" role="tabpanel" aria-labelledby="turu">
-            <h3 class="textoVerde mb-3"><i class="bi bi-geo-alt-fill"></i> Directorio - Sede Uruapan</h3>
-            <div class="table-responsive shadow-sm rounded border">
-                <table class="table table-hover table-striped align-middle mb-0">
-                    <thead style="background-color: #911A3A; color: white;">
-                        <tr>
-                            <th scope="col" class="py-3 text-nowrap">Nombre</th>
-                            <th scope="col" class="py-3">Cargo</th>
-                            <th scope="col" class="py-3">Correo</th>
-                            <th scope="col" class="py-3">Teléfono</th>
-                            <th scope="col" class="py-3">Extensión</th>
-                            <th scope="col" class="py-3" style="min-width: 250px;">Dirección</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>JESUS IGNACIO DEGOLLADO NÚÑEZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">denuignacio@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARÍA GUADALUPE VILLANUEVA MACIAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">gvillanueva@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>JESUS IGNACIO DEGOLLADO NÚÑEZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">denuignacio@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARÍA GUADALUPE VILLANUEVA MACIAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">gvillanueva@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>JESUS IGNACIO DEGOLLADO NÚÑEZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">denuignacio@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARÍA GUADALUPE VILLANUEVA MACIAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">gvillanueva@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="tab-pane fade" id="claca" role="tabpanel" aria-labelledby="tlaca">
-            <h3 class="textoVerde mb-3"><i class="bi bi-geo-alt-fill"></i> Directorio - Sede Lázaro Cárdenas</h3>
-            <div class="table-responsive shadow-sm rounded border">
-                <table class="table table-hover table-striped align-middle mb-0">
-                    <thead style="background-color: #911A3A; color: white;">
-                        <tr>
-                            <th scope="col" class="py-3 text-nowrap">Nombre</th>
-                            <th scope="col" class="py-3">Cargo</th>
-                            <th scope="col" class="py-3">Correo</th>
-                            <th scope="col" class="py-3">Teléfono</th>
-                            <th scope="col" class="py-3">Extensión</th>
-                            <th scope="col" class="py-3" style="min-width: 250px;">Dirección</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>JOEL ALONZO ZAVALA PEÑALOZA</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a href="" class="text-decoration-none" style="color: #496163;"></a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Paracho 26, 600 Casas, 60950 Cdad. Lázaro Cárdenas, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>BRENDA GUADALUPE EQUIHIUA PÉREZ</strong></td>
-                            <td>Auxiliar De Conciliador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">bequihua@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(452) 452-35-09</td>
-                            <td></td>
-                            <td>Paracho 26, 600 Casas, 60950 Cdad. Lázaro Cárdenas, Mich.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="tab-pane fade" id="czam" role="tabpanel" aria-labelledby="tzam">
-            <h3 class="textoVerde mb-3"><i class="bi bi-geo-alt-fill"></i> Directorio - Sede Zamora</h3>
-            <div class="table-responsive shadow-sm rounded border">
-                <table class="table table-hover table-striped align-middle mb-0">
-                    <thead style="background-color: #911A3A; color: white;">
-                        <tr>
-                            <th scope="col" class="py-3 text-nowrap">Nombre</th>
-                            <th scope="col" class="py-3">Cargo</th>
-                            <th scope="col" class="py-3">Correo</th>
-                            <th scope="col" class="py-3">Teléfono</th>
-                            <th scope="col" class="py-3">Extensión</th>
-                            <th scope="col" class="py-3" style="min-width: 250px;">Dirección</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>CARLOS RENÉ NAVARRETE AGUIÑIGA</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">cnavarrete@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>FRANCISCO HERNÁNDEZ HUERTA</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">fhernandez@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>LIBERIANA HERNÁNDEZ VALENTÍN</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">lvalentin@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>LIZETH EQUIHUA ALVARADO</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">lequihua@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>OSCAR SALINAS HUERTA</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">osalinas@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARÍA ISABEL BARRERA MORENO</strong></td>
-                            <td>Auxiliar De Conciliador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">mbarrera@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MONTSERRAT MEZA DE LA CRUZ</strong></td>
-                            <td>Auxiliar De Conciliador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">mmeza@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>VICTOR ANDRÉS CARRILLO DÁVALOS</strong></td>
-                            <td>Conciliador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">vcarrillo@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>BEATRÍZ ADRIANA TORRES GARCÍA</strong></td>
-                            <td>Conciliadora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">btorres@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>BELEN VILLAGÓMEZ LEÓN</strong></td>
-                            <td>Directora Regional Zamora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">bvillagomez@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>GABRIELA VENTURA JUÁREZ</strong></td>
-                            <td>Intendente</td>
-                            <td><a style="color: #496163;"></a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>OSCAR SALINAS HUERTA</strong></td>
-                            <td>Notificador</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">osalinas@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ROSA ISELA ARZATE QUEVEDO</strong></td>
-                            <td>Notificadora</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">rarzate@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap">(351) 688-04-81</td>
-                            <td></td>
-                            <td>Justo Sierra Poniente 290, Jardines de Catedral, 59600 Zamora de Hidalgo, Mich.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="tab-pane fade" id="csah" role="tabpanel" aria-labelledby="tsah">
-            <h3 class="textoVerde mb-3"><i class="bi bi-geo-alt-fill"></i> Directorio - Sede Sahuayo</h3>
-            <div class="table-responsive shadow-sm rounded border">
-                <table class="table table-hover table-striped align-middle mb-0">
-                    <thead style="background-color: #911A3A; color: white;">
-                        <tr>
-                            <th scope="col" class="py-3 text-nowrap">Nombre</th>
-                            <th scope="col" class="py-3">Cargo</th>
-                            <th scope="col" class="py-3">Correo</th>
-                            <th scope="col" class="py-3">Teléfono</th>
-                            <th scope="col" class="py-3">Extensión</th>
-                            <th scope="col" class="py-3" style="min-width: 250px;">Dirección</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>JESUS IGNACIO DEGOLLADO NÚÑEZ</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">denuignacio@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MARÍA GUADALUPE VILLANUEVA MACIAS</strong></td>
-                            <td>Auxiliar</td>
-                            <td><a class="text-decoration-none" style="color: #496163;">gvillanueva@cclmichoacan.gob.mx</a></td>
-                            <td class="text-nowrap"></td>
-                            <td></td>
-                            <td>Av. Universidad Sur 300, Lomas de Universidad, 59103 Sahuayo de Morelos, Mich.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-    </div>
+           <br> -->
 </main>
-                    
-        
-    </div>
 <br><br><br><br>
 <footer class="footer-site">
         <div class="container">
@@ -1162,9 +495,6 @@
 	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="js/core.min.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/carrusel.js"></script>
+	
 </body>
 </html>
