@@ -6,10 +6,10 @@
         <title>Centro de Conciliación Laboral | Michoacán</title>
         
         <meta property="og:title" content="Centro de Conciliación Laboral | Michoacán" />
-        <meta property="og:image" content="https://michoacan.gob.mx/cdn/img/michog.jpg"/>
+        <!--<meta property="og:image" content="https://michoacan.gob.mx/cdn/img/michog.jpg"/>-->
         <meta property="og:description" content="Portal del Centro de Conciliación Laboral del Estado de Michoacán" />
 
-        <link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/bootstrap.min.css">-->
         <!--<link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/estilos.css">-->
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -173,7 +173,7 @@
 
                     <?php 
                         // Iniciar cURL
-                        $ch = curl_init();
+                    /*    $ch = curl_init();
                         curl_setopt($ch, CURLOPT_URL, "https://michoacan.gob.mx/cdn/slider.php");
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         // Simular un navegador web para evitar bloqueos de seguridad
