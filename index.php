@@ -9,7 +9,8 @@
         <meta property="og:image" content="https://michoacan.gob.mx/cdn/img/michog.jpg"/>
         <meta property="og:description" content="Portal del Centro de Conciliación Laboral del Estado de Michoacán" />
 
-        <link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="puente.php?file=https%3A%2F%2Fmichoacan.gob.mx%2Fcdn%2Fcss%2Fbootstrap.min.css">
         <!--<link rel="stylesheet" href="https://michoacan.gob.mx/cdn/css/estilos.css">-->
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -92,7 +93,8 @@
                             <img src="imagenes/logo CCL horizontal.png" class="logo-dependencia" alt="Logo CCL">
                         </a>
                         <a class="navbar-brand border-start ps-3 d-none d-md-block" href="https://michoacan.gob.mx">
-                            <img src="https://michoacan.gob.mx/cdn/img/logo.svg" class="logo-gobierno" alt="Logo Gobierno">
+                            <!--<img src="https://michoacan.gob.mx/cdn/img/logo.svg" class="logo-gobierno" alt="Logo Gobierno">-->
+                            <img src="puente.php?file=https%3A%2F%2Fmichoacan.gob.mx%2Fcdn%2Fimg%2Flogo.svg" class="logo-gobierno" alt="Logo Gobierno">
                         </a>
                     </div>
 
@@ -172,14 +174,13 @@
                     </div>
 
                     <?php 
-                        // Iniciar cURL
                         $ch = curl_init();
                         curl_setopt($ch, CURLOPT_URL, "https://michoacan.gob.mx/cdn/slider.php");
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                        // Simular un navegador web para evitar bloqueos de seguridad
-                        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-                        // Evitar problemas si el sitio tiene problemas con su certificado SSL temporalmente
+                        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)');
+                        // Esto le permite a tu servidor saltarse el error del certificado vencido:
                         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
+                        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false); 
                         
                         $content = curl_exec($ch);
                         curl_close($ch);
@@ -188,19 +189,16 @@
                             preg_match_all('/src="([^"]+)"/', $content, $matches);
                             if(!empty($matches[1])) {
                                 foreach($matches[1] as $url) {
-                                    echo '<div class="item"><img src="' . $url . '" alt="carrusel gobierno"></div>';
+                                    // Si la URL es interna de ellos, la hacemos pasar por nuestro puente PHP
+                                    if (strpos($url, 'michoacan.gob.mx') !== false) {
+                                        $url_segura = "puente.php?file=" . urlencode($url);
+                                    } else {
+                                        $url_segura = $url;
+                                    }
+                                    echo '<div class="item"><img src="' . $url_segura . '" alt="carrusel gobierno"></div>';
                                 }
                             }
                         }
-                        /*$content = @file_get_contents("https://michoacan.gob.mx/cdn/slider.php");
-                        if($content) {
-                            preg_match_all('/src="([^"]+)"/', $content, $matches);
-                            if(!empty($matches[1])) {
-                                foreach($matches[1] as $url) {
-                                    echo '<div class="item"><img src="' . $url . '" alt="Comunicado Gobierno"></div>';
-                                }
-                            }
-                        }*/
                     ?>
                 </div>
             </div>
@@ -286,7 +284,8 @@
                 </div>
             </div>
             
-            <section style="background-color: #F6F6F6; background: url(https://michoacan.gob.mx/images/backgrounds/bg.png) fixed no-repeat;  background-size: cover; padding:20px; 0px;">
+            <!--<section style="background-color: #F6F6F6; background: url(https://michoacan.gob.mx/images/backgrounds/bg.png) fixed no-repeat;  background-size: cover; padding:20px; 0px;">-->
+            <section style="background-color: #F6F6F6; background: url(puente.php?file=https%3A%2F%2Fmichoacan.gob.mx%2Fimages%2Fbackgrounds%2Fbg.png) fixed no-repeat; background-size: cover; padding:20px 0px;">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 text-center">
