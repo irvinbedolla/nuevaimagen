@@ -156,6 +156,12 @@
                     </div>
 
                     <div class="item">
+                        <a href="noticias/comunicadoCCL015-2026.html" target="_blank">
+                            <img src="imagenes/carrusel/comunicadoCCL015-2026.png" alt="Centro de Conciliación">
+                        </a>
+                    </div>
+                    
+                    <div class="item">
                         <a href="noticias/comunicadoCCL014-2026.html" target="_blank">
                             <img src="imagenes/carrusel/comunicadoCCL014-2026.png" alt="Centro de Conciliación">
                         </a>
@@ -436,7 +442,27 @@
                     </div>
                     <div class="grid-galeria-estilizada">
                         <!--Base para las tres noticias mas recientes-->
-                        <a href="noticias\comunicadoCCL014-2026.html" class="galeria-item principal">
+                        <a href="noticias\comunicadoCCL016-2026.html" class="galeria-item principal">
+                            <div class="img-contenedor">
+                                <img src="imagenes/noticias/comunicadoCCL016-2026-1.jpeg" alt="Noticia Principal">
+                            </div>
+                            <div class="fecha-badge">08 junio, 2026</div>
+                            <div class="capa-oscura"></div>
+                            <div class="info-noticia">
+                                <h3 class="titulo-noticia">Garantiza el Centro de Conciliación Laboral acceso a la justicia gratuita y oportuna para las y los trabajadores</h3>
+                            </div>
+                        </a>
+                        <a href="noticias\comunicadoCCL015-2026.html" class="galeria-item">
+                            <div class="img-contenedor">
+                                <img src="imagenes/noticias/comunicadoCCL015-2026-1.png" alt="Noticia Principal">
+                            </div>
+                            <div class="fecha-badge">02 junio, 2026</div>
+                            <div class="capa-oscura"></div>
+                            <div class="info-noticia">
+                                <h3 class="titulo-noticia">Las vacaciones laborales son un derecho irrenunciable: CCL</h3>
+                            </div>
+                        </a>
+                        <a href="noticias\comunicadoCCL014-2026.html" class="galeria-item">
                             <div class="img-contenedor">
                                 <img src="imagenes/noticias/comunicadoCCL014-2026-1.jpeg" alt="Noticia Principal">
                             </div>
@@ -446,7 +472,7 @@
                                 <h3 class="titulo-noticia">¿Tienes audiencia de conciliación laboral? Conoce los requisitos para agilizar tu trámite</h3>
                             </div>
                         </a>
-                        <a href="noticias\comunicadoCCL013-2026.html" class="galeria-item">
+                        <!--<a href="noticias\comunicadoCCL013-2026.html" class="galeria-item">
                             <div class="img-contenedor">
                                 <img src="imagenes/noticias/comunicadoCCL013-2026-1.jpeg" alt="Noticia Principal">
                             </div>
@@ -467,7 +493,7 @@
                                 
                                 <h3 class="titulo-noticia">Centro de Conciliación Laboral asegura defensa a los derechos de las y los trabajadores</h3>
                             </div>
-                        </a>
+                        </a>-->
                         <!--<a href="noticias\comunicadoCCL011-2026.html" class="galeria-item">
                             <div class="img-contenedor">
                                 <img src="imagenes/noticias/comunicadoCCL011-2026-1.jpeg" alt="Noticia Secundaria 5">
