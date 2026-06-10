@@ -9,7 +9,7 @@ body.pagina-noticia {
     font-family: 'Gibson', sans-serif;
     background-color: #911A3A; /* El color guinda solicitado */
     color: #ffffff; /* Letra blanca */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -18,13 +18,17 @@ body.pagina-noticia {
 .contenedor-articulo {
     max-width: 1500px; 
     margin: 0 auto;
-    padding: 60px 20px;
+    padding-top: 110px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*padding: 60px 20px;*/
     text-align: left;
     
 }
 
 /* Imagen Destacada */
-.imagen-destacada img {
+/*.imagen-destacada img {
     width: 50%;
     height: auto;
     margin-bottom: 40px;
@@ -32,8 +36,29 @@ body.pagina-noticia {
     margin-left: auto;
     margin-right: auto;
 
+}*/
+/* Imagen Destacada */
+.imagen-destacada {
+    display: block !important; /* Asegura que figure se comporte como bloque */
+    width: 100% !important;
+    max-width: 600px !important;     /* El tamaño máximo ideal para que la cuadrada no sea gigante */
+    margin: 0 auto 40px auto !important; /* Centra el contenedor figure y da espacio abajo */
+    padding: 0 !important;           /* Resetea cualquier espacio extraño de Bootstrap */
+    /*overflow: hidden;     /* Evita comportamientos raros de desborde */
 }
 
+.imagen-destacada img {
+    display: block !important;
+    width: 100% !important;          /* Ocupa el 100% de su contenedor (máximo 650px) */
+    height: auto !important;         /* ¡CLAVE! Recalcula la altura perfectamente sin cortar nada */
+    /*max-height: 70vh;     /* En pantallas chicas, evita que la imagen cuadrada tape toda la pantalla */
+    /*object-fit: contain;  /* Escuda la imagen para que se mantenga íntegra y completa */
+    /*margin: 0 auto;
+    max-height: none !important; /* Elimina techos de altura remanentes */
+    object-fit: fill !important; /* Fuerza al navegador a mostrar el archivo de imagen completo de esquina a esquina */
+    transform: none !important;  /* Elimina posibles desajustes de posición en otros CSS */
+    margin: 0 auto !important;
+}
 /* Título de la noticia */
 .titulo {
     font-family: 'Gibson', sans-serif;
